@@ -106,7 +106,11 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10", preco:53990, comparar:149990 }
     ],
     imagens:[
-
+      "/img/produtos/insufree/1.png",
+      "/img/produtos/insufree/2.png",
+      "/img/produtos/insufree/3.png",
+      "/img/produtos/insufree/4.png",
+      "/img/produtos/insufree/5.png"
     ],
   },
   {
@@ -138,7 +142,9 @@ const PRODUTOS = [
       { titulo:"Default Title", preco:2590, comparar:5590 }
     ],
     imagens:[
-      "/img/produtos/rolo-de-pedra/rolo-de-pedra-3417351.jpg"
+      "/img/produtos/rolo-de-pedra/1.jpg",
+      "/img/produtos/rolo-de-pedra/2.jpg",
+      "/img/produtos/rolo-de-pedra/3.jpg"
     ],
   },
   {
@@ -150,7 +156,7 @@ const PRODUTOS = [
       { titulo:"Default Title", preco:3890, comparar:6590 }
     ],
     imagens:[
-      "/img/produtos/garrafa-termica-preta/garrafa-termica-preta-2481453.jpg"
+      "/img/produtos/garrafa-termica-preta/1.jpg"
     ],
   },
   {
@@ -180,8 +186,8 @@ const PRODUTOS = [
       { titulo:"Default Title", preco:3490, comparar:5990 }
     ],
     imagens:[
-      "/img/produtos/palmilhas-de-gel-ortop-dicas/palmilhas-de-gel-ortopedicas-6277793.jpg",
-      "/img/produtos/palmilhas-de-gel-ortop-dicas/palmilhas-de-gel-ortopedicas-7060013.jpg"
+      "/img/produtos/palmilhas-de-gel-ortop-dicas/1.jpg",
+      "/img/produtos/palmilhas-de-gel-ortop-dicas/2.jpg"
     ],
   },
   {
@@ -231,7 +237,7 @@ const PRODUTOS = [
       { titulo:"Default Title", preco:5190, comparar:6590 }
     ],
     imagens:[
-      "/img/produtos/massagem-profissional-eletrica/massagem-profissional-eletrica-5807209.jpg"
+      "/img/produtos/massagem-profissional-eletrica/1.jpg"
     ],
   },
   {
@@ -273,9 +279,9 @@ const PRODUTOS = [
       { titulo:"Default Title", preco:1950, comparar:2590 }
     ],
     imagens:[
-      "/img/produtos/pincel-de-barbear-com-suporte/pincel-de-barbear-com-suporte-6244288.webp",
-      "/img/produtos/pincel-de-barbear-com-suporte/pincel-de-barbear-com-suporte-2480680.webp",
-      "/img/produtos/pincel-de-barbear-com-suporte/pincel-de-barbear-com-suporte-1362010.webp"
+      "/img/produtos/pincel-de-barbear-com-suporte/1.webp",
+      "/img/produtos/pincel-de-barbear-com-suporte/2.webp",
+      "/img/produtos/pincel-de-barbear-com-suporte/3.webp"
     ],
   },
   {
@@ -313,7 +319,11 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10", preco:53990, comparar:149950 }
     ],
     imagens:[
-
+      "/img/produtos/naturion-gotas/1.png",
+      "/img/produtos/naturion-gotas/2.png",
+      "/img/produtos/naturion-gotas/3.png",
+      "/img/produtos/naturion-gotas/4.png",
+      "/img/produtos/naturion-gotas/5.png"
     ],
   },
   {
@@ -349,7 +359,11 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10", preco:53990, comparar:149990 }
     ],
     imagens:[
-
+      "/img/produtos/dht-blocker/1.png",
+      "/img/produtos/dht-blocker/2.png",
+      "/img/produtos/dht-blocker/3.png",
+      "/img/produtos/dht-blocker/4.png",
+      "/img/produtos/dht-blocker/5.png"
     ],
   },
   {
@@ -361,7 +375,9 @@ const PRODUTOS = [
       { titulo:"Default Title", preco:3990, comparar:6990 }
     ],
     imagens:[
-      "/img/produtos/umidificador-de-ar-port-til/umidificador-de-ar-portatil-3852121.webp"
+      "/img/produtos/umidificador-de-ar-port-til/1.webp",
+      "/img/produtos/umidificador-de-ar-port-til/2.webp",
+      "/img/produtos/umidificador-de-ar-port-til/3.webp"
     ],
   },
   {
@@ -373,7 +389,10 @@ const PRODUTOS = [
       { titulo:"Default Title", preco:3990, comparar:6990 }
     ],
     imagens:[
-      "/img/produtos/esponja-de-limpeza-facial-eletrica/esponja-de-limpeza-facial-eletrica-6925308.webp"
+      "/img/produtos/esponja-de-limpeza-facial-eletrica/1.webp",
+      "/img/produtos/esponja-de-limpeza-facial-eletrica/2.webp",
+      "/img/produtos/esponja-de-limpeza-facial-eletrica/3.webp",
+      "/img/produtos/esponja-de-limpeza-facial-eletrica/4.webp"
     ],
   },
   {
@@ -389,7 +408,7 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10", preco:53990, comparar:149990 }
     ],
     imagens:[
-
+      "/img/produtos/candfemm/1.jpg"
     ],
   },
   {
@@ -401,8 +420,8 @@ const PRODUTOS = [
       { titulo:"Default Title", preco:2990, comparar:3990 }
     ],
     imagens:[
-      "/img/produtos/touca-de-cetim-anti-frizz/touca-de-cetim-anti-frizz-5117556.jpg",
-      "/img/produtos/touca-de-cetim-anti-frizz/touca-de-cetim-anti-frizz-5214976.jpg"
+      "/img/produtos/touca-de-cetim-anti-frizz/1.jpg",
+      "/img/produtos/touca-de-cetim-anti-frizz/2.jpg"
     ],
   },
   {
@@ -436,7 +455,11 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10", preco:53990, comparar:149990 }
     ],
     imagens:[
-
+      "/img/produtos/hemo-gotas/1.png",
+      "/img/produtos/hemo-gotas/2.png",
+      "/img/produtos/hemo-gotas/3.png",
+      "/img/produtos/hemo-gotas/4.png",
+      "/img/produtos/hemo-gotas/5.png"
     ],
   },
   {
@@ -464,8 +487,8 @@ const PRODUTOS = [
       { titulo:"Default Title", preco:1490, comparar:2990 }
     ],
     imagens:[
-      "/img/produtos/escova-massageadora-capilar-de-silicone/escova-massageadora-capilar-de-silicone-8592743.jpg",
-      "/img/produtos/escova-massageadora-capilar-de-silicone/escova-massageadora-capilar-de-silicone-5839886.jpg"
+      "/img/produtos/escova-massageadora-capilar-de-silicone/1.jpg",
+      "/img/produtos/escova-massageadora-capilar-de-silicone/2.jpg"
     ],
   },
   {
@@ -477,7 +500,9 @@ const PRODUTOS = [
       { titulo:"Default Title", preco:2990, comparar:3990 }
     ],
     imagens:[
-      "/img/produtos/escova-de-dentes-de-bambu/escova-de-dentes-de-bambu-7576051.webp"
+      "/img/produtos/escova-de-dentes-de-bambu/1.webp",
+      "/img/produtos/escova-de-dentes-de-bambu/2.webp",
+      "/img/produtos/escova-de-dentes-de-bambu/3.webp"
     ],
   },
   {
@@ -619,9 +644,9 @@ const PRODUTOS = [
       { titulo:"Default Title", preco:2990, comparar:3990 }
     ],
     imagens:[
-      "/img/produtos/roupao-de-banho-unissex/roupao-de-banho-unissex-5723344.jpg",
-      "/img/produtos/roupao-de-banho-unissex/roupao-de-banho-unissex-6839642.jpg",
-      "/img/produtos/roupao-de-banho-unissex/roupao-de-banho-unissex-1159176.jpg"
+      "/img/produtos/roupao-de-banho-unissex/1.jpg",
+      "/img/produtos/roupao-de-banho-unissex/2.jpg",
+      "/img/produtos/roupao-de-banho-unissex/3.jpg"
     ],
   },
   {
@@ -673,8 +698,8 @@ const PRODUTOS = [
       { titulo:"Default Title", preco:3890, comparar:6590 }
     ],
     imagens:[
-      "/img/produtos/travesseiro-ortopedico/travesseiro-ortopedico-7369092.jpg",
-      "/img/produtos/travesseiro-ortopedico/travesseiro-ortopedico-6572982.jpg"
+      "/img/produtos/travesseiro-ortopedico/1.jpg",
+      "/img/produtos/travesseiro-ortopedico/2.jpg"
     ],
   },
   {
@@ -804,8 +829,8 @@ const PRODUTOS = [
       { titulo:"Default Title", preco:7990, comparar:14990 }
     ],
     imagens:[
-      "/img/produtos/massageador-relaxante-de-pescoco-e-ombro/massageador-relaxante-de-pescoco-e-ombro-4235846.jpg",
-      "/img/produtos/massageador-relaxante-de-pescoco-e-ombro/massageador-relaxante-de-pescoco-e-ombro-9048813.jpg"
+      "/img/produtos/massageador-relaxante-de-pescoco-e-ombro/1.jpg",
+      "/img/produtos/massageador-relaxante-de-pescoco-e-ombro/2.jpg"
     ],
   },
   {
@@ -940,8 +965,8 @@ const PRODUTOS = [
       { titulo:"Default Title", preco:1950, comparar:2590 }
     ],
     imagens:[
-      "/img/produtos/pente-de-madeira-antifrizz/pente-de-madeira-antifrizz-6133424.webp",
-      "/img/produtos/pente-de-madeira-antifrizz/pente-de-madeira-antifrizz-8407057.webp"
+      "/img/produtos/pente-de-madeira-antifrizz/1.webp",
+      "/img/produtos/pente-de-madeira-antifrizz/2.webp"
     ],
   },
 ];
