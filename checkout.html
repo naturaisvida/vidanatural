@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — Vida Natural</title>
+<link rel="icon" href="/img/faviconvidanatural.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --vn-dark:    #062b2b;
+  --vn-dark2:   #0d5045;
+  --vn-mid:     #1a8a74;
+  --vn-accent:  #3ec4ad;
+  --vn-light:   #7ed4c8;
+  --vn-pale:    #c5f0ea;
+  --vn-sage:    #ecf9f8;
+  --vn-gold:    #C9A84C;
+  --vn-text:    #0d2e28;
+  --vn-muted:   #4a7a72;
+  --vn-white:   #FFFFFF;
+  --green:      #1a8a74;
+  --green-d:    #0d5045;
+  --green-2:    #062b2b;
+  --bg:         #ecf9f8;
+  --white:      #FFFFFF;
+  --text:       #0d2e28;
+  --border:     #b0dcd6;
+  --border-light: #c5f0ea;
+  --red:        #e03a3a;
+  --success:    #1a8a74;
+  --font:       'Poppins', sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:15px;min-height:100vh}
+
+/* HEADER */
+.hdr{background:var(--white);border-bottom:2px solid var(--vn-pale);padding:14px 40px;display:flex;align-items:center;justify-content:space-between}
+.hdr-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.hdr-logo-img{height:44px;width:auto;flex-shrink:0;display:block}
+.hdr-sec{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:700;color:var(--vn-dark2);text-transform:uppercase;line-height:1.3}
+.hdr-sec svg{width:20px;height:20px;flex-shrink:0}
+
+/* LAYOUT */
+.wrap{max-width:1060px;margin:0 auto;padding:28px 20px;display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start}
+#steps{grid-column:1;grid-row:1}
+.sidebar{grid-column:2;grid-row:1}
+
+/* STEP CARD */
+.card{background:var(--white);border:1px solid var(--border-light);border-radius:10px;overflow:hidden;margin-bottom:14px;box-shadow:0 1px 4px rgba(13,40,24,.06)}
+.card-hdr{display:flex;justify-content:space-between;align-items:center;padding:17px 22px}
+.card-hdr h2{font-size:15px;font-weight:700;color:var(--vn-dark)}
+.card-hdr .num{font-size:12px;color:var(--vn-muted)}
+.card.locked .card-hdr{opacity:.45}
+.card.locked .card-body{display:none}
+.card-body{padding:0 22px 22px}
+
+/* STEP DONE BAR */
+.done-bar{display:none;align-items:center;gap:8px;padding:0 22px 14px;font-size:13px;color:var(--green)}
+.done-bar.show{display:flex}
+.done-bar a{margin-left:auto;font-size:12px;color:var(--green);text-decoration:none}
+
+/* FORM */
+.row{display:grid;gap:11px;margin-bottom:11px}
+.row.c2{grid-template-columns:1fr 1fr}
+.field{display:flex;flex-direction:column;gap:3px}
+.field input,.field select{padding:12px 13px;border:1px solid var(--border);border-radius:7px;font-family:var(--font);font-size:14px;color:var(--text);background:var(--white);outline:none;transition:border .15s}
+.field input:focus,.field select:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(46,139,111,.1)}
+.field input.err{border-color:var(--red)}
+.ferr{font-size:11px;color:var(--red);min-height:14px}
+
+/* BTN */
+.btn{width:100%;padding:14px;background:var(--green);color:#fff;border:none;border-radius:7px;font-family:var(--font);font-size:15px;font-weight:700;cursor:pointer;transition:background .15s;text-transform:uppercase;letter-spacing:.4px;margin-top:14px;position:relative}
+.btn:hover{background:var(--green-d)}
+.btn:disabled{background:#aabdb6;cursor:not-allowed}
+.btn.spin{color:transparent}
+.btn.spin::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:20px;height:20px;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:sp .65s linear infinite}
+@keyframes sp{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.note{text-align:center;font-size:12px;color:var(--vn-muted);margin-top:8px}
+.note a{color:var(--green)}
+
+/* PAYMENT TABS */
+.ptabs{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:18px}
+.ptab{border:2px solid var(--border);border-radius:9px;background:var(--white);cursor:pointer;padding:11px 6px;display:flex;flex-direction:column;align-items:center;gap:5px;transition:border .15s,background .15s;font-family:var(--font)}
+.ptab:hover{border-color:var(--green)}
+.ptab.on{border-color:var(--green);background:var(--vn-sage)}
+.ptab img{height:26px;object-fit:contain}
+.ptab span{font-size:12px;font-weight:600;color:var(--vn-dark2)}
+.ptab svg{height:26px;width:auto}
+.pcont{display:none}
+.pcont.on{display:block}
+
+/* PIX */
+.pix-box{background:var(--vn-sage);border:1px solid var(--vn-pale);border-radius:9px;padding:14px;margin-bottom:14px;font-size:13px}
+.pix-box ul{list-style:none;margin-top:7px}
+.pix-box li{display:flex;align-items:flex-start;gap:9px;margin-bottom:7px}
+.pix-box .n{background:var(--green);color:#fff;width:19px;height:19px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0}
+.disc-tag{background:var(--vn-pale);border:1px solid var(--vn-light);border-radius:7px;padding:9px 13px;font-size:13px;font-weight:600;color:var(--vn-dark2);text-align:center;margin-bottom:14px}
+
+/* QR */
+.qr-wrap{text-align:center;padding:16px 0}
+.qr-wrap img{width:190px;height:190px;border:1px solid var(--border);border-radius:8px}
+.qr-wrap p{font-size:12px;color:var(--vn-muted);margin-top:7px}
+.copy-row{display:flex;gap:8px;margin-top:12px}
+.copy-row input{flex:1;padding:9px 11px;border:1px solid var(--border);border-radius:7px;font-size:12px;background:var(--vn-sage)}
+.copybtn{padding:9px 14px;background:var(--green-2);color:#fff;border:none;border-radius:7px;cursor:pointer;font-size:13px;font-weight:600;font-family:var(--font);white-space:nowrap}
+.timer{text-align:center;font-size:13px;color:var(--vn-muted);margin-top:10px}
+.timer b{color:var(--red)}
+
+/* BOLETO */
+.blt-box{background:#fdf9ee;border:1px solid #f0d98a;border-radius:9px;padding:14px;margin-bottom:14px;font-size:13px}
+.blt-open{display:block;width:100%;padding:13px;background:var(--green-2);color:#fff;text-align:center;text-decoration:none;border-radius:7px;font-weight:700;font-size:14px;margin-bottom:11px}
+
+/* CARD */
+.card-prev{background:linear-gradient(135deg,var(--vn-dark2),var(--vn-mid));border-radius:12px;padding:18px;margin-bottom:15px;color:#fff;box-shadow:0 4px 18px rgba(13,40,24,.18)}
+.chip{width:28px;height:21px;background:var(--vn-gold);border-radius:4px;margin-bottom:10px}
+.card-num-p{font-size:18px;letter-spacing:3px;margin-bottom:12px;font-weight:600;word-spacing:6px}
+.card-row-p{display:flex;justify-content:space-between;font-size:12px}
+.card-row-p div span{display:block;font-size:10px;opacity:.7;margin-bottom:2px}
+
+/* ALERT */
+.alert{padding:11px 14px;border-radius:7px;font-size:13px;margin-bottom:10px}
+.alert-err{background:#fdf0f0;border:1px solid #f5c6c6;color:#c0392b}
+.alert-ok{background:#edfaf4;border:1px solid #a9dfbf;color:#1e6e40}
+
+/* SUMMARY SIDEBAR */
+.sidebar{background:var(--white);border:1px solid var(--border-light);border-radius:10px;padding:18px;position:sticky;top:16px;box-shadow:0 1px 4px rgba(13,40,24,.06)}
+.sidebar h3{font-size:14px;font-weight:700;margin-bottom:14px;padding-bottom:11px;border-bottom:1px solid var(--border-light);color:var(--vn-dark)}
+.obs{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:7px;font-family:var(--font);font-size:13px;resize:none;height:78px;outline:none;margin-bottom:3px}
+.obs:focus{border-color:var(--green)}
+.obs-c{font-size:11px;color:var(--vn-muted);text-align:right;margin-bottom:14px}
+.sline{display:flex;justify-content:space-between;font-size:14px;margin-bottom:7px}
+.stotal{border-top:1px solid var(--border-light);margin-top:7px;padding-top:11px;font-weight:700;font-size:16px}
+.sprod{display:flex;gap:11px;margin-top:14px;padding-top:14px;border-top:1px solid var(--border-light)}
+.sprod img{width:58px;height:58px;object-fit:cover;border-radius:7px;border:1px solid var(--border-light)}
+.sprod-info{flex:1}
+.sprod-name{font-size:12px;font-weight:600;margin-bottom:3px;color:var(--vn-dark)}
+.sprod-var{font-size:11px;color:var(--green);font-weight:600;text-transform:uppercase}
+.sprod-price{font-size:13px;font-weight:700;margin-top:4px;color:var(--vn-dark)}
+
+/* MOBILE SUMMARY ACCORDION */
+.mob-sum{display:none;background:var(--vn-pale);border-bottom:1px solid var(--vn-light);padding:13px 16px;cursor:pointer;align-items:center;justify-content:space-between;gap:8px;user-select:none}
+.mob-sum-left{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--vn-dark2)}
+.mob-sum-left svg{flex-shrink:0}
+.mob-arr{transition:transform .2s;flex-shrink:0}
+.mob-arr.open{transform:rotate(180deg)}
+
+/* ALWAYS 2-COL (CPF + Fone) */
+.row-2col{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:11px}
+.row-2col>*{min-width:0}
+
+/* FRETE OPTIONS */
+.frete-lbl{font-size:13px;font-weight:700;color:var(--text);margin-bottom:10px}
+.frete-opts{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+.frete-opt{display:flex;align-items:center;gap:12px;padding:12px 14px;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s;user-select:none}
+.frete-opt.on{border-color:var(--green);background:var(--vn-sage)}
+.frete-opt input[type=radio]{accent-color:var(--green);width:18px;height:18px;flex-shrink:0;cursor:pointer}
+.frete-opt-logo{height:32px;width:auto;max-width:88px;object-fit:contain;flex-shrink:0}
+.frete-opt-info{flex:1;min-width:0}
+.frete-opt-name{font-size:12px;font-weight:700;color:var(--text);line-height:1.35}
+.frete-opt-desc{font-size:11px;color:var(--vn-mid);margin-top:2px}
+.frete-opt-price{font-size:13px;font-weight:700;color:var(--green);white-space:nowrap;flex-shrink:0}
+
+/* FOOTER */
+.ftr{text-align:center;padding:22px 20px;border-top:1px solid var(--border-light);background:var(--white);margin-top:10px}
+.ftr p{font-size:12px;color:var(--vn-muted);margin-bottom:9px}
+.badges{display:flex;justify-content:center;align-items:center;gap:7px;flex-wrap:wrap;max-width:380px;margin:0 auto}
+.badges img{height:19px;object-fit:contain}
+
+/* SUCCESS */
+.success-screen{text-align:center;padding:44px 22px}
+.success-icon{width:66px;height:66px;background:var(--success);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.success-screen h2{font-size:21px;color:var(--success);margin-bottom:8px}
+.success-screen p{font-size:13px;color:var(--vn-muted)}
+
+@media(max-width:720px){
+  .hdr{padding:12px 16px}
+  .wrap{grid-template-columns:1fr;padding:12px;gap:0}
+  #steps{grid-column:auto;grid-row:auto}
+  .sidebar{grid-column:auto;grid-row:auto;position:static;display:none;border-radius:0;border-left:0;border-right:0;margin-bottom:12px}
+  .sidebar.mob-open{display:block}
+  .card-body{padding:0 14px 18px}
+  .card-hdr{padding:14px 16px}
+  .mob-sum{display:flex}
+  .row.c2{grid-template-columns:1fr}
+}
+</style>
+<script src="/js/tracking.js"></script>
+</head>
+<body>
+
+<header class="hdr">
+  <a class="hdr-logo" href="https://lojavidanatural.com">
+    <img class="hdr-logo-img" src="/img/logovidanatural.png" alt="Vida Natural">
+  </a>
+  <div class="hdr-sec">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/>
+    </svg>
+    <div>PAGAMENTO<br>100% SEGURO</div>
+  </div>
+</header>
+
+<!-- MOBILE SUMMARY ACCORDION -->
+<div class="mob-sum" id="mob-sum" onclick="toggleSumMob()">
+  <div class="mob-sum-left">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+    <span id="mob-sum-lbl">Resumo da compra</span>
+    <svg class="mob-arr" id="mob-arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+  </div>
+  <strong id="mob-sum-price" style="color:var(--green);font-size:14px"></strong>
+</div>
+
+<div class="wrap">
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h3>Resumo da compra</h3>
+    <textarea class="obs" id="obs" placeholder="Observacao da compra (opcional)" maxlength="300"
+      oninput="document.getElementById('obs-c').textContent=this.value.length+'/300 caracteres'"></textarea>
+    <p class="obs-c" id="obs-c">0/300 caracteres</p>
+    <div class="sline"><span id="sb-lbl">Produto (1)</span><span id="sb-price"></span></div>
+    <div class="sline"><span>Frete</span><span id="sb-frete" style="color:var(--green)">Gratis</span></div>
+    <div class="sline stotal"><span>Total</span><span id="sb-total"></span></div>
+    <div class="sprod">
+      <img id="sb-img" src="" alt="">
+      <div class="sprod-info">
+        <div class="sprod-name" id="sb-name"></div>
+        <div class="sprod-var" id="sb-var"></div>
+        <div class="sprod-price">Qtd.: <span id="sb-qty">1</span> &nbsp; <span id="sb-unit"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="steps">
+
+    <!-- STEP 1 -->
+    <div class="card" id="s1">
+      <div class="card-hdr"><h2>Identificacao</h2><span class="num">1 de 3</span></div>
+      <div class="card-body" id="s1-body">
+        <div class="row"><div class="field">
+          <input type="text" id="nome" placeholder="Nome completo" autocomplete="name">
+          <span class="ferr" id="e-nome"></span>
+        </div></div>
+        <div class="row"><div class="field">
+          <input type="email" id="email" placeholder="E-mail" autocomplete="email">
+          <span class="ferr" id="e-email"></span>
+        </div></div>
+        <div class="row-2col">
+          <div class="field">
+            <input type="text" id="cpf" placeholder="CPF" maxlength="14" autocomplete="off">
+            <span class="ferr" id="e-cpf"></span>
+          </div>
+          <div class="field">
+            <input type="tel" id="fone" placeholder="WhatsApp/Celular" maxlength="15" autocomplete="tel">
+            <span class="ferr" id="e-fone"></span>
+          </div>
+        </div>
+        <button class="btn" onclick="toStep2()">Ir para Entrega</button>
+        <p class="note">Ao prosseguir, voce concorda com as <a href="#">Politicas de Privacidade</a></p>
+      </div>
+      <div class="done-bar" id="s1-done">
+        <svg width="15" height="15" fill="var(--green)" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3.5-3.5a.5.5 0 11.708-.708L6.5 10.293l6.646-6.647a.5.5 0 01.708 0z"/></svg>
+        <span id="s1-txt"></span>
+        <a href="#" onclick="edit(1,event)">Editar</a>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="card locked" id="s2">
+      <div class="card-hdr"><h2>Entrega</h2><span class="num">2 de 3</span></div>
+      <div class="card-body" id="s2-body">
+        <div class="row c2">
+          <div class="field">
+            <input type="text" id="cep" placeholder="CEP" maxlength="9">
+            <span class="ferr" id="e-cep"></span>
+          </div>
+          <div class="field" style="justify-content:flex-end">
+            <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank"
+               style="font-size:12px;color:var(--green);padding-bottom:4px;text-align:right">Nao sei meu CEP</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <input type="text" id="rua" placeholder="Endereco">
+            <span class="ferr" id="e-rua"></span>
+          </div>
+        </div>
+        <div class="row c2">
+          <div class="field">
+            <input type="text" id="num" placeholder="Numero">
+            <span class="ferr" id="e-num"></span>
+          </div>
+          <div class="field">
+            <input type="text" id="comp" placeholder="Complemento (opcional)">
+          </div>
+        </div>
+        <div class="row c2">
+          <div class="field">
+            <input type="text" id="bairro" placeholder="Bairro">
+            <span class="ferr" id="e-bairro"></span>
+          </div>
+          <div class="field">
+            <input type="text" id="cidade" placeholder="Cidade">
+            <span class="ferr" id="e-cidade"></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <select id="estado">
+              <option value="">Estado</option>
+              <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
+              <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
+              <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
+              <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
+              <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+              <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+              <option>SP</option><option>SE</option><option>TO</option>
+            </select>
+            <span class="ferr" id="e-estado"></span>
+          </div>
+        </div>
+        <div class="frete-lbl">Escolha uma forma de entrega:</div>
+        <div class="frete-opts">
+          <label class="frete-opt on" id="frete-correios" onclick="selFrete(0)">
+            <input type="radio" name="frete" value="0" checked>
+            <img class="frete-opt-logo" src="/img/fretes/correios.png" alt="Correios">
+            <div class="frete-opt-info">
+              <div class="frete-opt-name">CORREIOS - Frete Gratis (4 a 10 dias uteis)</div>
+              <div class="frete-opt-desc">Entrega garantida</div>
+            </div>
+            <div class="frete-opt-price">Gratis</div>
+          </label>
+          <label class="frete-opt" id="frete-jadlog" onclick="selFrete(990)">
+            <input type="radio" name="frete" value="990">
+            <img class="frete-opt-logo" src="/img/fretes/jadlog.png" alt="Jadlog">
+            <div class="frete-opt-info">
+              <div class="frete-opt-name">JADLOG - Expresso (1 a 4 dias uteis)</div>
+              <div class="frete-opt-desc">Entrega garantida</div>
+            </div>
+            <div class="frete-opt-price">R$ 9,90</div>
+          </label>
+        </div>
+        <button class="btn" onclick="toStep3()">Ir para Pagamento</button>
+      </div>
+      <div class="done-bar" id="s2-done">
+        <svg width="15" height="15" fill="var(--green)" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3.5-3.5a.5.5 0 11.708-.708L6.5 10.293l6.646-6.647a.5.5 0 01.708 0z"/></svg>
+        <span id="s2-txt"></span>
+        <a href="#" onclick="edit(2,event)">Editar</a>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="card locked" id="s3">
+      <div class="card-hdr"><h2>Pagamento</h2><span class="num">3 de 3</span></div>
+      <div class="card-body" id="s3-body">
+
+        <div class="ptabs">
+          <button class="ptab" id="tab-pix" onclick="selPay('pix')">
+            <img src="/img/pagamentos/card-pix.svg" alt="PIX">
+            <span>PIX</span>
+          </button>
+          <button class="ptab" id="tab-boleto" onclick="selPay('boleto')">
+            <img src="/img/pagamentos/card-billet.svg" alt="Boleto">
+            <span>Boleto</span>
+          </button>
+          <button class="ptab" id="tab-cartao" onclick="selPay('cartao')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--vn-dark2)" stroke-width="2">
+              <rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+            </svg>
+            <span>Cartao</span>
+          </button>
+        </div>
+
+        <!-- PIX -->
+        <div class="pcont" id="pc-pix">
+          <div class="pix-box">
+            <strong>Como pagar com PIX:</strong>
+            <ul style="margin-top:8px">
+              <li><span class="n">1</span>Clique em "Gerar PIX" abaixo</li>
+              <li><span class="n">2</span>Abra seu banco no celular</li>
+              <li><span class="n">3</span>Escaneie o QR Code ou copie o codigo</li>
+              <li><span class="n">4</span>Confirmacao automatica em ate 1 min</li>
+            </ul>
+          </div>
+          <div class="disc-tag" id="pix-disc"></div>
+          <div id="pix-res" style="display:none">
+            <div class="qr-wrap">
+              <p style="font-size:14px;font-weight:600;margin-bottom:10px">Escaneie o QR Code</p>
+              <img id="qr-img" src="" alt="QR Code PIX">
+              <p>ou use o codigo Pix Copia e Cola</p>
+            </div>
+            <div class="copy-row">
+              <input type="text" id="pix-code" readonly>
+              <button class="copybtn" onclick="cp('pix-code',this)">Copiar</button>
+            </div>
+            <div class="timer">Expira em: <b id="pix-timer">30:00</b></div>
+            <p style="font-size:12px;color:var(--vn-muted);text-align:center;margin-top:10px">Aguardando confirmacao do pagamento...</p>
+          </div>
+          <div id="pix-btn">
+            <button class="btn" id="btn-pix" onclick="pay('pix')">Gerar PIX</button>
+          </div>
+        </div>
+
+        <!-- BOLETO -->
+        <div class="pcont" id="pc-boleto">
+          <div class="blt-box">
+            <strong>Atencao:</strong> O boleto pode levar ate <strong>3 dias uteis</strong> para ser compensado.
+            Seu pedido sera separado somente apos a confirmacao do pagamento.<br><br>
+            <strong>Vencimento:</strong> 3 dias uteis apos a emissao.
+          </div>
+          <div id="blt-res" style="display:none">
+            <a id="blt-link" href="#" target="_blank" class="blt-open">Abrir Boleto</a>
+            <div class="copy-row">
+              <input type="text" id="blt-code" readonly placeholder="Linha digitavel">
+              <button class="copybtn" onclick="cp('blt-code',this)">Copiar</button>
+            </div>
+            <p style="font-size:12px;color:var(--vn-muted);text-align:center;margin-top:10px">Guarde o codigo para pagar depois.</p>
+          </div>
+          <div id="blt-btn">
+            <button class="btn" id="btn-boleto" onclick="pay('boleto')">Gerar Boleto</button>
+          </div>
+        </div>
+
+        <!-- CARTAO -->
+        <div class="pcont" id="pc-cartao">
+          <div class="card-prev">
+            <div class="chip"></div>
+            <div class="card-num-p" id="pv-num">.... .... .... ....</div>
+            <div class="card-row-p">
+              <div><span>NOME</span><strong id="pv-name">NOME DO TITULAR</strong></div>
+              <div><span>VALIDADE</span><strong id="pv-exp">MM/AA</strong></div>
+            </div>
+          </div>
+          <div class="row"><div class="field">
+            <input type="text" id="cn" placeholder="Numero do cartao" maxlength="19" oninput="fmtCard(this)">
+            <span class="ferr" id="e-cn"></span>
+          </div></div>
+          <div class="row"><div class="field">
+            <input type="text" id="ch" placeholder="Nome igual ao cartao" oninput="document.getElementById('pv-name').textContent=this.value.toUpperCase()||'NOME DO TITULAR'">
+            <span class="ferr" id="e-ch"></span>
+          </div></div>
+          <div class="row c2">
+            <div class="field">
+              <input type="text" id="ce" placeholder="MM/AA" maxlength="5" oninput="fmtExp(this)">
+              <span class="ferr" id="e-ce"></span>
+            </div>
+            <div class="field">
+              <input type="text" id="cv" placeholder="CVV" maxlength="4" oninput="this.value=this.value.replace(/\D/g,'')">
+              <span class="ferr" id="e-cv"></span>
+            </div>
+          </div>
+          <div class="row"><div class="field">
+            <select id="parc"></select>
+          </div></div>
+          <div id="card-msg"></div>
+          <div id="card-res" style="display:none"></div>
+          <div id="card-btn">
+            <button class="btn" id="btn-card" onclick="pay('cartao')">Finalizar Compra</button>
+          </div>
+        </div>
+
+      </div><!-- /card-body -->
+    </div><!-- /step 3 -->
+
+  </div><!-- /steps -->
+</div>
+
+<footer class="ftr">
+  <p>Metodos de pagamento aceitos:</p>
+  <div class="badges">
+    <img src="/img/pagamentos/card-pix.svg" alt="PIX">
+    <img src="/img/pagamentos/card-billet.svg" alt="Boleto">
+    <img src="/img/pagamentos/card-visa.svg" alt="Visa">
+    <img src="/img/pagamentos/card-mastercard.svg" alt="Mastercard">
+    <img src="/img/pagamentos/card-elo.svg" alt="Elo">
+    <img src="/img/pagamentos/card-hiper.svg" alt="Hipercard">
+    <img src="/img/pagamentos/card-amex.svg" alt="Amex">
+    <img src="/img/pagamentos/card-aura.svg" alt="Aura">
+    <img src="/img/pagamentos/card-diners.svg" alt="Diners">
+    <img src="/img/pagamentos/card-discover.svg" alt="Discover">
+  </div>
+  <p style="font-size:11px;color:#aabdb6;margin-top:14px">
+    Duvidas? <a href="mailto:atendimento@lojavidanatural.com" style="color:var(--green)">atendimento@lojavidanatural.com</a> &nbsp;|&nbsp;
+    <a href="https://wa.me/5511970111782?text=Ola!%20Vim%20pelo%20carrinho%20da%20Vida%20Natural%20e%20preciso%20de%20ajuda%20para%20finalizar%20o%20meu%20pedido." target="_blank" rel="noopener" style="color:var(--green)">WhatsApp</a>
+  </p>
+</footer>
+
+<script>
+// ══════════════════════════════════════════
+// CONFIGURACAO
+// ══════════════════════════════════════════
+const CFG = {
+  publicKey:   'pk_VIDANATURAL_COLOQUE_AQUI',
+  apiEndpoint: '/api/order',
+  pixExpires:  1800,
+  installments: [
+    {n:1,  label:'1x sem juros',               rate:0},
+    {n:2,  label:'2x sem juros',               rate:0},
+    {n:3,  label:'3x sem juros',               rate:0},
+    {n:4,  label:'4x sem juros',               rate:0},
+    {n:6,  label:'6x sem juros',               rate:0},
+    {n:12, label:'12x com juros (2% a.m.)',    rate:0.02},
+  ],
+};
+
+// ══════════════════════════════════════════
+// PRODUTO — URL params
+// ══════════════════════════════════════════
+const P = (q => ({
+  nome:     q.get('nome')             || 'Produto Vida Natural',
+  variante: q.get('variante')         || '',
+  preco:    parseInt(q.get('preco'))  || 0,
+  qty:      parseInt(q.get('qty'))    || 1,
+  img:      q.get('img')              || '',
+}))(new URLSearchParams(location.search));
+
+// ══════════════════════════════════════════
+// HELPERS
+// ══════════════════════════════════════════
+function $$(cents) {
+  return 'R$ ' + (cents / 100).toFixed(2).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+}
+
+function calcPMT(total, rate, n) {
+  if (rate === 0) return total / n;
+  const r = rate;
+  return (total * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+}
+
+function getInstallment(n) {
+  return CFG.installments.find(x => x.n === n) || CFG.installments[0];
+}
+
+// ══════════════════════════════════════════
+// INIT
+// ══════════════════════════════════════════
+(function init() {
+  document.getElementById('sb-name').textContent = P.nome;
+  document.getElementById('sb-var').textContent  = P.variante;
+  document.getElementById('sb-qty').textContent  = P.qty;
+  document.getElementById('sb-img').src          = P.img;
+  document.getElementById('sb-lbl').textContent  = 'Produto (' + P.qty + ')';
+  document.getElementById('sb-unit').textContent = $$(P.preco);
+
+  const total = P.preco * P.qty;
+  document.getElementById('sb-price').textContent = $$(total);
+  document.getElementById('sb-total').textContent = $$(total);
+
+  const mobPrice = document.getElementById('mob-sum-price');
+  if (mobPrice) mobPrice.textContent = $$(total);
+
+  buildParcelas(total);
+  updatePixDiscount(total);
+})();
+
+function buildParcelas(total) {
+  const sel = document.getElementById('parc');
+  sel.innerHTML = '';
+  CFG.installments.forEach(inst => {
+    const pmt   = calcPMT(total, inst.rate, inst.n);
+    const label = inst.n + 'x de ' + $$(Math.round(pmt)) + (inst.rate > 0 ? ' (com juros)' : ' sem juros');
+    sel.add(new Option(label, inst.n));
+  });
+}
+
+function updatePixDiscount(total) {
+  const el = document.getElementById('pix-disc');
+  if (!el) return;
+  el.style.display = 'none';
+}
+
+// ══════════════════════════════════════════
+// STEPS
+// ══════════════════════════════════════════
+function toStep2() {
+  if (!v1()) return;
+  lock(1);
+  document.getElementById('s1-txt').textContent =
+    g('nome').split(' ')[0] + ' . ' + g('email');
+  unlock(2);
+  scrollTo('s2');
+  _saveCart('entrega');
+}
+
+function toStep3() {
+  if (!v2()) return;
+  lock(2);
+  document.getElementById('s2-txt').textContent =
+    g('rua') + ', ' + g('num') + ' - ' + g('cidade') + '/' + g('estado');
+  unlock(3);
+  selPay('pix');
+  scrollTo('s3');
+  _saveCart('pagamento');
+}
+
+function edit(n, e) {
+  e.preventDefault();
+  if (n === 1) { unlock(1); reLock(2); reLock(3); }
+  if (n === 2) { unlock(2); reLock(3); }
+}
+
+function lock(n) {
+  const s = document.getElementById('s' + n);
+  s.classList.add('locked');
+  document.getElementById('s' + n + '-body').style.display = 'none';
+  document.getElementById('s' + n + '-done').classList.add('show');
+}
+function unlock(n) {
+  const s = document.getElementById('s' + n);
+  s.classList.remove('locked');
+  document.getElementById('s' + n + '-body').style.display = '';
+}
+function reLock(n) {
+  const s = document.getElementById('s' + n);
+  s.classList.add('locked');
+  document.getElementById('s' + n + '-body').style.display = 'none';
+  document.getElementById('s' + n + '-done').classList.remove('show');
+}
+
+function scrollTo(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function toggleSumMob() {
+  const sb  = document.querySelector('.sidebar');
+  const arr = document.getElementById('mob-arr');
+  const open = sb.classList.toggle('mob-open');
+  arr.classList.toggle('open', open);
+}
+
+// ══════════════════════════════════════════
+// VALIDACAO
+// ══════════════════════════════════════════
+function v1() {
+  let ok = true;
+  const nome = g('nome').trim();
+  if (!nome || nome.split(/\s+/).length < 2)           { err('nome','Nome completo obrigatorio'); ok=false; } else clr('nome');
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(g('email'))) { err('email','E-mail invalido'); ok=false; }         else clr('email');
+  if (!cpfOk(g('cpf').replace(/\D/g,'')))              { err('cpf','CPF invalido'); ok=false; }              else clr('cpf');
+  if (g('fone').replace(/\D/g,'').length < 10)         { err('fone','Telefone invalido'); ok=false; }        else clr('fone');
+  return ok;
+}
+
+function v2() {
+  let ok = true;
+  [['cep','CEP'],['rua','Endereco'],['num','Numero'],['bairro','Bairro'],['cidade','Cidade'],['estado','Estado']]
+    .forEach(([f,l]) => {
+      if (!g(f).trim()) { err(f,'Informe o ' + l); ok=false; } else clr(f);
+    });
+  return ok;
+}
+
+function vCard() {
+  let ok = true;
+  if (g('cn').replace(/\D/g,'').length < 13) { err('cn','Numero invalido'); ok=false; }    else clr('cn');
+  if (!g('ch').trim())                        { err('ch','Informe o nome'); ok=false; }     else clr('ch');
+  if (!/^\d{2}\/\d{2}$/.test(g('ce')))       { err('ce','Validade invalida'); ok=false; }  else clr('ce');
+  if (g('cv').length < 3)                     { err('cv','CVV invalido'); ok=false; }       else clr('cv');
+  return ok;
+}
+
+function g(id)    { return document.getElementById(id).value; }
+function err(id, msg) { document.getElementById(id).classList.add('err'); document.getElementById('e-' + id).textContent = msg; }
+function clr(id)  { document.getElementById(id).classList.remove('err'); document.getElementById('e-' + id).textContent = ''; }
+
+function cpfOk(c) {
+  if (c.length !== 11 || /^(\d)\1+$/.test(c)) return false;
+  let s = 0; for (let i = 0; i < 9; i++) s += +c[i] * (10 - i);
+  let r = (s * 10) % 11; if (r === 10 || r === 11) r = 0; if (r !== +c[9]) return false;
+  s = 0; for (let i = 0; i < 10; i++) s += +c[i] * (11 - i);
+  r = (s * 10) % 11; if (r === 10 || r === 11) r = 0; return r === +c[10];
+}
+
+// ══════════════════════════════════════════
+// MASKS
+// ══════════════════════════════════════════
+document.getElementById('email').addEventListener('blur', function() {
+  if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.value.trim())) _saveCart('dados_pessoais');
+});
+
+document.getElementById('cpf').addEventListener('input', function() {
+  let v = this.value.replace(/\D/g, '').slice(0, 11);
+  v = v.replace(/(\d{3})(\d)/, '$1.$2')
+       .replace(/(\d{3})\.(\d{3})(\d)/, '$1.$2.$3')
+       .replace(/\.(\d{3})(\d)/, '.$1-$2');
+  this.value = v;
+});
+
+document.getElementById('fone').addEventListener('input', function() {
+  let v = this.value.replace(/\D/g, '').slice(0, 11);
+  this.value = v.length > 10
+    ? v.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3')
+    : v.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
+});
+
+document.getElementById('cep').addEventListener('input', function() {
+  let v = this.value.replace(/\D/g, '').slice(0, 8);
+  this.value = v.replace(/(\d{5})(\d)/, '$1-$2');
+  if (v.length === 8) viaCEP(v);
+});
+
+async function viaCEP(cep) {
+  try {
+    const r = await fetch('https://viacep.com.br/ws/' + cep + '/json/');
+    const d = await r.json();
+    if (d.erro) { err('cep', 'CEP nao encontrado'); return; }
+    document.getElementById('rua').value    = d.logradouro;
+    document.getElementById('bairro').value = d.bairro;
+    document.getElementById('cidade').value = d.localidade;
+    const sel = document.getElementById('estado');
+    for (const o of sel.options) if (o.value === d.uf) { o.selected = true; break; }
+    document.getElementById('num').focus();
+    clr('cep');
+  } catch(e) { err('cep', 'Erro ao buscar CEP'); }
+}
+
+// ══════════════════════════════════════════
+// FRETE
+// ══════════════════════════════════════════
+let shippingCost  = 0;
+let shippingLabel = 'Correios';
+
+function selFrete(cost) {
+  shippingCost  = cost;
+  shippingLabel = cost === 0 ? 'Correios' : 'Jadlog';
+  document.getElementById('frete-correios').classList.toggle('on', cost === 0);
+  document.getElementById('frete-jadlog').classList.toggle('on', cost > 0);
+  document.querySelector('#frete-correios input').checked = cost === 0;
+  document.querySelector('#frete-jadlog input').checked   = cost > 0;
+  updateSidebarTotal();
+}
+
+function updateSidebarTotal() {
+  const productTotal = P.preco * P.qty;
+  const grandTotal   = productTotal + shippingCost;
+  document.getElementById('sb-frete').textContent = shippingCost === 0 ? 'Gratis' : $$(shippingCost);
+  document.getElementById('sb-total').textContent = $$(grandTotal);
+  const mobPrice = document.getElementById('mob-sum-price');
+  if (mobPrice) mobPrice.textContent = $$(grandTotal);
+  buildParcelas(grandTotal);
+}
+
+// ══════════════════════════════════════════
+// PAYMENT TABS
+// ══════════════════════════════════════════
+let _payLocked = false;
+
+function selPay(m) {
+  if (_payLocked) return;
+  ['pix','boleto','cartao'].forEach(x => {
+    document.getElementById('tab-' + x).classList.remove('on');
+    document.getElementById('pc-' + x).classList.remove('on');
+  });
+  document.getElementById('tab-' + m).classList.add('on');
+  document.getElementById('pc-' + m).classList.add('on');
+}
+
+function lockPayTabs() {
+  _payLocked = true;
+  ['pix','boleto','cartao'].forEach(x => {
+    const t = document.getElementById('tab-' + x);
+    if (t) { t.style.opacity = '0.5'; t.style.cursor = 'default'; t.style.pointerEvents = 'none'; }
+  });
+}
+
+// ══════════════════════════════════════════
+// CARD PREVIEW
+// ══════════════════════════════════════════
+function fmtCard(el) {
+  let v = el.value.replace(/\D/g, '').slice(0, 16).replace(/(.{4})/g, '$1 ').trim();
+  el.value = v;
+  document.getElementById('pv-num').textContent = v || '.... .... .... ....';
+  if (v.replace(/\s/g, '').length >= 13) clr('cn');
+}
+
+function fmtExp(el) {
+  let v = el.value.replace(/\D/g, '').slice(0, 4);
+  if (v.length > 2) v = v.slice(0, 2) + '/' + v.slice(2);
+  el.value = v;
+  document.getElementById('pv-exp').textContent = v || 'MM/AA';
+  if (/^\d{2}\/\d{2}$/.test(v)) clr('ce');
+}
+
+// ══════════════════════════════════════════
+// PAGAMENTO
+// ══════════════════════════════════════════
+async function pay(method) {
+  const btnId = method === 'cartao' ? 'btn-card' : 'btn-' + method;
+  const btn   = document.getElementById(btnId);
+
+  if (method === 'cartao' && !vCard()) return;
+
+  btn.classList.add('spin'); btn.disabled = true;
+
+  try {
+    let cardToken = null;
+    if (method === 'cartao') cardToken = await tokenize();
+
+    const productTotal = P.preco * P.qty;
+    const grandTotal   = productTotal + shippingCost;
+    const parcN        = parseInt(g('parc') || '1');
+    const inst         = getInstallment(parcN);
+
+    let amount;
+    if (method === 'cartao' && inst.rate > 0) {
+      amount = Math.round(calcPMT(grandTotal, inst.rate, parcN) * parcN);
+    } else {
+      amount = grandTotal;
+    }
+
+    const phone = g('fone').replace(/\D/g, '');
+    const payload = {
+      method,
+      amount,
+      shipping_amount: shippingCost,
+      shipping_label:  shippingLabel,
+      card_token:      cardToken,
+      installments:    parcN,
+      pix_expires_in:  CFG.pixExpires,
+      observacao:      g('obs'),
+      utm:             _utm,
+      gclid:           _gclid || undefined,
+      customer: {
+        name:         g('nome').trim(),
+        email:        g('email').trim(),
+        document:     g('cpf').replace(/\D/g, ''),
+        phone_area:   phone.slice(0, 2),
+        phone_number: phone.slice(2),
+      },
+      address: {
+        line_1:   [g('num'), g('rua'), g('bairro')].filter(x => x && x.trim()).join(', ') || 'S/N',
+        line_2:   g('comp'),
+        zip_code: g('cep').replace(/\D/g, ''),
+        city:     g('cidade'),
+        state:    g('estado'),
+        country:  'BR',
+      },
+      items: [{
+        amount:      P.preco,
+        description: P.nome + (P.variante ? ' - ' + P.variante : ''),
+        quantity:    P.qty,
+      }],
+    };
+
+    const res  = await fetch(CFG.apiEndpoint, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify(payload),
+    });
+    const data = await res.json();
+    if (!res.ok || data.error) throw new Error(data.message || 'Erro ao processar pagamento');
+
+    handleResult(method, data, btn, amount);
+
+  } catch(e) {
+    showMsg(method, e.message, true);
+    btn.classList.remove('spin'); btn.disabled = false;
+  }
+}
+
+async function tokenize() {
+  const [mm, yy] = g('ce').split('/');
+  const res = await fetch(
+    'https://api.pagar.me/core/v5/tokens?appId=' + CFG.publicKey,
+    {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        type: 'card',
+        card: {
+          number:      g('cn').replace(/\D/g, ''),
+          holder_name: g('ch').toUpperCase().trim(),
+          exp_month:   parseInt(mm),
+          exp_year:    parseInt('20' + yy),
+          cvv:         g('cv'),
+        },
+      }),
+    }
+  );
+  const d = await res.json();
+  if (!res.ok) throw new Error('Dados do cartao invalidos');
+  return d.id;
+}
+
+function navigateTo(url) {
+  _markCartConverted();
+  location.href = url;
+}
+
+function handleResult(method, data, btn, amount) {
+  btn.classList.remove('spin'); btn.disabled = false;
+
+  if (method === 'pix') {
+    const tx = data.charges?.[0]?.last_transaction;
+    sessionStorage.setItem('vidanatural_pix', JSON.stringify({
+      qrImg:   tx?.qr_code_url || '',
+      qrCode:  tx?.qr_code     || '',
+      orderId: data.id,
+      expira:  CFG.pixExpires,
+      valor:   amount,
+    }));
+    _markCartConverted();
+    location.href = '/pix.html';
+  }
+  else if (method === 'boleto') {
+    const tx = data.charges?.[0]?.last_transaction;
+    sessionStorage.setItem('vidanatural_boleto', JSON.stringify({
+      line:    tx?.line || '',
+      pdf:     tx?.url  || tx?.pdf || '',
+      orderId: data.id,
+      valor:   amount,
+    }));
+    _markCartConverted();
+    location.href = '/boleto.html';
+  }
+  else if (method === 'cartao') {
+    const status = data.charges?.[0]?.status;
+    const ok = status === 'paid' || status === 'authorized_pending_capture';
+    if (ok) {
+      _markCartConverted();
+      location.href = '/sucesso.html?pedido=' + encodeURIComponent(data.id) + '&valor=' + ((amount || 0) / 100);
+    } else {
+      _markCartFailed();
+      document.getElementById('card-res').innerHTML =
+        '<div class="alert alert-err">Pagamento nao aprovado. Verifique os dados do cartao e tente novamente.</div>';
+      document.getElementById('card-res').style.display = '';
+    }
+  }
+}
+
+function showMsg(method, msg, isErr) {
+  const el = document.getElementById('card-msg');
+  if (method === 'cartao' && el) {
+    el.innerHTML = '<div class="alert ' + (isErr ? 'alert-err' : 'alert-ok') + '">' + msg + '</div>';
+  } else {
+    alert(msg);
+  }
+}
+
+// Copy helper
+function cp(inputId, btn) {
+  const el = document.getElementById(inputId);
+  el.select();
+  navigator.clipboard.writeText(el.value);
+  btn.textContent = 'Copiado!';
+  setTimeout(() => btn.textContent = 'Copiar', 2000);
+}
+
+// Success inline (para compatibilidade futura)
+function showSuccess(id) {
+  document.getElementById('steps').innerHTML =
+    '<div class="card"><div class="success-screen">' +
+    '<div class="success-icon"><svg width="32" height="32" fill="white" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3.5-3.5a.5.5 0 11.708-.708L6.5 10.293l6.646-6.647a.5.5 0 01.708 0z"/></svg></div>' +
+    '<h2>Pagamento Confirmado!</h2>' +
+    '<p>Obrigado pela sua compra! Voce recebera um e-mail de confirmacao em breve.</p>' +
+    '<p style="margin-top:10px;font-size:12px;color:var(--vn-muted)">Pedido: #' + id + '</p>' +
+    '</div></div>';
+}
+</script>
+
+<script>
+// ── UTM TRACKING ────────────────────────────────────────────────────────────
+const _utm = (function() {
+  const p    = new URLSearchParams(location.search);
+  const keys = ['source','medium','campaign','content','term'];
+  const stored = {};
+  try { Object.assign(stored, JSON.parse(sessionStorage.getItem('_vn_utm') || '{}')); } catch {}
+  const fresh = {};
+  keys.forEach(k => { const v = p.get('utm_' + k); if (v) fresh[k] = v; });
+  const merged = Object.keys(fresh).length ? fresh : stored;
+  if (Object.keys(merged).length) sessionStorage.setItem('_vn_utm', JSON.stringify(merged));
+  return merged;
+})();
+
+// ── GCLID TRACKING ──────────────────────────────────────────────────────────
+const _gclid = (function() {
+  const p       = new URLSearchParams(location.search);
+  const fromUrl = p.get('gclid');
+  if (fromUrl) { sessionStorage.setItem('_vn_gclid', fromUrl); return fromUrl; }
+  try {
+    const ck = document.cookie.split(';').find(c => c.trim().startsWith('_gcl_aw='));
+    if (ck) {
+      const parts = ck.split('=')[1].split('.');
+      const id    = parts[parts.length - 1];
+      if (id) { sessionStorage.setItem('_vn_gclid', id); return id; }
+    }
+  } catch(e) {}
+  return sessionStorage.getItem('_vn_gclid') || '';
+})();
+
+// ── ABANDONED CART ───────────────────────────────────────────────────────────
+const _cartId = (function() {
+  const fromUrl = new URLSearchParams(location.search).get('cartId');
+  if (fromUrl && /^[a-zA-Z0-9_-]{5,80}$/.test(fromUrl)) {
+    sessionStorage.setItem('vn_cart_id', fromUrl);
+    fetch('/api/cart/get?cartId=' + encodeURIComponent(fromUrl))
+      .then(r => r.ok ? r.json() : null)
+      .then(cart => {
+        if (!cart) return;
+        const c = cart.customer || {};
+        if (c.name)     document.getElementById('nome').value  = c.name;
+        if (c.email)    document.getElementById('email').value = c.email;
+        if (c.document) {
+          const v = c.document;
+          document.getElementById('cpf').value = v.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+        }
+        if (c.phone) {
+          const ph = c.phone;
+          document.getElementById('fone').value = ph.length > 10
+            ? ph.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3')
+            : ph.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
+        }
+      }).catch(() => {});
+    return fromUrl;
+  }
+  let id = sessionStorage.getItem('vn_cart_id');
+  if (!id) {
+    id = 'vn_' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+    sessionStorage.setItem('vn_cart_id', id);
+  }
+  return id;
+})();
+
+function _cartPayload(step) {
+  const productTotal = P.preco * P.qty;
+  const grand = productTotal + (typeof shippingCost !== 'undefined' ? shippingCost : 0);
+  const payload = {
+    cartId:      _cartId,
+    step,
+    totalAmount: grand,
+    checkoutUrl: window.location.href,
+    customer: {
+      name:     (document.getElementById('nome')?.value  || '').trim(),
+      email:    (document.getElementById('email')?.value || '').trim(),
+      phone:    (document.getElementById('fone')?.value  || ''),
+      document: (document.getElementById('cpf')?.value   || ''),
+    },
+    items: [{ description: P.nome + (P.variante ? ' - ' + P.variante : ''), quantity: P.qty, amount: P.preco }],
+  };
+  if (step !== 'dados_pessoais') {
+    payload.address = {
+      cep:   (document.getElementById('cep')?.value    || ''),
+      line1: [(document.getElementById('num')?.value    || ''), (document.getElementById('rua')?.value || ''), (document.getElementById('bairro')?.value || '')].filter(Boolean).join(', '),
+      city:  (document.getElementById('cidade')?.value || ''),
+      state: (document.getElementById('estado')?.value || ''),
+    };
+  }
+  return payload;
+}
+
+function _saveCart(step) {
+  try {
+    fetch('/api/cart/save', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify(_cartPayload(step)),
+    }).catch(() => {});
+  } catch(e) {}
+}
+
+function _markCartConverted() {
+  try {
+    fetch('/api/cart/save', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ cartId: _cartId, converted: true }),
+    }).catch(() => {});
+    sessionStorage.removeItem('vn_cart_id');
+  } catch(e) {}
+}
+
+function _markCartFailed() {
+  try {
+    fetch('/api/cart/save', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ ..._cartPayload('pagamento'), cardFailed: true }),
+    }).catch(() => {});
+  } catch(e) {}
+}
+
+// ── ANALYTICS PING ──────────────────────────────────────────────────────────
+(function() {
+  let sid = sessionStorage.getItem('_vn_sid');
+  if (!sid) {
+    sid = Math.random().toString(36).slice(2) + Math.random().toString(36).slice(2);
+    sessionStorage.setItem('_vn_sid', sid);
+  }
+  function ping() {
+    fetch('/api/analytics/ping', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ sid }),
+    }).catch(() => {});
+  }
+  ping();
+  setInterval(ping, 30000);
+})();
+</script>
+</body>
+</html>

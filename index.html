@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vida Natural | Suplementos Naturais com Frete Gratis</title>
+<meta name="description" content="Suplementos e produtos naturais com qualidade certificada. Frete Gratis e entrega rapida para todo o Brasil. Ate 69% OFF nas melhores formulas naturais.">
+<link rel="canonical" href="https://lojavidanatural.com/">
+<meta property="og:type"        content="website">
+<meta property="og:site_name"   content="Vida Natural">
+<meta property="og:title"       content="Vida Natural | Suplementos Naturais com Frete Gratis">
+<meta property="og:description" content="Suplementos e produtos naturais com qualidade certificada. Frete Gratis e entrega rapida para todo o Brasil.">
+<meta property="og:url"         content="https://lojavidanatural.com/">
+<meta property="og:image"       content="https://lojavidanatural.com/img/og-vidanatural.jpg">
+<meta name="twitter:card"       content="summary_large_image">
+<meta name="twitter:title"      content="Vida Natural | Suplementos Naturais com Frete Gratis">
+<meta name="twitter:description" content="Suplementos e produtos naturais com qualidade certificada. Frete Gratis para todo o Brasil.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Vida Natural","url":"https://lojavidanatural.com","logo":"https://lojavidanatural.com/img/faviconvidanatural.png","contactPoint":{"@type":"ContactPoint","email":"atendimento@lojavidanatural.com","contactType":"customer service","availableLanguage":"Portuguese"},"sameAs":[]},{"@type":"WebSite","name":"Vida Natural","url":"https://lojavidanatural.com","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://lojavidanatural.com/products/{search_term_string}"},"query-input":"required name=search_term_string"}}]}
+</script>
+<link rel="icon" href="/img/faviconvidanatural.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   CSS VARIABLES
+   ============================================================ */
+:root {
+  --vn-dark:    #062b2b;
+  --vn-dark2:   #0d5045;
+  --vn-mid:     #1a8a74;
+  --vn-accent:  #3ec4ad;
+  --vn-light:   #7ed4c8;
+  --vn-pale:    #c5f0ea;
+  --vn-sage:    #ecf9f8;
+  --vn-gold:    #C9A84C;
+  --vn-text:    #0d2e28;
+  --vn-muted:   #4a7a72;
+  --vn-white:   #FFFFFF;
+  --vn-border:  #c0e8e3;
+  --font:       'Poppins', sans-serif;
+  --radius:     14px;
+  --shadow-sm:  0 2px 12px rgba(13,40,24,.08);
+  --shadow-md:  0 6px 28px rgba(13,40,24,.12);
+  --shadow-lg:  0 16px 48px rgba(13,40,24,.18);
+  --transition: .22s cubic-bezier(.4,0,.2,1);
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  background: var(--vn-sage);
+  color: var(--vn-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.hdr {
+  background: var(--vn-white);
+  border-bottom: 1px solid var(--vn-border);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  box-shadow: 0 2px 20px rgba(13,40,24,.07);
+}
+.hdr-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 28px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.hdr-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.hdr-logo-img {
+  height: 56px;
+  width: auto;
+  flex-shrink: 0;
+  display: block;
+}
+@media (max-width: 768px) {
+  .hdr-logo-img { height: 44px; }
+}
+
+/* Nav */
+.hdr-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+}
+.hdr-nav a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--vn-muted);
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: color var(--transition), background var(--transition);
+}
+.hdr-nav a:hover {
+  color: var(--vn-mid);
+  background: var(--vn-sage);
+}
+
+/* Mobile nav toggle */
+.hdr-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 6px;
+  border: none;
+  background: none;
+}
+.hdr-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--vn-dark2);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  background: linear-gradient(145deg, var(--vn-dark) 0%, var(--vn-dark2) 55%, #1a6b62 100%);
+  color: var(--vn-white);
+  padding: 96px 28px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background orbs */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(82,196,160,.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -120px;
+  left: -60px;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(201,168,76,.08) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.hero-content {}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--vn-accent);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+.hero-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--vn-accent);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .5; transform: scale(1.4); }
+}
+
+.hero h1 {
+  font-size: clamp(32px, 4.5vw, 58px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+.hero h1 em {
+  font-style: normal;
+  color: var(--vn-accent);
+}
+
+.hero-desc {
+  font-size: clamp(15px, 1.8vw, 18px);
+  color: rgba(255,255,255,.75);
+  max-width: 480px;
+  margin-bottom: 36px;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--vn-accent);
+  color: var(--vn-dark);
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 16px 32px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 8px 24px rgba(82,196,160,.35);
+}
+.hero-cta:hover {
+  background: var(--vn-light);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(82,196,160,.45);
+}
+.hero-cta svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* Hero badges */
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 36px;
+}
+.hbadge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.2);
+  backdrop-filter: blur(8px);
+  border-radius: 100px;
+  padding: 8px 16px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: rgba(255,255,255,.9);
+}
+.hbadge svg {
+  width: 14px;
+  height: 14px;
+  color: var(--vn-accent);
+  flex-shrink: 0;
+}
+
+/* Hero visual side */
+.hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-visual-inner {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, rgba(82,196,160,.18) 0%, rgba(27,67,50,.35) 100%);
+  border: 1px solid rgba(82,196,160,.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.hero-visual-inner::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  border: 1px dashed rgba(82,196,160,.15);
+  animation: spin 20s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.hero-lotus-svg {
+  width: 180px;
+  height: 180px;
+  opacity: .9;
+}
+
+/* ============================================================
+   TRUST BAR
+   ============================================================ */
+.trust {
+  background: var(--vn-white);
+  border-top: 1px solid var(--vn-border);
+  border-bottom: 1px solid var(--vn-border);
+  padding: 24px 28px;
+}
+.trust-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 32px;
+  border-right: 1px solid var(--vn-border);
+  flex: 1 1 180px;
+  min-width: 0;
+}
+.trust-item:last-child { border-right: none; }
+.trust-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--vn-pale);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.trust-icon svg {
+  width: 20px;
+  height: 20px;
+  color: var(--vn-mid);
+}
+.trust-label {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--vn-text);
+  line-height: 1.3;
+}
+.trust-sub {
+  font-size: 11.5px;
+  color: var(--vn-muted);
+  font-weight: 400;
+}
+
+/* ============================================================
+   SECTION SHARED
+   ============================================================ */
+.section {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 72px 28px;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+.section-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--vn-mid);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.section-title {
+  font-size: clamp(24px, 3vw, 38px);
+  font-weight: 800;
+  color: var(--vn-text);
+  letter-spacing: -.5px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.section-sub {
+  font-size: 16px;
+  color: var(--vn-muted);
+  max-width: 520px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+/* ============================================================
+   PRODUCT GRID
+   ============================================================ */
+.produtos-section {
+  padding: 72px 0;
+}
+.produtos-bg {
+  background: var(--vn-sage);
+}
+.produtos-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
+  gap: 24px;
+}
+
+/* ============================================================
+   PRODUCT CARD
+   ============================================================ */
+.card {
+  background: var(--vn-white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--vn-pale);
+}
+
+.card-img-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  background: var(--vn-sage);
+}
+.card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s cubic-bezier(.4,0,.2,1);
+}
+.card:hover .card-img-wrap img {
+  transform: scale(1.03);
+}
+
+/* Card badges */
+.card-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 5px 12px;
+  border-radius: 100px;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--vn-white);
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  line-height: 1;
+  z-index: 1;
+}
+
+/* Card body */
+.card-body {
+  padding: 20px 20px 22px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.card-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--vn-text);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+.card-sub {
+  font-size: 12.5px;
+  color: var(--vn-muted);
+  margin-bottom: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.card-pricing {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+.card-from {
+  font-size: 11px;
+  color: var(--vn-muted);
+  font-weight: 500;
+}
+.card-price {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--vn-mid);
+  letter-spacing: -.5px;
+}
+.card-compare {
+  font-size: 13px;
+  color: #b0bfb8;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+.card-frete {
+  font-size: 12px;
+  color: var(--vn-mid);
+  font-weight: 600;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.card-frete svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+}
+
+.card-cta {
+  margin-top: auto;
+  display: block;
+  width: 100%;
+  padding: 13px 20px;
+  background: var(--vn-dark2);
+  color: var(--vn-white);
+  border: none;
+  border-radius: 10px;
+  font-family: var(--font);
+  font-size: 13.5px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+  text-transform: uppercase;
+  letter-spacing: .6px;
+}
+.card-cta:hover {
+  background: var(--vn-mid);
+  transform: translateY(-1px);
+}
+
+/* ============================================================
+   ABOUT SECTION
+   ============================================================ */
+.about-section {
+  background: var(--vn-white);
+  padding: 0;
+}
+.about-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 80px 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.about-visual {
+  position: relative;
+}
+.about-card-bg {
+  background: linear-gradient(145deg, var(--vn-dark) 0%, var(--vn-dark2) 100%);
+  border-radius: 24px;
+  padding: 48px 40px;
+  color: var(--vn-white);
+  position: relative;
+  overflow: hidden;
+}
+.about-card-bg::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(82,196,160,.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.about-card-bg::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(201,168,76,.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.about-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  position: relative;
+  z-index: 1;
+}
+.about-stat {
+  text-align: center;
+  padding: 24px 16px;
+  background: rgba(255,255,255,.07);
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.12);
+}
+.about-stat-num {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--vn-accent);
+  line-height: 1;
+  margin-bottom: 6px;
+  letter-spacing: -1px;
+}
+.about-stat-label {
+  font-size: 12px;
+  color: rgba(255,255,255,.7);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.about-content {}
+.about-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--vn-mid);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.about-eyebrow::before {
+  content: '';
+  width: 28px;
+  height: 2px;
+  background: var(--vn-accent);
+  border-radius: 2px;
+}
+.about-title {
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 800;
+  color: var(--vn-text);
+  line-height: 1.2;
+  letter-spacing: -.5px;
+  margin-bottom: 20px;
+}
+.about-title span {
+  color: var(--vn-mid);
+}
+.about-body {
+  font-size: 15.5px;
+  color: var(--vn-muted);
+  line-height: 1.75;
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+.about-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 28px;
+}
+.about-pillar {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--vn-sage);
+  border-radius: 12px;
+  border-left: 3px solid var(--vn-accent);
+}
+.about-pillar-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--vn-pale);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.about-pillar-icon svg {
+  width: 18px;
+  height: 18px;
+  color: var(--vn-mid);
+}
+.about-pillar-text strong {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--vn-text);
+  margin-bottom: 2px;
+}
+.about-pillar-text span {
+  font-size: 12.5px;
+  color: var(--vn-muted);
+  line-height: 1.5;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.ftr {
+  background: var(--vn-dark2);
+  color: var(--vn-white);
+  padding: 56px 28px 0;
+}
+.ftr-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.ftr-top {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.ftr-brand {}
+.ftr-brand-logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--vn-white);
+  letter-spacing: -.3px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ftr-brand-logo span {
+  color: var(--vn-accent);
+}
+.ftr-brand-logo svg {
+  width: 32px;
+  height: 32px;
+  opacity: .9;
+}
+.ftr-brand-desc {
+  font-size: 13.5px;
+  color: rgba(255,255,255,.55);
+  line-height: 1.7;
+  max-width: 300px;
+  margin-bottom: 24px;
+}
+.ftr-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: rgba(255,255,255,.65);
+  margin-bottom: 10px;
+  transition: color var(--transition);
+}
+.ftr-contact-item:hover { color: var(--vn-accent); }
+.ftr-contact-item svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  opacity: .8;
+}
+
+.ftr-col h4 {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: rgba(255,255,255,.5);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 18px;
+}
+.ftr-col a {
+  display: block;
+  font-size: 13.5px;
+  color: rgba(255,255,255,.65);
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color var(--transition);
+}
+.ftr-col a:hover { color: var(--vn-accent); }
+
+.ftr-payments {
+  margin-top: 16px;
+}
+.ftr-payments h5 {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.ftr-pay-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.ftr-pay-icon {
+  background: rgba(255,255,255,.1);
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,.65);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.ftr-disclaimer {
+  padding: 24px 0 16px;
+  font-size: 11px;
+  color: rgba(255,255,255,.35);
+  line-height: 1.7;
+  border-top: 1px solid rgba(255,255,255,.06);
+  margin-top: 0;
+}
+.ftr-disclaimer strong {
+  color: rgba(255,255,255,.5);
+}
+
+.ftr-bottom {
+  padding: 18px 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 12px;
+  color: rgba(255,255,255,.35);
+}
+.ftr-bottom a {
+  color: rgba(255,255,255,.35);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.ftr-bottom a:hover { color: rgba(255,255,255,.65); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+  .hero-badges { justify-content: center; }
+  .hero-desc { margin: 0 auto 36px; }
+  .hero-visual { display: none; }
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .ftr-top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hdr-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: var(--vn-white);
+    border-bottom: 1px solid var(--vn-border);
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 0 16px;
+    box-shadow: 0 8px 24px rgba(6,43,43,.12);
+    z-index: 199;
+  }
+  .hdr-nav.open { display: flex; }
+  .hdr-nav a { padding: 12px 24px; border-radius: 0; font-size: 15px; color: var(--vn-text); }
+  .hdr-toggle { display: flex; }
+  .hdr { position: sticky; }
+  .hdr-inner { padding: 0 20px; height: 60px; position: relative; }
+  .hero { padding: 64px 20px 56px; }
+  .produtos-inner { padding: 0 16px; }
+  .section { padding: 52px 20px; }
+  .about-inner { padding: 52px 20px; }
+  .ftr { padding: 48px 20px 0; }
+  .ftr-top {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding-bottom: 36px;
+  }
+  .ftr-bottom { flex-direction: column; text-align: center; }
+  .trust-item { border-right: none; border-bottom: 1px solid var(--vn-border); }
+  .trust-item:last-child { border-bottom: none; }
+  .about-stat-grid { grid-template-columns: 1fr 1fr; }
+  .trust-inner { flex-direction: column; align-items: stretch; }
+}
+
+@media (max-width: 480px) {
+  .grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .card-body { padding: 14px 14px 16px; }
+  .card-name { font-size: 13.5px; }
+  .card-price { font-size: 18px; }
+  .card-cta { font-size: 12px; padding: 11px 14px; }
+}
+
+@media (max-width: 360px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   GOLD ACCENT UTILITY
+   ============================================================ */
+.gold { color: var(--vn-gold); }
+</style>
+<script src="/js/tracking.js"></script>
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="hdr">
+  <div class="hdr-inner">
+    <a class="hdr-logo" href="/">
+      <img class="hdr-logo-img" src="/img/logovidanatural.png" alt="Vida Natural">
+    </a>
+
+    <ul class="hdr-nav" id="hdr-nav">
+      <li><a href="/">Inicio</a></li>
+      <li><a href="#produtos">Produtos</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+
+    <button class="hdr-toggle" aria-label="Menu" onclick="document.getElementById('hdr-nav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-dot"></span>
+        Formulas 100% Naturais
+      </div>
+      <h1>Natureza que<br><em>cuida de voce</em></h1>
+      <p class="hero-desc">
+        Suplementos naturais formulados com o melhor da natureza para sua saude, bem-estar e vitalidade. Qualidade certificada, resultados reais.
+      </p>
+      <a class="hero-cta" href="#produtos">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        Ver Todos os Produtos
+      </a>
+      <div class="hero-badges">
+        <span class="hbadge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Frete Gratis
+        </span>
+        <span class="hbadge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Garantia de 30 Dias
+        </span>
+        <span class="hbadge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          Pagamento Seguro
+        </span>
+        <span class="hbadge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Entrega Rapida
+        </span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-visual-inner">
+        <!-- Large decorative lotus -->
+        <svg class="hero-lotus-svg" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Outer petals -->
+          <path d="M90 160C90 160 48 128 48 96C48 74 66 58 90 58C114 58 132 74 132 96C132 128 90 160 90 160Z" fill="#2E8B6F" opacity=".7"/>
+          <path d="M90 160C90 160 36 120 36 84C36 62 50 48 68 54C78 57.5 86 68 90 82C94 68 102 57.5 112 54C130 48 144 62 144 84C144 120 90 160 90 160Z" fill="#52C4A0" opacity=".65"/>
+          <!-- Inner petals -->
+          <path d="M90 152C90 152 54 120 54 92C54 74 68 62 90 62C112 62 126 74 126 92C126 120 90 152 90 152Z" fill="#1B4332" opacity=".85"/>
+          <!-- Side petals -->
+          <path d="M66 112C66 112 28 104 26 76C25 62 34 54 44 57C54 60 62 80 66 112Z" fill="#52C4A0" opacity=".45"/>
+          <path d="M114 112C114 112 152 104 154 76C155 62 146 54 136 57C126 60 118 80 114 112Z" fill="#52C4A0" opacity=".45"/>
+          <!-- Top petal -->
+          <path d="M90 96C90 96 78 72 82 54C84 44 88 38 90 36C92 38 96 44 98 54C102 72 90 96 90 96Z" fill="#52C4A0" opacity=".55"/>
+          <!-- Center -->
+          <circle cx="90" cy="94" r="14" fill="#2E8B6F" opacity=".9"/>
+          <circle cx="90" cy="94" r="8" fill="#95D5B2"/>
+          <circle cx="90" cy="94" r="4" fill="#D8F3DC"/>
+          <!-- Gold accent dots -->
+          <circle cx="90" cy="72" r="3" fill="#C9A84C" opacity=".8"/>
+          <circle cx="76" cy="98" r="2.5" fill="#C9A84C" opacity=".6"/>
+          <circle cx="104" cy="98" r="2.5" fill="#C9A84C" opacity=".6"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TRUST BAR
+     ============================================================ -->
+<div class="trust">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <div class="trust-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+        </svg>
+      </div>
+      <div>
+        <div class="trust-label">Envio em 24 horas</div>
+        <div class="trust-sub">Pedidos aprovados ate 18h</div>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>
+        </svg>
+      </div>
+      <div>
+        <div class="trust-label">Garantia de 30 Dias</div>
+        <div class="trust-sub">Devolucao sem burocracia</div>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+        </svg>
+      </div>
+      <div>
+        <div class="trust-label">Pagamento Seguro</div>
+        <div class="trust-sub">Pix, cartao e boleto</div>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="trust-label">Formulas Naturais</div>
+        <div class="trust-sub">Ingredientes certificados</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     PRODUTOS
+     ============================================================ -->
+<section class="produtos-section produtos-bg" id="produtos">
+  <div class="produtos-inner">
+    <div class="section-header">
+      <div class="section-eyebrow">Catalogo</div>
+      <h2 class="section-title">Nossos Produtos</h2>
+      <p class="section-sub">Formulas naturais desenvolvidas para apoiar sua saude de forma completa e eficaz.</p>
+    </div>
+    <div class="grid" id="produtos-grid">
+      <!-- Gerado por JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SOBRE
+     ============================================================ -->
+<section class="about-section" id="sobre">
+  <div class="about-inner">
+
+
+    <div class="about-content">
+      <div class="about-eyebrow">Quem somos</div>
+      <h2 class="about-title">A <span>Vida Natural</span> nasceu da crença no poder da natureza</h2>
+      <p class="about-body">
+        Acreditamos que o corpo humano responde melhor quando cuidado com ingredientes que a propria natureza oferece. Por isso, cada produto da Vida Natural e desenvolvido com ativo naturais selecionados, formulados para trazer resultado real com seguranca e transparencia.
+      </p>
+      <p class="about-body">
+        Nosso compromisso e com a sua saude. Nao vendemos promessas: vendemos formulas baseadas na ciencia da natureza, com qualidade verificada e entrega confiavel para todo o Brasil.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="ftr" id="contato">
+  <div class="ftr-inner">
+    <div class="ftr-top">
+
+      <div class="ftr-brand">
+        <div class="ftr-brand-logo">
+          <img src="/img/logovidanatural.png" alt="Vida Natural" style="height:52px;width:auto;background:#fff;border-radius:8px;padding:4px 8px;display:block;">
+        </div>
+        <p class="ftr-brand-desc">
+          Suplementos naturais com qualidade certificada para sua saude e bem-estar. Frete Gratis para todo o Brasil.
+        </p>
+        <a class="ftr-contact-item" href="mailto:atendimento@lojavidanatural.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+          atendimento@lojavidanatural.com
+        </a>
+        <div class="ftr-payments" style="margin-top:20px">
+          <h5>Formas de Pagamento</h5>
+          <div class="ftr-pay-icons">
+            <span class="ftr-pay-icon">Pix</span>
+            <span class="ftr-pay-icon">Credito</span>
+            <span class="ftr-pay-icon">Debito</span>
+            <span class="ftr-pay-icon">Boleto</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ftr-col">
+        <h4>Politicas</h4>
+        <a href="#">Politica de Privacidade e Cookies</a>
+        <a href="#">Termos de Uso</a>
+        <a href="#">Politica de Reembolso e Devolucao</a>
+        <a href="#">Politica de Frete</a>
+        <a href="#">Aviso Legal</a>
+      </div>
+
+      <div class="ftr-col">
+        <h4>Navegacao</h4>
+        <a href="/">Inicio</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre Nos</a>
+        <a href="#contato">Contato</a>
+      </div>
+
+    </div>
+
+    <div class="ftr-disclaimer">
+      <strong>Aviso importante:</strong> Os produtos comercializados neste site sao suplementos alimentares. Nao sao medicamentos e nao se destinam a diagnosticar, tratar, curar ou prevenir qualquer doenca. Consulte um profissional de saude antes de iniciar qualquer suplementacao. Os resultados podem variar de pessoa para pessoa.
+    </div>
+
+    <div class="ftr-bottom">
+      <span>© 2025 Vida Natural LTDA. Todos os direitos reservados.</span>
+      <span>lojavidanatural.com</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     JS — renderiza produtos a partir de /js/produtos.js
+     ============================================================ -->
+<script src="/js/produtos.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  function formatBRL(centavos) {
+    return (centavos / 100).toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL'
+    });
+  }
+
+  function menorPreco(variantes) {
+    if (!variantes || variantes.length === 0) return null;
+    return variantes.reduce(function (min, v) {
+      return v.preco < min.preco ? v : min;
+    }, variantes[0]);
+  }
+
+  var CATALOGO = [
+    'travesseiro-ortopedico',
+    'garrafa-termica-preta',
+    'massagem-profissional-eletrica',
+    'rolo-de-pedra',
+    'palmilhas-de-gel-ortop-dicas',
+    'escova-massageadora-capilar-de-silicone',
+    'massageador-relaxante-de-pescoco-e-ombro',
+    'esponja-de-limpeza-facial-eletrica',
+    'umidificador-de-ar-port-til',
+    'pincel-de-barbear-com-suporte',
+    'escova-de-dentes-de-bambu',
+    'pente-de-madeira-antifrizz',
+    'roupao-de-banho-unissex',
+    'touca-de-cetim-anti-frizz'
+  ];
+
+  function renderCards() {
+    var grid = document.getElementById('produtos-grid');
+    if (!grid) return;
+    if (typeof PRODUTOS === 'undefined' || !Array.isArray(PRODUTOS)) return;
+
+    var fragment = document.createDocumentFragment();
+
+    PRODUTOS.forEach(function (p) {
+      if (CATALOGO.indexOf(p.slug) === -1) return;
+      if (!p.variantes || p.variantes.length === 0) return;
+
+      var melhor = menorPreco(p.variantes);
+      var imagem = (p.imagens && p.imagens.length > 0) ? p.imagens[0] : '/img/placeholder.png';
+
+      var card = document.createElement('article');
+      card.className = 'card';
+
+      var badgeHtml = '';
+      if (p.badge) {
+        badgeHtml = '<span class="card-badge" style="background:' + (p.badgeColor || '#15a731') + '">' + p.badge + '</span>';
+      }
+
+      var compareHtml = '';
+      if (melhor.comparar && melhor.comparar > 0) {
+        compareHtml = '<span class="card-compare">De ' + formatBRL(melhor.comparar) + '</span>';
+      }
+
+      card.innerHTML =
+        '<div class="card-img-wrap">' +
+          '<img src="' + imagem + '" alt="' + p.nome + '" loading="lazy">' +
+          badgeHtml +
+        '</div>' +
+        '<div class="card-body">' +
+          '<div class="card-name">' + p.nome + '</div>' +
+          '<div class="card-sub">' + (p.subtitulo || '') + '</div>' +
+          '<div class="card-pricing">' +
+            '<span class="card-from">A partir de</span>' +
+            '<span class="card-price">' + formatBRL(melhor.preco) + '</span>' +
+            compareHtml +
+          '</div>' +
+          '<div class="card-frete">' +
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">' +
+              '<polyline points="20 6 9 17 4 12"/>' +
+            '</svg>' +
+            'Frete Gratis' +
+          '</div>' +
+          '<a class="card-cta" href="/products/' + p.slug + '">Ver Produto</a>' +
+        '</div>';
+
+      fragment.appendChild(card);
+    });
+
+    grid.appendChild(fragment);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderCards);
+  } else {
+    renderCards();
+  }
+})();
+</script>
+<a href="https://wa.me/5511970111782?text=Ola!%20Vim%20pelo%20site%20da%20Vida%20Natural%20e%20gostaria%20de%20mais%20informacoes." target="_blank" rel="noopener" aria-label="WhatsApp" style="position:fixed;bottom:24px;right:24px;z-index:9999;width:56px;height:56px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.5);transition:transform .2s,box-shadow .2s" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 28px rgba(37,211,102,.65)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 20px rgba(37,211,102,.5)'">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.878-1.42A9.952 9.952 0 0012 22c5.523 0 10-4.477 10-10S17.521 2 12 2z"/></svg>
+</a>
+</body>
+</html>

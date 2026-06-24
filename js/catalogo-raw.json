@@ -1,0 +1,348 @@
+[
+  {
+    "slug": "rolo-de-pedra",
+    "nome": "Rolo de Pedra",
+    "titulo": "Rolo de Pedra",
+    "subtitulo": "MAIS VENDIDO | EXCLUSIVIDADE",
+    "descricao_html": "<p>Rolo de Pedra — acessorio de beleza exclusivo da Loja Vida Natural.</p>\n<ul>\n  <li>Frete Gratis Via Correios Expresso valido para todo o Brasil</li>\n  <li>Satisfacao garantida ou dinheiro de volta</li>\n  <li>Devolucoes Gratuitas — Estorno de 100% do seu dinheiro — 7 dias apos o recebimento</li>\n</ul>\n<p>Suas informacoes de pagamento sao processadas com seguranca. Nao armazenamos dados do cartao de credito nem temos acesso aos numeros do seu cartao.</p>",
+    "imagens": [
+      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/rolo-de-pedra-3417351.jpg",
+      "https://www.lojavidanatural.com/cdn/shop/files/rolo-de-pedra-3417351_700x.jpg?v=1780065845",
+      "https://www.lojavidanatural.com/cdn/shop/files/rolo-de-pedra-3417351_1024x.jpg?v=1780065845"
+    ],
+    "preco_original": 5590,
+    "preco_promo": 2590,
+    "badge": "MAIS VENDIDO",
+    "categoria": "estetica",
+    "meta_titulo": "Rolo de Pedra | Loja Vida Natural",
+    "meta_descricao": "Rolo de Pedra — exclusividade Vida Natural. De R$ 55,90 por R$ 25,90. Frete Gratis para todo o Brasil. Satisfacao garantida ou dinheiro de volta.",
+    "variantes": [],
+    "notas": "Produto consta como Esgotado (out of stock) no momento da extracao em 24/06/2026. Produto sem variantes — oferta unica. PIX: R$ 24,61 (5% de desconto). Parcelamento em ate 12x de R$ 2,59 no cartao. Badge adicional: EXCLUSIVIDADE. A pagina nao contem meta title nem meta description explicitos no HTML — os valores informados sao inferidos do conteudo da pagina. A descricao do produto no body_html do Shopify esta vazia; o texto de marketing da pagina e composto apenas pelos selos de confianca e diferenciais da loja."
+  },
+  {
+    "slug": "garrafa-termica-preta",
+    "nome": "Garrafa Termica Preta",
+    "titulo": "Garrafa Termica Preta",
+    "descricao_html": "<p>Garrafa Termica Preta - Vida Natural</p>",
+    "imagens": [
+      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/garrafa-termica-preta-2481453.jpg?v=1780065848"
+    ],
+    "preco_original": 6590,
+    "preco_promo": 3890,
+    "variantes": [
+      {
+        "titulo": "Default Title",
+        "preco": 3890,
+        "preco_original": 6590
+      }
+    ],
+    "badge": "MAIS VENDIDO, EXCLUSIVIDADE",
+    "categoria": "acessorio",
+    "notas": "Produto sem body_html no JSON da Shopify (descricao vazia). Unica variante disponivel: Default Title. Preco PIX com 5% OFF: R$36,96. Desconto de 41% sobre o preco original. Vendor: Vida Natural. SKU nao definido. Apenas uma imagem de produto disponivel no CDN Shopify (508x1200px)."
+  },
+  {
+    "slug": "palmilhas-de-gel-ortop-dicas",
+    "nome": "Palmilhas de Gel Ortopedicas",
+    "titulo": "Palmilhas de Gel Ortopedicas",
+    "subtitulo": "Conforto e suporte ortopedico para seus pes",
+    "descricao_html": "<p>Palmilhas de Gel Ortopedicas.</p><p>Descricao detalhada nao disponivel na pagina — o campo body_html do produto esta vazio na loja. Nao ha tabs, acordeoes ou secoes de beneficios, modo de uso ou ingredientes publicadas para este produto.</p>",
+    "imagens": [
+      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/palmilhas-de-gel-ortopedicas-6277793.jpg?v=1780065850",
+      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/palmilhas-de-gel-ortopedicas-7060013.jpg?v=1780065849"
+    ],
+    "preco_original": 5990,
+    "preco_promo": 3490,
+    "badge": "MAIS VENDIDO, EXCLUSIVIDADE",
+    "variantes": [
+      {
+        "titulo": "Default Title",
+        "preco": 3490,
+        "preco_original": 5990
+      }
+    ],
+    "meta_titulo": "Nao disponivel — meta tags nao acessiveis via fetch estatico (pagina Shopify com JS)",
+    "meta_descricao": "Nao disponivel — meta tags nao acessiveis via fetch estatico (pagina Shopify com JS)",
+    "categoria": "acessorio",
+    "notas": "Produto com status \"Esgotado\" no momento da extracao (24/06/2026). Sem variantes de tamanho ou cor — apenas \"Default Title\". O campo body_html esta vazio na API do Shopify (.json), o que significa que a descricao de marketing nao foi cadastrada na loja. Nao ha tabs, acordeoes ou secoes de beneficios/modo de uso publicadas. Dois badges: MAIS VENDIDO e EXCLUSIVIDADE. Desconto de 42% aplicado (R$59,90 para R$34,90). Opcao PIX com 5% adicional: R$33,16. Vendor: Vida Natural. Handle Shopify: palmilhas-de-gel-ortop-dicas. Product ID: 8719074951326."
+  },
+  {
+    "slug": "massagem-profissional-eletrica",
+    "nome": "Massagem Profissional Eletrica",
+    "titulo": "Massagem Profissional Eletrica",
+    "subtitulo": "Mais Vendido — Exclusividade Vida Natural",
+    "descricao_html": "<p>Sem descricao cadastrada no produto (body_html vazio no Shopify). A pagina exibe apenas informacoes de preco, parcelamento e politicas da loja.</p>\n\n<p><strong>Frete Gratis, Aproveite Hoje!</strong></p>\n<p>Satisfacao garantida ou dinheiro de volta!</p>\n<ul>\n  <li>Frete gratis para todo o Brasil via Correios Expresso</li>\n  <li>Devolucao gratis em ate 7 dias com reembolso integral</li>\n  <li>Despacho prioritario em ate 1 hora para pagamentos via PIX</li>\n</ul>",
+    "imagens": [
+      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/massagem-profissional-eletrica-5807209.jpg?v=1780065845"
+    ],
+    "preco_original": 6590,
+    "preco_promo": 5190,
+    "variantes": [
+      {
+        "titulo": "Default Title",
+        "preco": 5190,
+        "preco_original": 6590
+      }
+    ],
+    "badge": "MAIS VENDIDO | EXCLUSIVIDADE",
+    "categoria": "acessorio",
+    "meta_titulo": "Massagem Profissional Eletrica — Vida Natural",
+    "meta_descricao": "Nao disponivel na pagina (meta description nao retornada pelo fetch)",
+    "notas": "Produto sem descricao cadastrada no Shopify (body_html vazio confirmado via /products/massagem-profissional-eletrica.json). Apenas 1 imagem no CDN. Sem variantes — Default Title unico. Produto marcado como esgotado (available: false) em 24/06/2026. PIX com 5% OFF = R$49,31. Parcelamento em ate 12x. ID Shopify: 8719077802142."
+  },
+  {
+    "slug": "pincel-de-barbear-com-suporte",
+    "nome": "Pincel de Barbear com Suporte",
+    "titulo": "Pincel de Barbear com Suporte",
+    "subtitulo": "MAIS VENDIDO | EXCLUSIVIDADE",
+    "descricao_html": "<p>Descricao do produto nao disponivel na fonte publica da pagina. O campo body_html do produto na API Shopify esta vazio, e a pagina nao renderiza texto de descricao, beneficios, modo de uso ou ingredientes. A descricao pode estar armazenada em metafields privados acessiveis apenas via API Admin autenticada.</p>",
+    "imagens": [
+      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/pincel-de-barbear-com-suporte-6244288.webp?v=1780065850",
+      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/pincel-de-barbear-com-suporte-2480680.webp?v=1780065850",
+      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/pincel-de-barbear-com-suporte-1362010.webp?v=1780065850"
+    ],
+    "preco_original": 2590,
+    "preco_promo": 1950,
+    "variantes": [
+      {
+        "titulo": "Default Title",
+        "preco": 1950,
+        "preco_original": 2590
+      }
+    ],
+    "badge": "MAIS VENDIDO | EXCLUSIVIDADE",
+    "meta_titulo": "Pincel de Barbear com Suporte",
+    "meta_descricao": "",
+    "categoria": "acessorio",
+    "notas": "Produto sem variantes (Default Title apenas). Sem estoque no momento da extracao (out of stock). body_html vazio na API Shopify — descricao possivelmente em metafields privados. Meta title e meta description nao capturados pelo WebFetch (cabecalho HTML nao acessivel). Preco PIX: R$ 18,53 (5% de desconto sobre R$ 19,50). Frete gratis via Correios Expresso para todo o Brasil. Devolucao gratuita em 7 dias. Vendor: Vida Natural. Product ID Shopify: 8719071936670."
+  },
+  {
+    "slug": "umidificador-de-ar-port-til",
+    "nome": "Umidificador de Ar Portátil",
+    "titulo": "Umidificador de Ar Portátil",
+    "subtitulo": "Mais Vendido — Exclusividade Vida Natural",
+    "descricao_html": "<p>Descricao nao preenchida na loja de origem. O produto foi cadastrado sem body_html na plataforma Shopify.</p>",
+    "imagens": [
+      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/umidificador-de-ar-portatil-3852121.webp?v=1780065848",
+      "https://www.lojavidanatural.com/cdn/shop/files/umidificador-de-ar-portatil-3852121_700x.webp?v=1780065848",
+      "https://www.lojavidanatural.com/cdn/shop/files/umidificador-de-ar-portatil-3852121_1024x.webp?v=1780065848"
+    ],
+    "preco_original": 6990,
+    "preco_promo": 3990,
+    "badge": "MAIS VENDIDO",
+    "categoria": "acessorio",
+    "meta_titulo": "Umidificador de Ar Portátil — Vida Natural",
+    "meta_descricao": "Umidificador de Ar Portátil Vida Natural. De R$ 69,90 por R$ 39,90. Exclusividade.",
+    "variantes": [
+      {
+        "titulo": "Default Title",
+        "preco": 3990,
+        "preco_original": 6990
+      }
+    ],
+    "notas": "Produto marcado como ESGOTADO na loja (available: false). Descricao (body_html) esta vazia no cadastro Shopify — nao foi possivel extrair copy de marketing, beneficios ou modo de uso. SKU nao definido. Sem tags nem product_type configurados. ID Shopify do produto: 8719072559262. ID da variante: 46856712093854. A imagem unica esta no CDN Shopify com dimensoes 400x362px — as URLs com sufixo _700x e _1024x sao redimensionamentos automaticos do mesmo arquivo."
+  },
+  {
+    "slug": "esponja-de-limpeza-facial-eletrica",
+    "nome": "Esponja de Limpeza Facial Eletrica",
+    "titulo": "Esponja de Limpeza Facial Eletrica",
+    "subtitulo": "",
+    "descricao_html": "<p>Entrega via Correios com codigo de rastreio.</p>",
+    "imagens": [
+      "https://www.lojavidanatural.com/cdn/shop/files/esponja-de-limpeza-facial-eletrica-6925308.webp?v=1780065849",
+      "https://www.lojavidanatural.com/cdn/shop/files/esponja-de-limpeza-facial-eletrica-6925308_1024x.webp?v=1780065849",
+      "https://www.lojavidanatural.com/cdn/shop/files/esponja-de-limpeza-facial-eletrica-6925308_600x600_crop_center.webp?v=1780065849",
+      "https://www.lojavidanatural.com/cdn/shop/files/esponja-de-limpeza-facial-eletrica-6925308_1600x.webp?v=1780065849"
+    ],
+    "preco_original": 6990,
+    "preco_promo": 3990,
+    "variantes": [
+      {
+        "titulo": "Default Title",
+        "preco": 3990,
+        "preco_original": 6990
+      }
+    ],
+    "badge": "MAIS VENDIDO",
+    "meta_titulo": "Esponja de Limpeza Facial Eletrica",
+    "meta_descricao": "",
+    "categoria": "estetica",
+    "notas": "Produto marcado como Esgotado na loja. Badges: MAIS VENDIDO e EXCLUSIVIDADE. Sem variantes (produto unico). Descricao do produto esta vazia no Shopify - apenas texto de entrega foi encontrado no HTML. Preco a vista no PIX: R$ 37,91 (5% OFF). Parcelamento em ate 12x de R$ 3,98. Loja oferece compra via WhatsApp: 5511970111782. Produto disponivel para compra mas sem estoque ativo."
+  },
+  {
+    "slug": "touca-de-cetim-anti-frizz",
+    "nome": "Touca de Cetim Anti-Frizz",
+    "titulo": "Touca de Cetim Anti-Frizz",
+    "subtitulo": "Vida Natural",
+    "descricao_html": "",
+    "imagens": [
+      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/touca-de-cetim-anti-frizz-5117556.jpg?v=1780065846",
+      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/touca-de-cetim-anti-frizz-5214976.jpg?v=1780065846"
+    ],
+    "preco_original": 3990,
+    "preco_promo": 2990,
+    "variantes": [
+      {
+        "titulo": "Default Title",
+        "preco": 2990,
+        "preco_original": 3990
+      }
+    ],
+    "badge": "MAIS VENDIDO | EXCLUSIVIDADE",
+    "categoria": "acessorio",
+    "meta_titulo": "Touca de Cetim Anti-Frizz | Vida Natural",
+    "meta_descricao": "",
+    "notas": "Produto sem descricao (body_html vazio no Shopify). Status: esgotado no momento da extracao (2026-06-24). Variante unica sem nome de opcao. Badges exibidos: MAIS VENDIDO e EXCLUSIVIDADE. Pagamento: PIX R$28,41 (5% off), boleto R$29,90, parcelado em ate 12x de R$2,98. Frete gratis Correios Express nacional. Devolucao gratuita em 7 dias. Vendor: Vida Natural. Product ID Shopify: 8719071412382."
+  },
+  {
+    "slug": "escova-massageadora-capilar-de-silicone",
+    "nome": "Escova Massageadora Capilar de Silicone",
+    "titulo": "Escova Massageadora Capilar de Silicone",
+    "subtitulo": "Escova Massageadora Capilar de Silicone - Vida Natural",
+    "descricao_html": "<p>A pagina do produto nao possui descricao cadastrada (body_html vazio no Shopify). Nenhum texto de descricao, beneficios, modo de uso, ingredientes ou avisos esta publicado na pagina no momento da extracao.</p>",
+    "imagens": [
+      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/escova-massageadora-capilar-de-silicone-8592743.jpg?v=1780065850",
+      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/escova-massageadora-capilar-de-silicone-5839886.jpg?v=1780065850"
+    ],
+    "preco_original": 2990,
+    "preco_promo": 1490,
+    "badge": "MAIS VENDIDO, EXCLUSIVIDADE",
+    "categoria": "estetica",
+    "meta_titulo": "Escova Massageadora Capilar de Silicone - Vida Natural",
+    "meta_descricao": "Nao foi possivel extrair a meta description da pagina renderizada.",
+    "variantes": [
+      {
+        "titulo": "Default Title",
+        "preco": 1490,
+        "preco_original": 2990
+      }
+    ],
+    "notas": "Produto marcado como Esgotado (available: false) no momento da extracao em 24/06/2026. O campo body_html esta vazio no Shopify - a pagina nao tem descricao de produto cadastrada. PIX: R$ 14,16 (5% de desconto adicional). Parcelamento disponivel em ate 12x. Frete gratis via Correios Expresso para todo o Brasil. Garantia de devolucao em 7 dias."
+  },
+  {
+    "slug": "escova-de-dentes-de-bambu",
+    "nome": "Escova de Dentes de Bambu",
+    "titulo": "Escova de Dentes de Bambu",
+    "subtitulo": "Exclusividade Vida Natural",
+    "descricao_html": "<p>Produto sem descricao cadastrada na loja de origem. O body_html retornado pela API Shopify esta vazio.</p>",
+    "imagens": [
+      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/escova-de-dentes-de-bambu-7576051.webp?v=1780065847",
+      "https://www.lojavidanatural.com/cdn/shop/files/escova-de-dentes-de-bambu-7576051_700x.webp?v=1780065847",
+      "https://www.lojavidanatural.com/cdn/shop/files/escova-de-dentes-de-bambu-7576051_1024x.webp?v=1780065847"
+    ],
+    "preco_original": 3990,
+    "preco_promo": 2990,
+    "badge": "MAIS VENDIDO | EXCLUSIVIDADE",
+    "categoria": "acessorio",
+    "meta_titulo": "Escova de Dentes de Bambu | Vida Natural",
+    "meta_descricao": "Nao disponivel na pagina (meta tags nao retornadas pelo fetch).",
+    "variantes": [
+      {
+        "titulo": "Default Title",
+        "preco": 2990,
+        "preco_original": 3990
+      }
+    ],
+    "notas": "Produto marcado como Esgotado (Out of Stock) no momento da extracao (24/06/2026). Body HTML do produto esta vazio na Shopify — nenhuma descricao de marketing, beneficios, ingredientes ou modo de uso cadastrado. Variante unica sem opcoes de tamanho/cor/sabor. Desconto de 25% (de R$39,90 por R$29,90). PIX com 5% adicional = R$28,41. Parcelamento em ate 12x de R$2,98 (total R$35,82). Frete gratis via Correios Expresso para todo o Brasil. Garantia de 7 dias com devolucao de 100%."
+  },
+  {
+    "slug": "roupao-de-banho-unissex",
+    "nome": "Roupao de Banho Unissex",
+    "titulo": "Roupao de Banho Unissex",
+    "subtitulo": "Frete Gratis. Aproveite Hoje!",
+    "badge": "MAIS VENDIDO",
+    "categoria": "acessorio",
+    "preco_original": 3990,
+    "preco_promo": 2990,
+    "descricao_html": "<p>Roupao de Banho Unissex — confortavel e pratico para uso diario apos o banho.</p>\n<ul>\n  <li>Frete Gratis via Correios Expresso para todo o Brasil</li>\n  <li>Satisfacao garantida ou dinheiro de volta</li>\n  <li>Devolucoes gratuitas com estorno de 100% dentro de 7 dias apos o recebimento",
+    "imagens": [
+      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/roupao-de-banho-unissex-5723344.jpg?v=1780065847",
+      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/roupao-de-banho-unissex-6839642.jpg?v=1780065847",
+      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/roupao-de-banho-unissex-1159176.jpg?v=1780065847"
+    ],
+    "variantes": [
+      {
+        "titulo": "Default Title",
+        "preco": 2990,
+        "preco_original": 3990
+      }
+    ],
+    "meta_titulo": "Roupao de Banho Unissex — Loja Vida Natural",
+    "meta_descricao": "Roupao de Banho Unissex com frete gratis e satisfacao garantida. Aproveite o preco promocional na Loja Vida Natural.",
+    "notas": "Produto esgotado no momento da extracao (available: false). Body HTML vazio no Shopify — descricao de marketing e injetada pelo tema via metafields/secoes dinamicas, nao acessivel via API publica. Nao ha variantes reais (apenas Default Title). Badges identificados na pagina: MAIS VENDIDO e EXCLUSIVIDADE. PIX com 5% OFF = R$28,41. Parcelamento em ate 12x. ID Shopify do produto: 8719071477918. ID da variante: 46856706621598."
+  },
+  {
+    "slug": "travesseiro-ortopedico",
+    "nome": "Travesseiro Ortopedico",
+    "titulo": "Travesseiro Ortopedico",
+    "subtitulo": "Vida Natural",
+    "descricao_html": "<p>Entrega via Correios com codigo de rastreio.</p>",
+    "imagens": [
+      "https://www.lojavidanatural.com/cdn/shop/files/travesseiro-ortopedico-7369092.jpg?v=1780065849",
+      "https://www.lojavidanatural.com/cdn/shop/files/travesseiro-ortopedico-6572982.jpg?v=1780065849"
+    ],
+    "preco_original": 6590,
+    "preco_promo": 3890,
+    "variantes": [
+      {
+        "titulo": "Default Title",
+        "preco": 3890,
+        "preco_original": 6590
+      }
+    ],
+    "badge": "MAIS VENDIDO",
+    "meta_titulo": "Travesseiro Ortopedico",
+    "meta_descricao": "",
+    "categoria": "acessorio",
+    "notas": "Produto fora de estoque no momento da extracao (available: false). Nao possui descricao de marketing - o campo body_html e content estao vazios na loja Shopify. Badge adicional: EXCLUSIVIDADE. Preco PIX (5% OFF): R$36,96. Parcelamento: ate 12x de R$3,88. Vendido pela loja lojavidanatural.com via checkout Yampi. Shopify product ID: 8719085404318. Variant ID: 46856738701470. Imagem 1 (travesseiro-ortopedico-7369092.jpg): dimensoes 859x553px, aspect ratio 1.553. Imagem 2 (travesseiro-ortopedico-6572982.jpg): dimensoes 1000x1000px, aspect ratio 1.0."
+  },
+  {
+    "slug": "massageador-relaxante-de-pescoco-e-ombro",
+    "nome": "Massageador Relaxante de Pescoço e Ombro",
+    "titulo": "Massageador Relaxante de Pescoço e Ombro",
+    "subtitulo": "",
+    "descricao_html": "<p>Nenhuma descricao de produto foi encontrada na pagina. O campo <code>body_html</code> esta vazio no Shopify e nenhum bloco de texto de marketing, beneficios, especificacoes tecnicas ou modo de uso foi identificado no HTML estatico da pagina. O conteudo pode ter sido removido ou nunca preenchido.</p>",
+    "imagens": [
+      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/massageador-relaxante-de-pescoco-e-ombro-4235846.jpg?v=1780065849",
+      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/massageador-relaxante-de-pescoco-e-ombro-9048813.jpg?v=1780065849"
+    ],
+    "preco_original": 14990,
+    "preco_promo": 7990,
+    "variantes": [
+      {
+        "titulo": "Default Title",
+        "preco": 7990,
+        "preco_original": 14990
+      }
+    ],
+    "badge": "MAIS VENDIDO / EXCLUSIVIDADE",
+    "meta_titulo": "Massageador Relaxante de Pescoço e Ombro",
+    "meta_descricao": "",
+    "categoria": "acessorio",
+    "notas": "Produto ESGOTADO (available: false). Sem variantes reais - apenas \"Default Title\". Descricao completamente vazia no Shopify (body_html: \"\", description: \"\", content: \"\"). Nenhum conteudo de marketing encontrado no HTML estatico. A pagina possui 2 imagens no CDN Shopify. Preco PIX com 5% OFF: R$ 75,91. Parcelamento em ate 12x de R$ 7,97 com juros. Meta description esta vazia. Vendor: Vida Natural. Produto publicado em 2026-05-18."
+  },
+  {
+    "slug": "pente-de-madeira-antifrizz",
+    "nome": "Pente de Madeira Antifrizz",
+    "titulo": "Pente de Madeira Antifrizz",
+    "subtitulo": "EXCLUSIVIDADE",
+    "badge": "MAIS VENDIDO",
+    "descricao_html": "",
+    "imagens": [
+      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/pente-de-madeira-antifrizz-6133424.webp?v=1780065849",
+      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/pente-de-madeira-antifrizz-8407057.webp?v=1780065849"
+    ],
+    "preco_original": 2590,
+    "preco_promo": 1950,
+    "variantes": [
+      {
+        "titulo": "Default Title",
+        "preco": 1950,
+        "preco_original": 2590
+      }
+    ],
+    "meta_titulo": "",
+    "meta_descricao": "",
+    "categoria": "acessorio",
+    "notas": "Produto marcado como Esgotado na pagina. Sem variantes de tamanho/quantidade - apenas uma variante padrao. Descricao do produto esta vazia na loja Shopify (body_html em branco). Nao foram encontradas meta tags og:title ou og:description na pagina. PIX com 5% OFF: R$ 18,53. Parcelamento em ate 12x de R$ 1,94. Badge secundario: EXCLUSIVIDADE. Badges de confianca: Envio para todo o Brasil, Compra Garantida, Suporte Rapido, Pagamento seguro."
+  }
+]

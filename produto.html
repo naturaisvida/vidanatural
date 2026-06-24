@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pg-title">Produto | Comprar com Desconto | Vida Natural</title>
+<meta name="description" id="pg-desc" content="">
+<link id="pg-canonical" rel="canonical" href="">
+<meta id="og-type"    property="og:type"        content="product">
+<meta id="og-site"    property="og:site_name"   content="Vida Natural">
+<meta id="og-title"   property="og:title"       content="">
+<meta id="og-desc"    property="og:description" content="">
+<meta id="og-image"   property="og:image"       content="">
+<meta id="og-url"     property="og:url"         content="">
+<meta id="og-prc"     property="product:price:amount"   content="">
+<meta id="og-cur"     property="product:price:currency" content="BRL">
+<meta name="twitter:card" content="summary_large_image">
+<script id="ld-json" type="application/ld+json"></script>
+<link rel="icon" href="/img/faviconvidanatural.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --vn-dark:   #062b2b;
+  --vn-dark2:  #0d5045;
+  --vn-mid:    #1a8a74;
+  --vn-accent: #3ec4ad;
+  --vn-light:  #7ed4c8;
+  --vn-pale:   #c5f0ea;
+  --vn-sage:   #ecf9f8;
+  --vn-gold:   #C9A84C;
+  --vn-text:   #0d2e28;
+  --vn-muted:  #4a7a72;
+  --vn-white:  #FFFFFF;
+  --green:     #1a8a74;
+  --green-d:   #0d5045;
+  --green-2:   #062b2b;
+  --bg:        #F0F7F4;
+  --border:    #C8E6D8;
+  --font:      'Poppins', sans-serif;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font); background: var(--bg); color: var(--vn-text); font-size: 15px; }
+
+/* ── HEADER ── */
+.hdr {
+  background: var(--vn-white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  box-shadow: 0 2px 12px rgba(13,40,24,.08);
+}
+.hdr-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 13px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hdr-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.hdr-logo-img {
+  height: 44px;
+  width: auto;
+  flex-shrink: 0;
+  display: block;
+}
+.hdr-sec {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--vn-dark2);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.hdr-sec svg { width: 18px; height: 18px; color: var(--vn-mid); flex-shrink: 0; }
+
+/* ── BREADCRUMB ── */
+.bc { max-width: 1200px; margin: 0 auto; padding: 12px 24px; font-size: 12px; color: var(--vn-muted); }
+.bc a { color: var(--vn-mid); text-decoration: none; }
+.bc a:hover { text-decoration: underline; }
+
+/* ── PRODUCT LAYOUT ── */
+.prod-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 24px 56px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* ── GALLERY ── */
+.gallery { position: sticky; top: 76px; }
+.main-img {
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--vn-white);
+  aspect-ratio: 1 / 1;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(46,139,111,.1);
+}
+.main-img img { width: 100%; height: 100%; object-fit: cover; cursor: zoom-in; transition: transform .3s ease; }
+.main-img img:hover { transform: scale(1.02); }
+.thumbs { display: flex; gap: 8px; margin-top: 10px; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; }
+.thumbs::-webkit-scrollbar { display: none; }
+.thumb {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color .15s, box-shadow .15s;
+  background: var(--vn-white);
+}
+.thumb.on { border-color: var(--vn-mid); box-shadow: 0 0 0 2px rgba(46,139,111,.18); }
+.thumb:hover { border-color: var(--vn-light); }
+.thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ── PRODUCT INFO ── */
+.prod-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+.prod-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+}
+.badge-natural      { background: linear-gradient(110deg, #0d7a68 0%, #3ec4ad 100%); }
+.badge-frete        { background: linear-gradient(110deg, #9a6c00 0%, #e0a800 100%); }
+.badge-lancamento   { background: linear-gradient(110deg, #1255a0 0%, #3b9fea 100%); }
+.badge-novidade     { background: linear-gradient(110deg, #5c1f99 0%, #b060f0 100%); }
+.badge-destaque     { background: linear-gradient(110deg, var(--vn-dark) 0%, var(--vn-mid) 100%); }
+.badge-mais-vendido { background: linear-gradient(110deg, #b83c00 0%, #f57c20 100%); }
+
+.prod-title {
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 900;
+  color: var(--vn-text);
+  line-height: 1.2;
+  margin-bottom: 6px;
+  letter-spacing: -.3px;
+}
+.prod-sub {
+  font-size: 14px;
+  color: var(--vn-muted);
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+
+/* ── STARS ── */
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  font-size: 13px;
+  color: var(--vn-muted);
+}
+.star-icons { color: #F0A500; font-size: 16px; letter-spacing: 1px; }
+
+/* ── TRUST STRIP ── */
+.trust-strip {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 22px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--vn-white);
+  box-shadow: 0 2px 8px rgba(46,139,111,.07);
+}
+.trust-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 11px 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--vn-dark2);
+  white-space: nowrap;
+}
+.trust-item + .trust-item { border-left: 1px solid var(--border); }
+.trust-item svg { width: 15px; height: 15px; flex-shrink: 0; color: var(--vn-mid); }
+
+/* ── VARIANTS ── */
+.variants-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--vn-text);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.variants-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.variants-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+.vcard {
+  flex: 1 1 148px;
+  max-width: 188px;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 10px;
+  cursor: pointer;
+  transition: border-color .15s, background .15s, transform .12s, box-shadow .15s;
+  text-align: center;
+  background: var(--vn-white);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.vcard:hover { border-color: var(--vn-mid); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(46,139,111,.15); }
+.vcard.on { border-color: var(--vn-mid); background: #ECF7F3; box-shadow: 0 4px 16px rgba(46,139,111,.18); }
+.vcard-pop {
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #a07b20, var(--vn-gold));
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 12px;
+  border-radius: 100px;
+  white-space: nowrap;
+  letter-spacing: .3px;
+  box-shadow: 0 2px 8px rgba(201,168,76,.35);
+}
+.vcard-title { font-size: 11px; font-weight: 800; color: var(--vn-dark2); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px; }
+.vcard-price { font-size: 19px; font-weight: 800; color: var(--vn-text); margin-bottom: 2px; }
+.vcard-compare { font-size: 12px; color: #aaa; text-decoration: line-through; margin-bottom: 5px; }
+.vcard-disc {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--vn-mid);
+  background: rgba(46,139,111,.1);
+  border-radius: 100px;
+  padding: 2px 8px;
+  display: inline-block;
+}
+.vcard-btn {
+  display: block;
+  width: 100%;
+  margin-top: auto;
+  padding: 10px 4px;
+  background: linear-gradient(135deg, #1da84e 0%, #15803d 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  cursor: pointer;
+  transition: filter .15s, transform .1s;
+  box-shadow: 0 3px 10px rgba(21,128,61,.35);
+}
+.vcard-btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
+.vcard-btn:active { transform: translateY(0); }
+
+/* ── PRICE BOX ── */
+.price-box {
+  background: var(--vn-white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 10px rgba(46,139,111,.06);
+}
+.price-main { font-size: 34px; font-weight: 900; color: var(--vn-mid); line-height: 1; letter-spacing: -.5px; }
+.price-old { font-size: 14px; color: #aaa; text-decoration: line-through; margin-top: 5px; }
+.price-inst { font-size: 13px; color: var(--vn-muted); margin-top: 7px; }
+.price-pix {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--vn-dark2);
+  margin-top: 5px;
+  background: var(--vn-pale);
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+
+/* ── CTAs ── */
+.btn-comprar {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, var(--vn-mid), var(--vn-dark2));
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-family: var(--font);
+  font-size: 17px;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity .15s, transform .12s;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  margin-bottom: 12px;
+  box-shadow: 0 6px 20px rgba(46,139,111,.35);
+}
+.btn-comprar:hover { opacity: .9; transform: translateY(-1px); }
+.btn-comprar:active { transform: translateY(0); }
+.btn-wpp {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #25D366;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .15s;
+  letter-spacing: .3px;
+}
+.btn-wpp:hover { background: #1dae52; }
+.checkout-note { text-align: center; font-size: 12px; color: var(--vn-muted); margin-top: 12px; }
+
+/* ── STICKY BAR ── */
+.sticky-kit {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--vn-white);
+  border-top: 2px solid var(--vn-mid);
+  padding: 11px 20px;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  z-index: 300;
+  box-shadow: 0 -6px 24px rgba(13,40,24,.14);
+}
+.sticky-kit.show { display: flex; }
+.sticky-kit-left { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.sticky-kit-label { font-size: 10px; font-weight: 600; color: var(--vn-muted); text-transform: uppercase; letter-spacing: .5px; }
+.sticky-kit-name { font-size: 13px; font-weight: 700; color: var(--vn-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sticky-kit-price { font-size: 16px; font-weight: 900; color: var(--vn-mid); }
+.sticky-kit-actions { display: flex; gap: 8px; align-items: center; flex-shrink: 0; }
+.sticky-back-btn {
+  background: var(--vn-sage);
+  color: var(--vn-text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.sticky-buy-btn {
+  background: linear-gradient(135deg, var(--vn-mid), var(--vn-dark2));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 11px 20px;
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(46,139,111,.3);
+}
+.sticky-buy-btn:hover { opacity: .92; }
+
+/* ── DESCRIPTION TABS ── */
+.desc-section { max-width: 1200px; margin: 0 auto; padding: 0 24px 64px; }
+.desc-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 30px;
+  gap: 4px;
+}
+.desc-tab {
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 13px 24px;
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--vn-muted);
+  cursor: pointer;
+  margin-bottom: -2px;
+  transition: color .15s, border-color .15s;
+}
+.desc-tab.on { color: var(--vn-dark2); border-bottom-color: var(--vn-mid); }
+.desc-tab:hover { color: var(--vn-dark2); }
+.desc-pane { line-height: 1.8; color: var(--vn-text); }
+.desc-pane, .desc-pane * { font-family: var(--font) !important; }
+.desc-pane p { font-size: 15px; line-height: 1.8; color: #3A5A48; margin-bottom: 14px; margin-top: 0; }
+.desc-pane h1 { font-size: 20px; font-weight: 800; color: var(--vn-dark2); margin: 28px 0 12px; line-height: 1.3; }
+.desc-pane h2 { font-size: 17px; font-weight: 700; color: var(--vn-dark2); margin: 24px 0 10px; line-height: 1.3; }
+.desc-pane h3 { font-size: 15px; font-weight: 700; color: var(--vn-dark2); margin: 18px 0 8px; line-height: 1.3; }
+.desc-pane h1:first-child, .desc-pane h2:first-child, .desc-pane h3:first-child { margin-top: 0; }
+.desc-pane ul, .desc-pane ol { padding-left: 20px; margin-bottom: 14px; }
+.desc-pane li { font-size: 14px; color: #3A5A48; line-height: 1.6; margin-bottom: 6px; }
+.desc-pane strong { color: var(--vn-text); }
+.desc-pane table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 13px; }
+.desc-pane th { background: var(--vn-pale, #e8f5ef); color: var(--vn-dark2); font-weight: 700; text-align: left; padding: 8px 12px; border: 1px solid #c8e6d4; }
+.desc-pane td { padding: 7px 12px; border: 1px solid #ddeee5; color: #3A5A48; }
+.desc-pane-cta { display: block; width: 100%; margin: 28px 0 8px; padding: 16px; background: linear-gradient(135deg, #1da84e 0%, #15803d 100%); color: #fff !important; font-size: 16px; font-weight: 800; text-align: center; border: none; border-radius: 12px; cursor: pointer; box-shadow: 0 3px 10px rgba(21,128,61,.35); letter-spacing: .3px; }
+
+/* ── VN-PDP: descricao rica dos produtos do catalogo ── */
+.vn-pdp { --p-t:#1a8a74;--p-td:#0d5045;--p-dk:#062b2b;--p-pale:#e8f5f2;--p-line:#c8e6d4;--p-ink:#1e3a32;--p-mu:#557066; font-family:'Poppins',sans-serif;color:var(--p-ink);line-height:1.65;font-size:15px;max-width:100%;overflow:hidden;background:#fff;border-radius:14px; }
+.vn-pdp *{box-sizing:border-box;margin:0;padding:0}
+.vn-hero{background:linear-gradient(145deg,#1a8a74 0%,#0d5045 60%,#062b2b 100%);color:#fff;padding:36px 24px 32px;text-align:center}
+.vn-hero-badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:20px}
+.vn-hero-badge{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;color:rgba(255,255,255,.9);background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:100px;padding:4px 12px}
+.vn-hero-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:12px}
+.vn-hero h1{font-family:'Poppins',sans-serif;font-size:clamp(20px,5vw,28px);font-weight:800;color:#fff;line-height:1.2;margin-bottom:10px}
+.vn-hero-sub{font-size:14px;color:rgba(255,255,255,.85);max-width:440px;margin:0 auto 22px;line-height:1.6}
+.vn-hero-cta{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--p-t);font-family:'Poppins',sans-serif;font-weight:700;font-size:14px;padding:13px 26px;border-radius:100px;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.25);cursor:pointer;border:none}
+.vn-sec{padding:28px 24px}
+.vn-sec+.vn-sec{border-top:1px solid var(--p-line)}
+.vn-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--p-t);margin-bottom:8px}
+.vn-sec h2{font-family:'Poppins',sans-serif;font-size:18px;font-weight:700;color:var(--p-dk);margin-bottom:12px;line-height:1.3}
+.vn-sec p{font-size:14px;color:var(--p-mu);line-height:1.65;margin-bottom:10px}
+.vn-feats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+@media(max-width:360px){.vn-feats{grid-template-columns:1fr}}
+.vn-feat{background:var(--p-pale);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:7px}
+.vn-fi{width:36px;height:36px;border-radius:9px;background:var(--p-t);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.vn-fi svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.vn-feat strong{font-size:13px;font-weight:700;color:var(--p-dk);line-height:1.3}
+.vn-feat span{font-size:12px;color:var(--p-mu);line-height:1.5}
+.vn-steps{display:flex;flex-direction:column;gap:14px;margin-top:12px}
+.vn-step{display:flex;align-items:flex-start;gap:12px}
+.vn-sn{width:30px;height:30px;flex-shrink:0;background:var(--p-t);color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;margin-top:1px}
+.vn-step strong{font-size:14px;font-weight:700;color:var(--p-dk);display:block;margin-bottom:3px}
+.vn-step p{font-size:13px;color:var(--p-mu);line-height:1.55;margin:0}
+.vn-garantia{background:var(--p-pale);border-left:4px solid var(--p-t);border-radius:0 12px 12px 0;padding:16px 18px}
+.vn-garantia strong{font-size:14px;font-weight:700;color:var(--p-dk);display:block;margin-bottom:5px}
+.vn-garantia p{font-size:13px;color:var(--p-mu);line-height:1.6;margin:0}
+
+/* ── REVIEWS ── */
+.rev-section { max-width: 1200px; margin: 0 auto; padding: 0 24px 64px; }
+.rev-section-title { font-size: 22px; font-weight: 800; color: var(--vn-dark2); margin-bottom: 6px; }
+.rev-section-sub { font-size: 13px; color: var(--vn-muted); margin-bottom: 22px; }
+.rev-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-bottom: 30px;
+  padding-bottom: 22px;
+  border-bottom: 2px solid var(--border);
+}
+.rev-summary { display: flex; align-items: center; gap: 22px; }
+.rev-score { font-size: 62px; font-weight: 900; color: var(--vn-text); line-height: 1; }
+.rev-score-details { display: flex; flex-direction: column; gap: 3px; }
+.rev-stars-big { color: #F0A500; font-size: 24px; letter-spacing: 2px; }
+.rev-count { font-size: 13px; color: var(--vn-muted); margin-top: 3px; }
+.rev-bars { display: flex; flex-direction: column; gap: 6px; }
+.rev-bar-row { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--vn-muted); }
+.rev-bar-track { width: 120px; height: 7px; background: var(--vn-pale); border-radius: 4px; overflow: hidden; }
+.rev-bar-fill { height: 100%; background: linear-gradient(90deg, var(--vn-mid), var(--vn-accent)); border-radius: 4px; }
+.rev-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; }
+.rev-card {
+  background: var(--vn-white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
+  position: relative;
+  transition: box-shadow .2s;
+}
+.rev-card:hover { box-shadow: 0 4px 20px rgba(46,139,111,.12); }
+.rev-card-top { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.rev-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+}
+.rev-name { font-size: 14px; font-weight: 700; color: var(--vn-text); }
+.rev-city { font-size: 12px; color: var(--vn-muted); margin-top: 2px; }
+.rev-verified { font-size: 11px; font-weight: 600; color: var(--vn-mid); display: flex; align-items: center; gap: 3px; margin-top: 3px; }
+.rev-stars { color: #F0A500; font-size: 15px; letter-spacing: 1px; margin-bottom: 9px; }
+.rev-text { font-size: 14px; color: #3A5A48; line-height: 1.65; }
+.rev-date { font-size: 11px; color: #bbb; margin-top: 10px; }
+.rev-hidden { display: none; }
+.rev-more-btn {
+  display: block;
+  margin: 28px auto 0;
+  padding: 13px 32px;
+  background: var(--vn-white);
+  color: var(--vn-mid);
+  border: 2px solid var(--vn-mid);
+  border-radius: 100px;
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background .15s, color .15s, transform .1s;
+}
+.rev-more-btn:hover { background: var(--vn-mid); color: #fff; transform: translateY(-1px); }
+
+/* ── MORE PRODUCTS ── */
+.more-section { background: var(--vn-white); padding: 52px 24px; border-top: 1px solid var(--border); }
+.more-inner { max-width: 1200px; margin: 0 auto; }
+.more-title { font-size: 22px; font-weight: 800; color: var(--vn-dark2); margin-bottom: 6px; }
+.more-sub { font-size: 13px; color: var(--vn-muted); margin-bottom: 26px; }
+.more-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+.more-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--vn-white);
+  border: 1px solid var(--border);
+  transition: transform .2s, box-shadow .2s;
+  text-decoration: none;
+  color: var(--vn-text);
+  display: block;
+}
+.more-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(46,139,111,.15); }
+.more-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+.more-card-body { padding: 14px; }
+.more-card-name { font-size: 13px; font-weight: 700; color: var(--vn-text); margin-bottom: 4px; line-height: 1.35; }
+.more-card-price { font-size: 15px; font-weight: 900; color: var(--vn-mid); }
+.more-card-cta { font-size: 12px; color: var(--vn-muted); font-weight: 500; margin-top: 6px; }
+
+/* ── FOOTER ── */
+.ftr { background: var(--vn-dark2); color: #fff; padding: 48px 24px 28px; }
+.ftr-inner { max-width: 1200px; margin: 0 auto; }
+.ftr-brand { margin-bottom: 32px; }
+.ftr-brand-name { font-size: 26px; font-weight: 900; color: var(--vn-white); letter-spacing: -.3px; }
+.ftr-brand-name span { color: var(--vn-accent); }
+.ftr-brand-tag { font-size: 12px; color: rgba(255,255,255,.5); margin-top: 4px; letter-spacing: .3px; }
+.ftr-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 36px; margin-bottom: 36px; }
+.ftr-col h4 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; color: var(--vn-light); margin-bottom: 16px; }
+.ftr-col p, .ftr-col a {
+  display: block;
+  font-size: 13px;
+  color: rgba(255,255,255,.7);
+  text-decoration: none;
+  margin-bottom: 8px;
+  line-height: 1.55;
+  transition: color .15s;
+}
+.ftr-col a:hover { color: var(--vn-accent); }
+.ftr-col .ftr-contact-item { display: flex; align-items: center; gap: 8px; }
+.ftr-col .ftr-contact-item svg { flex-shrink: 0; opacity: .7; }
+.ftr-bottom {
+  border-top: 1px solid rgba(255,255,255,.12);
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+.ftr-pay { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center; }
+.ftr-pay img { height: 24px; object-fit: contain; opacity: .85; }
+.ftr-copy { font-size: 12px; color: rgba(255,255,255,.45); max-width: 840px; line-height: 1.65; }
+
+/* ── MODAL ── */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  z-index: 1000;
+}
+.modal-overlay.open { display: block; }
+.modal-box {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--vn-white);
+  border-radius: 16px;
+  width: min(560px, 94vw);
+  max-height: 80vh;
+  overflow-y: auto;
+  z-index: 1001;
+  padding: 32px 28px;
+  box-shadow: 0 24px 60px rgba(0,0,0,.25);
+}
+.modal-box.open { display: block; }
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.modal-head strong { font-size: 17px; color: var(--vn-text); }
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--vn-muted);
+  line-height: 1;
+}
+.modal-body { font-size: 14px; color: #3A5A48; line-height: 1.75; }
+.modal-body p { margin-bottom: 12px; }
+
+/* ── ZOOM ── */
+.zoom-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.88);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+.zoom-overlay.open { display: flex; }
+.zoom-overlay img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 10px; }
+
+/* ── SECTION DIVIDER ── */
+.sec-divider { max-width: 1200px; margin: 0 auto 0; padding: 0 24px; }
+.sec-divider hr { border: none; border-top: 1px solid var(--border); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .ftr-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .prod-wrap { grid-template-columns: 1fr; gap: 26px; padding: 0 16px 36px; }
+  .gallery { position: static; }
+  .hdr-inner { padding: 10px 16px; }
+  .bc { padding: 10px 16px; }
+  .desc-section { padding: 0 16px 40px; }
+  .rev-section { padding: 0 16px 40px; }
+  .more-section { padding: 36px 16px; }
+  .ftr-grid { grid-template-columns: 1fr; gap: 28px; }
+  .ftr-brand { margin-bottom: 24px; }
+}
+@media (max-width: 480px) {
+  .trust-item { font-size: 10px; padding: 9px 2px; gap: 4px; }
+  .variants-grid { gap: 8px; }
+  .vcard { flex: 1 1 130px; max-width: 165px; }
+}
+
+/* ── MC-PDP: sistema de descricao rica dos produtos ── */
+.mc-pdp{--teal:#16a6a6;--teal-d:#0d8c8c;--green:#23b16a;--green-d:#1a9457;--cta:#1db955;--cta-d:#159a45;--mint:#eaf6f1;--mint-2:#f3faf6;--red:#e23b3b;--ink:#243230;--muted:#6a7873;--line:#e3ece7;--radius:16px;font-family:'Mulish',-apple-system,system-ui,sans-serif;color:var(--ink);line-height:1.6;font-size:17px;background:#fff;max-width:900px;margin:0 auto;border-radius:var(--radius);overflow:hidden;box-shadow:0 16px 48px -26px rgba(22,166,166,.4)}
+.mc-pdp *{box-sizing:border-box;margin:0;padding:0}
+.mc-pdp h1,.mc-pdp h2{text-wrap:balance}
+.mc-pdp h1,.mc-pdp h2,.mc-pdp h3,.mc-pdp .mc-disp{font-family:'Poppins',sans-serif;line-height:1.15;letter-spacing:-.01em;font-weight:700;color:var(--ink)}
+.mc-pdp em{font-style:normal;color:var(--green)}
+.mc-pdp .mc-wrap{padding:42px 34px}
+@media(max-width:600px){.mc-pdp{font-size:16px}.mc-pdp .mc-wrap{padding:30px 20px}}
+.mc-pdp .mc-kicker{display:inline-block;font-family:'Mulish',sans-serif;font-size:12.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.mc-pdp .mc-center{text-align:center}
+.mc-pdp a.mc-btn,.mc-pdp .mc-btn{display:inline-flex !important;align-items:center;justify-content:center;gap:9px;background:var(--cta) !important;background-image:none !important;color:#fff !important;font-family:'Poppins',sans-serif;font-weight:700 !important;font-size:16.5px;letter-spacing:.01em;padding:16px 34px;border-radius:50px !important;border:none !important;cursor:pointer;text-decoration:none !important;box-shadow:0 12px 26px -12px rgba(29,185,85,.7);transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
+.mc-pdp a.mc-btn:hover,.mc-pdp .mc-btn:hover{transform:translateY(-2px);background:var(--cta-d) !important;color:#fff !important}
+.mc-pdp a.mc-btn:visited{color:#fff !important}
+.mc-pdp .mc-hero{position:relative;text-align:center;color:#fff;padding:46px 34px 42px;background:linear-gradient(120deg,var(--teal) 0%,var(--green) 100%);overflow:hidden}
+.mc-pdp .mc-hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:20px 20px;opacity:.6;pointer-events:none}
+.mc-pdp .mc-pills{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-bottom:20px}
+.mc-pdp .mc-pill{font-size:12.5px;font-weight:700;letter-spacing:.02em;color:#fff;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);border-radius:50px;padding:7px 15px;display:inline-flex;align-items:center;gap:7px}
+.mc-pdp .mc-hero .mc-kicker{position:relative;z-index:1;color:rgba(255,255,255,.85)}
+.mc-pdp .mc-hero h1{position:relative;z-index:1;color:#fff;font-size:clamp(30px,6vw,46px);font-weight:800;margin-bottom:14px}
+.mc-pdp .mc-hero h1 em{color:#fff;border-bottom:3px solid rgba(255,255,255,.55)}
+.mc-pdp .mc-hero p{position:relative;z-index:1;color:rgba(255,255,255,.92);max-width:620px;margin:0 auto 26px;font-size:18px}
+.mc-pdp .mc-stars{position:relative;z-index:1;display:inline-flex;align-items:center;gap:8px;margin-bottom:22px;color:#fff;font-weight:700;font-size:14px}
+.mc-pdp .mc-stars .s{color:#ffd54a;letter-spacing:2px;font-size:16px}
+.mc-pdp .mc-hero .mc-btn{position:relative;z-index:1;background:#fff !important;background-image:none !important;color:var(--green-d) !important;box-shadow:0 12px 26px -12px rgba(0,0,0,.4)}
+.mc-pdp .mc-hero .mc-btn:hover{background:#f3fbf6 !important;color:var(--green-d) !important}
+@media(max-width:600px){.mc-pdp .mc-hero{padding:32px 18px 34px}.mc-pdp .mc-hero h1{font-size:24px;line-height:1.2}.mc-pdp .mc-pills{gap:6px}.mc-pdp .mc-pill{font-size:11px;padding:6px 10px;gap:4px}.mc-pdp .mc-hero p{font-size:16px}}
+.mc-pdp .mc-pill svg{width:14px;height:14px;flex:0 0 auto}
+.mc-pdp .mc-ic svg{width:24px;height:24px;color:#fff}
+.mc-pdp .b-ic svg{width:24px;height:24px;color:var(--teal)}
+.mc-pdp .mc-why{background:var(--mint-2)}
+.mc-pdp .mc-why h2{font-size:clamp(24px,4.6vw,32px);text-align:center;margin-bottom:8px}
+.mc-pdp .mc-divider{display:flex;align-items:center;justify-content:center;gap:12px;color:var(--teal);margin:6px 0 26px;font-size:14px}
+.mc-pdp .mc-divider::before,.mc-pdp .mc-divider::after{content:"";height:2px;width:56px;background:linear-gradient(90deg,transparent,var(--teal))}
+.mc-pdp .mc-divider::after{background:linear-gradient(90deg,var(--teal),transparent)}
+.mc-pdp .mc-why-lead{text-align:center;color:var(--muted);max-width:660px;margin:0 auto 30px;font-size:16.5px}
+.mc-pdp .mc-adv{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.mc-pdp .mc-adv{grid-template-columns:1fr}}
+.mc-pdp .mc-adv-item{display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center;background:#fff;border:1px solid var(--line);border-radius:13px;padding:24px 20px;transition:transform .18s ease,box-shadow .18s ease}
+.mc-pdp .mc-adv-item:hover{transform:translateY(-2px);box-shadow:0 12px 28px -18px rgba(22,166,166,.5)}
+.mc-pdp .mc-adv-item .mc-ic{flex:0 0 auto;width:48px;height:48px;border-radius:13px;background:linear-gradient(135deg,var(--teal),var(--green));color:#fff;display:flex;align-items:center;justify-content:center}
+.mc-pdp .mc-adv-item b{display:block;color:var(--ink);font-size:16px;margin-bottom:2px;font-weight:700}
+.mc-pdp .mc-adv-item span{font-size:14.5px;color:var(--muted)}
+.mc-pdp .mc-fy-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+@media(max-width:600px){.mc-pdp .mc-fy-grid{grid-template-columns:1fr}}
+.mc-pdp .mc-fy{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 18px}
+.mc-pdp .mc-fy svg{width:22px;height:22px;color:var(--green);flex:0 0 auto;margin-top:1px}
+.mc-pdp .mc-fy span{font-size:15.5px;color:var(--ink);font-weight:600;line-height:1.45}
+.mc-pdp .mc-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:30px}
+@media(max-width:600px){.mc-pdp .mc-steps{grid-template-columns:1fr;max-width:340px;margin:30px auto 0}}
+.mc-pdp .mc-step{text-align:center;padding:8px}
+.mc-pdp .mc-step .mc-num{width:56px;height:56px;border-radius:50%;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-size:24px;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--teal),var(--green));box-shadow:0 10px 22px -10px rgba(22,166,166,.7)}
+.mc-pdp .mc-step h3{font-size:18px;margin-bottom:6px}
+.mc-pdp .mc-step p{font-size:14.5px;color:var(--muted)}
+.mc-pdp .mc-guar{display:flex;gap:24px;align-items:center;background:linear-gradient(120deg,var(--teal),var(--green));color:#fff;border-radius:18px;padding:28px}
+@media(max-width:600px){.mc-pdp .mc-guar{flex-direction:column;text-align:center}}
+.mc-pdp .mc-seal{flex:0 0 auto;width:92px;height:92px;border-radius:50%;background:#fff;color:var(--green-d);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;line-height:1;box-shadow:0 12px 26px -10px rgba(0,0,0,.3)}
+.mc-pdp .mc-seal b{font-size:30px;font-weight:800}
+.mc-pdp .mc-seal span{font-size:10px;letter-spacing:.1em;text-transform:uppercase;margin-top:4px;font-family:'Mulish',sans-serif;font-weight:800}
+.mc-pdp .mc-guar h3{font-size:21px;margin-bottom:8px;color:#fff}
+.mc-pdp .mc-guar p{font-size:15px;color:rgba(255,255,255,.92)}
+.mc-pdp .mc-badges{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+@media(max-width:600px){.mc-pdp .mc-badges{grid-template-columns:1fr 1fr}}
+.mc-pdp .mc-badge{text-align:center;background:var(--mint-2);border:1px solid var(--line);border-radius:12px;padding:18px 10px}
+.mc-pdp .mc-badge .b-ic{display:flex;justify-content:center;margin-bottom:7px}
+.mc-pdp .mc-badge small{font-size:13px;color:var(--muted);line-height:1.35;display:block}
+.mc-pdp .mc-badge b{color:var(--ink);display:block;font-size:14px}
+.mc-pdp .mc-faq h2{font-size:clamp(22px,4.4vw,30px);text-align:center;margin-bottom:6px}
+.mc-pdp .mc-faq details{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden}
+.mc-pdp .mc-faq summary{cursor:pointer;list-style:none;padding:18px 20px;font-weight:700;font-size:16px;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:14px;font-family:'Poppins',sans-serif}
+.mc-pdp .mc-faq summary::-webkit-details-marker{display:none}
+.mc-pdp .mc-faq summary::after{content:"+";font-size:24px;color:var(--green);font-weight:400;line-height:1;transition:transform .2s}
+.mc-pdp .mc-faq details[open] summary::after{transform:rotate(45deg)}
+.mc-pdp .mc-faq .mc-ans{padding:0 20px 18px;font-size:15px;color:var(--muted)}
+.mc-pdp .mc-faq .mc-ans b{color:var(--ink)}
+.mc-pdp .mc-final{text-align:center;color:#fff;padding:46px 34px;background:linear-gradient(120deg,var(--green),var(--teal));position:relative;overflow:hidden}
+.mc-pdp .mc-final::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:20px 20px;opacity:.6}
+.mc-pdp .mc-final h2{position:relative;z-index:1;color:#fff;font-size:clamp(24px,5vw,34px);margin-bottom:14px}
+.mc-pdp .mc-final p{position:relative;z-index:1;color:rgba(255,255,255,.92);max-width:540px;margin:0 auto 26px;font-size:16.5px}
+.mc-pdp .mc-final .mc-btn{position:relative;z-index:1;background:#fff !important;background-image:none !important;color:var(--green-d) !important}
+.mc-pdp .mc-final .mc-feats{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-top:24px;color:rgba(255,255,255,.92);font-size:14px;font-weight:600}
+.mc-pdp .mc-final .mc-feats span{display:inline-flex;align-items:center;gap:7px}
+</style>
+<script src="/js/tracking.js"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="hdr">
+  <div class="hdr-inner">
+    <a href="/" class="hdr-logo">
+      <img class="hdr-logo-img" src="/img/logovidanatural.png" alt="Vida Natural">
+    </a>
+    <div class="hdr-sec">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+      </svg>
+      PAGAMENTO 100% SEGURO
+    </div>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<span id="bc-nome" style="display:none"></span>
+
+<!-- PRODUCT LAYOUT -->
+<div class="prod-wrap">
+  <!-- GALLERY -->
+  <div class="gallery">
+    <div class="main-img">
+      <img id="main-photo" src="" alt="" onclick="openZoom(this.src)">
+    </div>
+    <div class="thumbs" id="thumbs"></div>
+  </div>
+
+  <!-- PRODUCT INFO -->
+  <div class="prod-info">
+    <div class="prod-tags">
+      <span class="prod-badge badge-natural">100% Natural</span>
+      <span class="prod-badge badge-frete">Frete Gratis</span>
+      <span class="prod-badge" id="prod-badge" style="display:none"></span>
+    </div>
+
+    <h1 class="prod-title" id="prod-title"></h1>
+    <p class="prod-sub" id="prod-sub"></p>
+
+    <div class="stars">
+      <span class="star-icons">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+    </div>
+
+    <div class="trust-strip">
+      <div class="trust-item">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/>
+        </svg>
+        Frete Gratis
+      </div>
+      <div class="trust-item">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+        </svg>
+        Garantia 30 dias
+      </div>
+      <div class="trust-item">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+        Entrega Rapida
+      </div>
+    </div>
+
+    <div class="variants-label">Escolha seu kit</div>
+    <div class="variants-grid" id="variants-grid"></div>
+
+    <div class="checkout-note">
+      <div style="font-size:11px;font-weight:700;color:var(--vn-muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px">Metodos de Pagamento Aceitos</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:nowrap">
+        <img src="/img/pagamentos/card-pix.svg"        alt="PIX"        style="height:22px;object-fit:contain">
+        <img src="/img/pagamentos/card-billet.svg"     alt="Boleto"     style="height:22px;object-fit:contain">
+        <img src="/img/pagamentos/card-visa.svg"       alt="Visa"       style="height:22px;object-fit:contain">
+        <img src="/img/pagamentos/card-mastercard.svg" alt="Mastercard" style="height:22px;object-fit:contain">
+        <img src="/img/pagamentos/card-elo.svg"        alt="Elo"        style="height:22px;object-fit:contain">
+        <img src="/img/pagamentos/card-hiper.svg"      alt="Hipercard"  style="height:22px;object-fit:contain">
+        <img src="/img/pagamentos/card-amex.svg"       alt="Amex"       style="height:22px;object-fit:contain">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DIVIDER -->
+<div class="sec-divider"><hr></div>
+
+<!-- DESCRIPTION TABS -->
+<div class="desc-section">
+  <div class="desc-tabs">
+    <button class="desc-tab on" data-tab="sobre"    onclick="switchTab('sobre')">Sobre <span id="tab-nome"></span></button>
+    <button class="desc-tab"    data-tab="como-usar" onclick="switchTab('como-usar')">Como Usar</button>
+  </div>
+  <div class="desc-pane" id="desc-sobre"></div>
+  <div class="desc-pane" id="desc-como-usar" style="display:none"></div>
+</div>
+
+<!-- DIVIDER -->
+<div class="sec-divider"><hr></div>
+
+<!-- REVIEWS -->
+<div class="rev-section">
+  <div class="rev-section-title">Avaliacoes dos Clientes</div>
+  <div class="rev-section-sub">O que quem ja comprou esta dizendo</div>
+  <div class="rev-header">
+    <div class="rev-summary">
+      <div class="rev-score">4.9</div>
+      <div class="rev-score-details">
+        <div class="rev-stars-big">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rev-count">Avaliacoes verificadas</div>
+      </div>
+    </div>
+    <div class="rev-bars">
+      <div class="rev-bar-row">5&#9733; <div class="rev-bar-track"><div class="rev-bar-fill" style="width:81%"></div></div> 81%</div>
+      <div class="rev-bar-row">4&#9733; <div class="rev-bar-track"><div class="rev-bar-fill" style="width:13%"></div></div> 13%</div>
+      <div class="rev-bar-row">3&#9733; <div class="rev-bar-track"><div class="rev-bar-fill" style="width:4%"></div></div>  4%</div>
+      <div class="rev-bar-row">2&#9733; <div class="rev-bar-track"><div class="rev-bar-fill" style="width:1%"></div></div>  1%</div>
+      <div class="rev-bar-row">1&#9733; <div class="rev-bar-track"><div class="rev-bar-fill" style="width:1%"></div></div>  1%</div>
+    </div>
+  </div>
+  <div class="rev-grid" id="rev-grid"></div>
+</div>
+
+<!-- MORE PRODUCTS -->
+<!-- mais-produtos removido -->
+
+<!-- FOOTER -->
+<footer class="ftr">
+  <div class="ftr-inner">
+    <div class="ftr-brand">
+      <div class="ftr-brand-name">Vida <span>Natural</span></div>
+    </div>
+    <div class="ftr-grid">
+      <div class="ftr-col">
+        <h4>Atendimento ao Cliente</h4>
+        <p class="ftr-contact-item">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          atendimento@lojavidanatural.com
+        </p>
+        <p class="ftr-contact-item">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Seg-Sex, 9h-18h
+        </p>
+      </div>
+      <div class="ftr-col">
+        <h4>Politicas</h4>
+        <a href="#" onclick="openModal('privacidade');return false">Politica de Privacidade</a>
+        <a href="#" onclick="openModal('termos');return false">Termos de Uso</a>
+        <a href="#" onclick="openModal('devolucao');return false">Reembolso e Devolucao</a>
+        <a href="#" onclick="openModal('frete');return false">Politicas de Frete</a>
+        <a href="#" onclick="openModal('aviso');return false">Aviso Legal</a>
+      </div>
+    </div>
+    <div class="ftr-bottom">
+      <div class="ftr-pay" style="flex-wrap:nowrap;gap:6px">
+        <img src="/img/pagamentos/card-pix.svg"        alt="PIX"        style="height:20px">
+        <img src="/img/pagamentos/card-billet.svg"     alt="Boleto"     style="height:20px">
+        <img src="/img/pagamentos/card-visa.svg"       alt="Visa"       style="height:20px">
+        <img src="/img/pagamentos/card-mastercard.svg" alt="Mastercard" style="height:20px">
+        <img src="/img/pagamentos/card-elo.svg"        alt="Elo"        style="height:20px">
+        <img src="/img/pagamentos/card-hiper.svg"      alt="Hipercard"  style="height:20px">
+        <img src="/img/pagamentos/card-amex.svg"       alt="Amex"       style="height:20px">
+      </div>
+      <p class="ftr-copy"><strong>Aviso:</strong> Os produtos comercializados neste site sao suplementos alimentares. Nao sao medicamentos e nao se destinam a diagnosticar, tratar, curar ou prevenir doencas. Consulte um profissional de saude antes de iniciar qualquer suplementacao.</p>
+      <p class="ftr-copy">&copy; 2025 Vida Natural &middot; Todos os direitos reservados &middot; lojavidanatural.com</p>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY BAR -->
+<div class="sticky-kit" id="sticky-kit">
+  <div class="sticky-kit-left">
+    <div class="sticky-kit-label">Kit selecionado</div>
+    <div class="sticky-kit-name"  id="sticky-kit-name"></div>
+    <div class="sticky-kit-price" id="sticky-kit-price"></div>
+  </div>
+  <div class="sticky-kit-actions">
+    <button class="sticky-back-btn" id="sticky-back-btn">Trocar kit</button>
+    <a class="sticky-buy-btn" id="sticky-buy-btn" href="#">COMPRAR</a>
+  </div>
+</div>
+
+<!-- ZOOM MODAL -->
+<div class="zoom-overlay" id="zoom" onclick="closeZoom()">
+  <img id="zoom-img" src="" alt="">
+</div>
+
+<!-- POLITICAS MODAIS -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal()"></div>
+<div class="modal-box" id="modal-box">
+  <div class="modal-head">
+    <strong id="modal-title"></strong>
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+  </div>
+  <div class="modal-body" id="modal-body"></div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="/js/copys.js"></script>
+<script src="/js/produtos.js"></script>
+<script>
+// ─── Copy templates ────────────────────────────────────────────────────────────
+function _getTpl(nome, tipo) {
+  var t = tipo || 'geral';
+  var map = {
+    masc: {
+      intro: '<p><strong>'+nome+'</strong> e a formula desenvolvida para homens que querem recuperar a disposicao, a forca e o vigor que o dia a dia vai roubando. Com ativos naturais cuidadosamente combinados, age no organismo masculino de forma precisa, apoiando a producao hormonal, combatendo o cansaco cronico e devolvendo a energia que voce precisa para render mais em tudo.</p><p>Sem formulas sinteticas, sem estimulantes agressivos. Apenas o poder da natureza, concentrado em cada dose.</p>',
+      beneficios: [
+        'Aumenta a disposicao e combate o cansaco cronico',
+        'Apoia a producao hormonal natural do organismo masculino',
+        'Melhora o foco, clareza mental e desempenho',
+        'Contribui para um sono mais profundo e reparador',
+        '100% natural, sem conservantes artificiais'
+      ]
+    },
+    fem: {
+      intro: '<p><strong>'+nome+'</strong> foi criado para a mulher que nao tem tempo a perder — que quer se sentir bem, bonita e cheia de energia todos os dias. Com ingredientes botanicos de alta biodisponibilidade, atua no equilibrio do organismo feminino de forma suave e eficaz.</p><p>Formulado com respeito ao ritmo feminino. Natureza pura a servico do seu bem-estar.</p>',
+      beneficios: [
+        'Apoia o equilibrio hormonal e o ciclo natural feminino',
+        'Promove cabelos mais fortes, pele mais saudavel e unhas firmes',
+        'Reduz o inchaco, o cansaco e a irritabilidade',
+        'Melhora o humor, a energia e a autoestima',
+        'Ingredientes naturais com alta absorcao e seguranca comprovada'
+      ]
+    },
+    geral: {
+      intro: '<p><strong>'+nome+'</strong> e um suplemento natural desenvolvido para quem quer mais saude, equilibrio e qualidade de vida, sem complicacoes. Com uma combinacao exclusiva de ingredientes naturais selecionados por sua eficacia e pureza, atua no organismo de forma inteligente, apoiando funcoes essenciais e ajudando seu corpo a funcionar no seu melhor todos os dias.</p><p>Simples de tomar, facil de sentir a diferenca. Tecnologia natural a seu favor.</p>',
+      beneficios: [
+        'Contribui para o equilibrio natural e bem-estar geral',
+        'Melhora a disposicao e reduz o cansaco do dia a dia',
+        'Ingredientes de alta pureza e biodisponibilidade',
+        'Sem conservantes artificiais ou substancias nocivas',
+        'Qualidade verificada, resultado sentido'
+      ]
+    }
+  };
+  return map[t] || map.geral;
+}
+
+function gerarSobre(p) {
+  if (typeof COPYS !== 'undefined' && COPYS[p.slug] && COPYS[p.slug].trim().length > 10) {
+    return COPYS[p.slug];
+  }
+  var tpl  = _getTpl(p.nome, p.tipo);
+  var bens = tpl.beneficios.map(function(b) {
+    return '<li style="padding:10px 0;border-bottom:1px solid #e6f2ec">' + b + '</li>';
+  }).join('');
+  return tpl.intro +
+    '<h3 style="font-size:17px;font-weight:700;color:var(--vn-dark2);margin:26px 0 14px;display:flex;align-items:center;gap:10px">' +
+      '<span style="background:var(--vn-mid);color:#fff;width:28px;height:28px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0">&#10003;</span>' +
+      'Principais Beneficios' +
+    '</h3>' +
+    '<ul style="list-style:none;padding:0;margin:0 0 8px;border-top:1px solid #e6f2ec">' + bens + '</ul>';
+}
+
+function gerarComoUsar(p) {
+  var t = p.tipo || 'geral';
+  var DATA = {
+    masc: {
+      titulo: 'Modo de uso',
+      passos: [
+        { titulo: 'Leia as instrucoes da embalagem', desc: 'Siga as orientacoes do fabricante para garantir o melhor aproveitamento do produto e a sua seguranca.' },
+        { titulo: 'Incorpore a sua rotina diaria',   desc: 'Produtos Vida Natural sao pensados para facilitar o dia a dia. Escolha um horario fixo e torne o uso um habito.' },
+        { titulo: 'Guarde em local adequado',        desc: 'Mantenha em lugar seco, fresco e fora da luz solar direta para preservar a qualidade e a eficacia do produto.' }
+      ],
+      destaque:   'Resultados aparecem com uso regular.',
+      dest_sub:   'Para aproveitar ao maximo os beneficios, mantenha constancia no uso e combine com um estilo de vida saudavel.',
+      rodape:     'Em caso de duvidas sobre o produto, entre em contato com nosso suporte.'
+    },
+    fem: {
+      titulo: 'Modo de uso',
+      passos: [
+        { titulo: 'Leia as instrucoes da embalagem', desc: 'Siga as orientacoes do fabricante para garantir o melhor aproveitamento do produto e a sua seguranca.' },
+        { titulo: 'Incorpore a sua rotina diaria',   desc: 'Produtos Vida Natural sao pensados para facilitar o dia a dia. Escolha um horario fixo e torne o uso um habito.' },
+        { titulo: 'Guarde em local adequado',        desc: 'Mantenha em lugar seco, fresco e fora da luz solar direta para preservar a qualidade e a eficacia do produto.' }
+      ],
+      destaque:   'Resultados aparecem com uso regular.',
+      dest_sub:   'Para aproveitar ao maximo os beneficios, mantenha constancia no uso e combine com um estilo de vida saudavel.',
+      rodape:     'Em caso de duvidas sobre o produto, entre em contato com nosso suporte.'
+    },
+    geral: {
+      titulo: 'Modo de uso',
+      passos: [
+        { titulo: 'Leia as instrucoes da embalagem', desc: 'Siga as orientacoes do fabricante para garantir o melhor aproveitamento do produto e a sua seguranca.' },
+        { titulo: 'Incorpore a sua rotina diaria',   desc: 'Produtos Vida Natural sao pensados para facilitar o dia a dia. Escolha um horario fixo e torne o uso um habito.' },
+        { titulo: 'Guarde em local adequado',        desc: 'Mantenha em lugar seco, fresco e fora da luz solar direta para preservar a qualidade e a eficacia do produto.' }
+      ],
+      destaque:   'Resultados aparecem com uso regular.',
+      dest_sub:   'Para aproveitar ao maximo os beneficios, mantenha constancia no uso e combine com um estilo de vida saudavel.',
+      rodape:     'Em caso de duvidas sobre o produto, entre em contato com nosso suporte.'
+    }
+  };
+  var d = DATA[t] || DATA.geral;
+  var passos = d.passos.map(function(s, i) {
+    return '<div style="' + (i > 0 ? 'border-top:1px solid var(--vn-pale);padding-top:16px;margin-top:16px;' : '') + 'display:flex;align-items:flex-start;gap:14px">' +
+      '<span style="background:var(--vn-accent);color:#fff;font-size:13px;font-weight:800;width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px">' + (i + 1) + '</span>' +
+      '<div>' +
+        '<strong style="color:var(--vn-text);font-size:15px;display:block;margin-bottom:4px">' + s.titulo + '</strong>' +
+        '<p style="color:var(--vn-muted);font-size:13px;margin:0;line-height:1.6">' + s.desc + '</p>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+  return '<div style="background:var(--vn-white);border:1px solid var(--vn-border);border-radius:14px;padding:26px;margin-bottom:16px">' +
+      '<h2 style="color:var(--vn-dark2);font-size:18px;font-weight:800;margin:0 0 22px">' + d.titulo + '</h2>' +
+      passos +
+    '</div>' +
+    '<div style="background:var(--vn-pale);border-left:4px solid var(--vn-accent);border-radius:0 12px 12px 0;padding:18px 20px;margin-bottom:16px">' +
+      '<p style="color:var(--vn-dark2);font-size:15px;font-weight:700;margin:0 0 6px">' + d.destaque + '</p>' +
+      '<p style="color:var(--vn-muted);font-size:13px;line-height:1.6;margin:0">' + d.dest_sub + '</p>' +
+    '</div>' +
+    '<p style="color:var(--vn-muted);font-size:12px;text-align:center;margin:0">' + d.rodape + '</p>';
+}
+
+function switchTab(tab) {
+  document.querySelectorAll('.desc-tab').forEach(function(t) { t.classList.remove('on'); });
+  document.querySelectorAll('.desc-pane').forEach(function(p) { p.style.display = 'none'; });
+  document.querySelector('.desc-tab[data-tab="' + tab + '"]').classList.add('on');
+  document.getElementById('desc-' + tab).style.display = '';
+}
+
+// ─── Reviews ──────────────────────────────────────────────────────────────────
+var CORES_AVATAR = ['#1a8a74','#0d5045','#3ec4ad','#C9A84C','#2980b9','#8e44ad','#e67e22','#c0392b'];
+
+var REVIEWS = {
+  masc: [
+    { ini:'CS', nome:'Carlos S.',     cidade:'Sao Paulo, SP',      stars:5, data:'ha 2 dias',    texto:'Em 3 semanas ja sinto diferenca absurda. Disposicao la em cima, durmo melhor e rendo muito mais no dia a dia. Recomendo demais!' },
+    { ini:'RM', nome:'Roberto M.',    cidade:'Curitiba, PR',       stars:5, data:'ha 3 dias',    texto:'Voltei a me sentir com energia de verdade. Acordo disposto e ainda sobra animo no fim do dia. Produto de outro nivel.' },
+    { ini:'FL', nome:'Fabio L.',      cidade:'Recife, PE',         stars:4, data:'ha 4 dias',    texto:'Ja tentei varios e esse foi o que realmente funcionou pra mim. Entrega tambem foi rapidissima.' },
+    { ini:'MA', nome:'Marcelo A.',    cidade:'Belo Horizonte, MG', stars:5, data:'ha 5 dias',    texto:'Comprei pra testar e e real. Terceira semana e ja sinto a diferenca no corpo e na cabeca. Vou pedir mais.' },
+    { ini:'JS', nome:'Joao S.',       cidade:'Brasilia, DF',       stars:5, data:'ha 1 semana',  texto:'Minha esposa notou antes de mim! Disse que fiquei mais disposto e bem-humorado. Aprovado.' },
+    { ini:'LP', nome:'Lucas P.',      cidade:'Porto Alegre, RS',   stars:5, data:'ha 1 semana',  texto:'Nunca pensei que um natural fizesse tanta diferenca. Ja indiquei pra varios amigos.' },
+    { ini:'EA', nome:'Eduardo A.',    cidade:'Salvador, BA',       stars:5, data:'ha 10 dias',   texto:'Resultado que da pra sentir. Mais energia, menos cansaco e o sono melhorou bastante.' },
+    { ini:'PR', nome:'Paulo R.',      cidade:'Fortaleza, CE',      stars:5, data:'ha 12 dias',   texto:'Custo-beneficio excelente. To no segundo frasco e nao paro mais. Entrega no prazo.' },
+    { ini:'GH', nome:'Gustavo H.',    cidade:'Manaus, AM',         stars:4, data:'ha 2 semanas', texto:'Bom produto, senti diferenca a partir da segunda semana. Demora um pouco mas funciona.' },
+    { ini:'RC', nome:'Ricardo C.',    cidade:'Goiania, GO',        stars:5, data:'ha 2 semanas', texto:'Excelente. Disposicao pro trabalho e pra treinar voltou. Recomendo de olhos fechados.' },
+    { ini:'AN', nome:'Anderson N.',   cidade:'Belem, PA',          stars:5, data:'ha 2 semanas', texto:'Cheguei desconfiado e me surpreendi. Qualidade de verdade, nada de enrolacao.' },
+    { ini:'VS', nome:'Vinicius S.',   cidade:'Florianopolis, SC',  stars:5, data:'ha 3 semanas', texto:'Melhor compra que fiz esse ano. Energia constante o dia inteiro, sem aquele baque a tarde.' },
+    { ini:'DM', nome:'Diego M.',      cidade:'Natal, RN',          stars:5, data:'ha 3 semanas', texto:'Produto serio. Senti no humor, no sono e na disposicao. Ja virou rotina.' },
+    { ini:'LF', nome:'Leonardo F.',   cidade:'Campinas, SP',       stars:4, data:'ha 3 semanas', texto:'Funciona bem. Esperava resultado mais rapido mas valeu a pena. Vou continuar.' },
+    { ini:'RT', nome:'Rafael T.',     cidade:'Vitoria, ES',        stars:5, data:'ha 1 mes',     texto:'Um mes de uso e to outra pessoa. Mais foco, mais pique. Atendimento tambem nota 10.' },
+    { ini:'BC', nome:'Bruno C.',      cidade:'Sao Luis, MA',       stars:5, data:'ha 1 mes',     texto:'Comprei o kit maior e valeu cada centavo. Resultado consistente e entrega certinha.' },
+    { ini:'MO', nome:'Marcos O.',     cidade:'Cuiaba, MT',         stars:5, data:'ha 5 semanas', texto:'Recomendo demais. Voltei a ter disposicao que eu nao tinha ha anos.' },
+    { ini:'TS', nome:'Tiago S.',      cidade:'Joinville, SC',      stars:5, data:'ha 5 semanas', texto:'Sensacional. Natural e eficiente, sem efeito colateral nenhum pra mim.' },
+    { ini:'WL', nome:'Wagner L.',     cidade:'Maceio, AL',         stars:3, data:'ha 6 semanas', texto:'Produto ok. Senti uma leve melhora mas esperava mais. Entrega foi rapida pelo menos.' },
+    { ini:'HC', nome:'Henrique C.',   cidade:'Ribeirao Preto, SP', stars:5, data:'ha 6 semanas', texto:'Top demais. Energia, foco e bem-estar. Ja to no terceiro pedido.' },
+    { ini:'AC', nome:'Alexandre C.',  cidade:'Londrina, PR',       stars:5, data:'ha 2 meses',   texto:'Mudou minha rotina. Acordo bem, produzo mais e durmo melhor. Vale muito.' },
+    { ini:'FS', nome:'Felipe S.',     cidade:'Aracaju, SE',        stars:5, data:'ha 2 meses',   texto:'Qualidade comprovada. Indiquei pro meu pai e ele tambem aprovou.' },
+    { ini:'NS', nome:'Nelson S.',     cidade:'Caxias do Sul, RS',  stars:4, data:'ha 2 meses',   texto:'Gostei do resultado, principalmente na disposicao. Embalagem bem cuidada.' },
+    { ini:'OD', nome:'Otavio D.',     cidade:'Uberlandia, MG',     stars:5, data:'ha 3 meses',   texto:'Comecei sem expectativa e hoje nao fico sem. Diferenca real no dia a dia.' }
+  ],
+  fem: [
+    { ini:'FO', nome:'Fernanda O.',   cidade:'Sao Paulo, SP',      stars:5, data:'ha 1 dia',     texto:'Em menos de um mes ja me sinto outra mulher. Mais energia e autoestima la em cima. Amei!' },
+    { ini:'JR', nome:'Juliana R.',    cidade:'Florianopolis, SC',  stars:5, data:'ha 2 dias',    texto:'Entrega super rapida e o resultado apareceu logo. Me sinto mais leve e disposta. 10/10!' },
+    { ini:'PC', nome:'Patricia C.',   cidade:'Goiania, GO',        stars:5, data:'ha 3 dias',    texto:'Cheguei cetica e fui surpreendida. Recomendo de coracao pra todas as mulheres.' },
+    { ini:'AB', nome:'Ana Beatriz T.',cidade:'Porto Alegre, RS',   stars:4, data:'ha 4 dias',    texto:'Ja estou no terceiro kit! Humor, energia e ate o sono melhoraram. Qualidade real.' },
+    { ini:'CM', nome:'Camila M.',     cidade:'Ribeirao Preto, SP', stars:5, data:'ha 5 dias',    texto:'Indiquei pra minha mae depois de ver meus resultados. As duas adoramos!' },
+    { ini:'RS', nome:'Renata S.',     cidade:'Fortaleza, CE',      stars:5, data:'ha 1 semana',  texto:'A diferenca no meu humor e na disposicao foi perceptivel na primeira semana. Sensacional.' },
+    { ini:'BL', nome:'Bruna L.',      cidade:'Curitiba, PR',       stars:5, data:'ha 1 semana',  texto:'Produto maravilhoso. Me sinto mais animada e bem comigo mesma.' },
+    { ini:'LA', nome:'Larissa A.',    cidade:'Salvador, BA',       stars:5, data:'ha 9 dias',    texto:'Amei o resultado. Pele, cabelo e disposicao melhoraram juntos. Vale muito a pena.' },
+    { ini:'TC', nome:'Tatiane C.',    cidade:'Manaus, AM',         stars:4, data:'ha 2 semanas', texto:'Bom produto. Demorou um pouquinho mas vi diferenca. Atendimento otimo.' },
+    { ini:'VA', nome:'Vanessa S.',    cidade:'Recife, PE',         stars:5, data:'ha 2 semanas', texto:'Simplesmente perfeito. Voltei a ter energia pra cuidar da casa, dos filhos e de mim.' },
+    { ini:'MD', nome:'Marina D.',     cidade:'Campinas, SP',       stars:5, data:'ha 2 semanas', texto:'Cada real investido valeu. Me sinto mais leve, dormindo melhor e mais feliz.' },
+    { ini:'SR', nome:'Sabrina R.',    cidade:'Belem, PA',          stars:5, data:'ha 3 semanas', texto:'Recomendo demais! Mudou meu dia a dia, mais animo e menos cansaco.' },
+    { ini:'KO', nome:'Karina O.',     cidade:'Natal, RN',          stars:5, data:'ha 3 semanas', texto:'Que diferenca! Autoestima renovada e muito mais disposicao. Ja pedi de novo.' },
+    { ini:'PA', nome:'Paula A.',      cidade:'Vitoria, ES',        stars:4, data:'ha 3 semanas', texto:'Gostei bastante. Resultado gradual mas consistente. Embalagem linda.' },
+    { ini:'DF', nome:'Daniela F.',    cidade:'Goiania, GO',        stars:5, data:'ha 1 mes',     texto:'Um mes usando e to amando. Energia, humor e pele, tudo melhor. Obrigada!' },
+    { ini:'CL', nome:'Carla L.',      cidade:'Sao Luis, MA',       stars:5, data:'ha 1 mes',     texto:'Produto de qualidade e entrega no prazo. Indico pra todas as amigas.' },
+    { ini:'RB', nome:'Roberta M.',    cidade:'Cuiaba, MT',         stars:5, data:'ha 5 semanas', texto:'Maravilhoso. Me sinto mais confiante e disposta. Virou item fixo aqui em casa.' },
+    { ini:'JE', nome:'Jessica S.',    cidade:'Joinville, SC',      stars:5, data:'ha 5 semanas', texto:'Sensacional, natural e eficiente. Nao sinto mais aquele cansaco da tarde.' },
+    { ini:'LE', nome:'Leticia P.',    cidade:'Maceio, AL',         stars:3, data:'ha 6 semanas', texto:'Produto ok, senti melhora leve. Esperava um pouco mais, mas a entrega foi rapida.' },
+    { ini:'AM', nome:'Aline M.',      cidade:'Ribeirao Preto, SP', stars:5, data:'ha 6 semanas', texto:'Top! Disposicao e bem-estar que eu nao tinha ha tempos. Recomendo muito.' },
+    { ini:'BS', nome:'Bianca S.',     cidade:'Londrina, PR',       stars:5, data:'ha 2 meses',   texto:'Mudou minha rotina. Acordo bem e termino o dia com energia. Vale cada centavo.' },
+    { ini:'GM', nome:'Gabriela M.',   cidade:'Aracaju, SE',        stars:5, data:'ha 2 meses',   texto:'Qualidade comprovada. Minha irma viu em mim e ja comprou tambem.' },
+    { ini:'NF', nome:'Natalia F.',    cidade:'Caxias do Sul, RS',  stars:4, data:'ha 2 meses',   texto:'Gostei do resultado, principalmente no humor e na pele. Bem cuidado o pacote.' },
+    { ini:'SO', nome:'Simone O.',     cidade:'Uberlandia, MG',     stars:5, data:'ha 3 meses',   texto:'Comecei sem esperar muito e hoje nao vivo sem. Diferenca real no meu dia.' }
+  ],
+  geral: [
+    { ini:'RB', nome:'Rodrigo B.',    cidade:'Sao Paulo, SP',      stars:5, data:'ha 1 dia',     texto:'Resultado real. Me sinto mais equilibrado e com energia constante ao longo do dia.' },
+    { ini:'MF', nome:'Mariana F.',    cidade:'Campinas, SP',       stars:5, data:'ha 2 dias',    texto:'Qualidade e entrega rapida. Surpreendida desde o primeiro uso. Ja pedi o segundo kit.' },
+    { ini:'DM', nome:'Diego M.',      cidade:'Salvador, BA',       stars:5, data:'ha 3 dias',    texto:'Faz parte da minha rotina agora. Nota 10 em qualidade, resultado e atendimento.' },
+    { ini:'SP', nome:'Sandra P.',     cidade:'Manaus, AM',         stars:4, data:'ha 4 dias',    texto:'Fui cetica mas os resultados falaram por si. Produto muito bom, recomendo.' },
+    { ini:'TR', nome:'Thiago R.',     cidade:'Natal, RN',          stars:5, data:'ha 5 dias',    texto:'Surpreendido com a melhora. Bons ativos, qualidade comprovada!' },
+    { ini:'LM', nome:'Lucia M.',      cidade:'Curitiba, PR',       stars:5, data:'ha 1 semana',  texto:'Comprei com receio e ja estou no quarto kit. Diferenca real e perceptivel.' },
+    { ini:'EG', nome:'Eduardo G.',    cidade:'Recife, PE',         stars:5, data:'ha 1 semana',  texto:'Excelente custo-beneficio. Bem-estar e disposicao que da pra sentir.' },
+    { ini:'AP', nome:'Amanda P.',     cidade:'Fortaleza, CE',      stars:5, data:'ha 10 dias',   texto:'Maravilhoso. Me sinto mais leve e disposta. Entrega rapidinha.' },
+    { ini:'CF', nome:'Carlos F.',     cidade:'Goiania, GO',        stars:4, data:'ha 2 semanas', texto:'Bom produto, melhora gradual. Vale a pena continuar usando.' },
+    { ini:'BV', nome:'Beatriz V.',    cidade:'Belem, PA',          stars:5, data:'ha 2 semanas', texto:'Adorei. Resultado consistente e atendimento muito atencioso.' },
+    { ini:'RA', nome:'Rafael A.',     cidade:'Florianopolis, SC',  stars:5, data:'ha 2 semanas', texto:'Top demais. Energia o dia todo, sem cansaco a tarde. Recomendo.' },
+    { ini:'PS', nome:'Priscila S.',   cidade:'Campinas, SP',       stars:5, data:'ha 3 semanas', texto:'Mudou meu dia a dia. Mais animo e melhor humor. Ja indiquei pra familia.' },
+    { ini:'MN', nome:'Marcos N.',     cidade:'Vitoria, ES',        stars:5, data:'ha 3 semanas', texto:'Produto serio e eficiente. Senti diferenca no sono e na disposicao.' },
+    { ini:'LC', nome:'Larissa C.',    cidade:'Goiania, GO',        stars:4, data:'ha 3 semanas', texto:'Gostei. Resultado aos poucos mas constante. Embalagem caprichada.' },
+    { ini:'JF', nome:'Joao F.',       cidade:'Sao Luis, MA',       stars:5, data:'ha 1 mes',     texto:'Um mes de uso e to muito satisfeito. Qualidade e entrega impecaveis.' },
+    { ini:'VC', nome:'Vanessa C.',    cidade:'Cuiaba, MT',         stars:5, data:'ha 1 mes',     texto:'Sensacional. Voltei a ter disposicao pra tudo. Recomendo de coracao.' },
+    { ini:'GS', nome:'Gustavo S.',    cidade:'Joinville, SC',      stars:5, data:'ha 5 semanas', texto:'Excelente. Natural, sem efeito colateral e com resultado de verdade.' },
+    { ini:'TA', nome:'Tatiana A.',    cidade:'Maceio, AL',         stars:5, data:'ha 5 semanas', texto:'Maravilha. Bem-estar e energia renovados. Virou item fixo aqui.' },
+    { ini:'WS', nome:'Wesley S.',     cidade:'Aracaju, SE',        stars:3, data:'ha 6 semanas', texto:'Produto ok, melhora leve. Esperava mais, mas a entrega foi rapida.' },
+    { ini:'HA', nome:'Helena A.',     cidade:'Ribeirao Preto, SP', stars:5, data:'ha 6 semanas', texto:'Top! Disposicao e bem-estar que eu nao tinha ha tempos. Vale muito.' },
+    { ini:'FC', nome:'Fernando C.',   cidade:'Londrina, PR',       stars:5, data:'ha 2 meses',   texto:'Mudou minha rotina pra melhor. Acordo bem e produzo mais. Recomendo.' },
+    { ini:'IS', nome:'Isabela S.',    cidade:'Aracaju, SE',        stars:5, data:'ha 2 meses',   texto:'Qualidade comprovada. Indiquei e todo mundo aprovou. Otimo produto.' },
+    { ini:'RN', nome:'Ronaldo N.',    cidade:'Caxias do Sul, RS',  stars:4, data:'ha 2 meses',   texto:'Bom resultado, principalmente na energia. Pacote bem cuidado.' },
+    { ini:'SM', nome:'Sofia M.',      cidade:'Uberlandia, MG',     stars:5, data:'ha 3 meses',   texto:'Comecei sem esperar e hoje nao fico sem. Diferenca real no dia a dia.' }
+  ]
+};
+
+function gerarAvaliacoes(prod) {
+  var lista = REVIEWS[prod.tipo] || REVIEWS.geral;
+  var grid  = document.getElementById('rev-grid');
+  var VISIVEL = 6;
+  lista.forEach(function(r, i) {
+    var cor   = CORES_AVATAR[i % CORES_AVATAR.length];
+    var stars = '&#9733;'.repeat(r.stars) + (r.stars < 5 ? '&#9734;'.repeat(5 - r.stars) : '');
+    var card  = document.createElement('div');
+    card.className = 'rev-card' + (i >= VISIVEL ? ' rev-hidden' : '');
+    card.innerHTML =
+      '<div class="rev-card-top">' +
+        '<div class="rev-avatar" style="background:' + cor + '">' + r.ini + '</div>' +
+        '<div>' +
+          '<div class="rev-name">' + r.nome + '</div>' +
+          '<div class="rev-city">' + r.cidade + '</div>' +
+          '<div class="rev-verified">&#10003; Compra verificada</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="rev-stars">' + stars + '</div>' +
+      '<p class="rev-text">"' + r.texto + '"</p>' +
+      '<div class="rev-date">' + r.data + '</div>';
+    grid.appendChild(card);
+  });
+  var cnt = document.querySelector('.rev-count');
+  if (cnt) cnt.textContent = lista.length + ' avaliacoes verificadas';
+  if (lista.length > VISIVEL) {
+    var btn = document.createElement('button');
+    btn.className = 'rev-more-btn';
+    btn.type = 'button';
+    btn.textContent = 'Ver todas as ' + lista.length + ' avaliacoes';
+    btn.onclick = function() {
+      var ocultos = grid.querySelectorAll('.rev-card.rev-hidden');
+      for (var k = 0; k < ocultos.length; k++) ocultos[k].classList.remove('rev-hidden');
+      btn.remove();
+    };
+    grid.parentNode.appendChild(btn);
+  }
+}
+
+// ─── Helpers ─────────────────────────────────────────────────────────────
+function $$(c) {
+  return 'R$ ' + (c / 100).toFixed(2).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+}
+function qs(id) { return document.getElementById(id); }
+
+// ─── Captura UTMs ─────────────────────────────────────────────────────────────
+(function() {
+  var p = new URLSearchParams(location.search);
+  var fresh = {};
+  ['source','medium','campaign','content','term'].forEach(function(k) {
+    var v = p.get('utm_' + k);
+    if (v) fresh[k] = v;
+  });
+  if (Object.keys(fresh).length) sessionStorage.setItem('_utm', JSON.stringify(fresh));
+})();
+
+// ─── Ler slug da URL ──────────────────────────────────────────────────────────
+var slug = new URLSearchParams(location.search).get('slug')
+  || (location.pathname.match(/\/products\/([^/?#]+)/) || [])[1]
+  || '';
+
+var prod = (typeof PRODUTOS !== 'undefined') ? PRODUTOS.find(function(p) { return p.slug === slug; }) : null;
+
+if (!prod) {
+  document.body.innerHTML = '<div style="text-align:center;padding:80px 24px"><h2 style="color:var(--vn-dark2)">Produto nao encontrado</h2><a href="/" style="color:var(--vn-mid);margin-top:16px;display:inline-block">Voltar a loja</a></div>';
+  throw new Error('produto nao encontrado: ' + slug);
+}
+
+// ─── Meta + SEO ───────────────────────────────────────────────────────────────
+var _ORIGIN = 'https://lojavidanatural.com';
+var _PURL   = _ORIGIN + '/products/' + slug;
+
+document.getElementById('pg-title').textContent     = prod.titulo + ' | Comprar com Desconto | Vida Natural';
+document.getElementById('pg-desc').setAttribute('content', prod.subtitulo);
+document.getElementById('pg-canonical').href        = _PURL;
+document.getElementById('og-title').content         = prod.titulo + ' | Comprar com Desconto | Vida Natural';
+document.getElementById('og-desc').content          = prod.subtitulo;
+document.getElementById('og-image').content         = _ORIGIN + prod.imagens[0];
+document.getElementById('og-url').content           = _PURL;
+var _lowPrc = Math.min.apply(null, prod.variantes.map(function(v) { return v.preco; })) / 100;
+document.getElementById('og-prc').content           = _lowPrc.toFixed(2);
+
+// Schema.org Product + BreadcrumbList
+var _ld = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type':       'Product',
+      name:          prod.titulo,
+      description:   prod.subtitulo,
+      image:         prod.imagens.map(function(i) { return _ORIGIN + i; }),
+      brand: { '@type': 'Brand', name: 'Vida Natural' },
+      offers: {
+        '@type':        'AggregateOffer',
+        priceCurrency:  'BRL',
+        lowPrice:       _lowPrc.toFixed(2),
+        highPrice:      (Math.max.apply(null, prod.variantes.map(function(v) { return v.preco; })) / 100).toFixed(2),
+        offerCount:     prod.variantes.length,
+        availability:   'https://schema.org/InStock',
+        url:            _PURL,
+        seller: { '@type': 'Organization', name: 'Vida Natural' }
+      },
+      aggregateRating: {
+        '@type':      'AggregateRating',
+        ratingValue:  '4.9',
+        reviewCount:  '5000',
+        bestRating:   '5'
+      }
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Inicio', item: _ORIGIN + '/' },
+        { '@type': 'ListItem', position: 2, name: prod.titulo, item: _PURL }
+      ]
+    }
+  ]
+};
+document.getElementById('ld-json').textContent = JSON.stringify(_ld);
+
+// ─── Breadcrumb ───────────────────────────────────────────────────────────────
+document.getElementById('bc-nome').textContent = prod.titulo;
+
+// ─── Badge ────────────────────────────────────────────────────────────────────
+var badgeEl = qs('prod-badge');
+if (prod.badge) {
+  badgeEl.textContent = prod.badge;
+  badgeEl.style.display = '';
+  var badgeMap = { 'LANCAMENTO':'badge-lancamento','LANÇAMENTO':'badge-lancamento','NOVIDADE':'badge-novidade','DESTAQUE':'badge-destaque','MAIS VENDIDO':'badge-mais-vendido' };
+  var bCls = badgeMap[prod.badge.toUpperCase()];
+  if (bCls) badgeEl.classList.add(bCls);
+  else { badgeEl.style.background = prod.badgeColor || 'var(--vn-mid)'; badgeEl.style.color = '#fff'; }
+}
+
+// ─── Titulo / sub / tab nome ──────────────────────────────────────────────────
+qs('prod-title').textContent = prod.titulo;
+qs('prod-sub').textContent   = prod.subtitulo;
+qs('tab-nome').textContent   = prod.nome;
+
+// ─── Descricao ────────────────────────────────────────────────────────────────
+if (prod.semCopy) {
+  var ds = document.querySelector('.desc-section');
+  if (ds) ds.style.display = 'none';
+} else {
+  qs('desc-sobre').innerHTML    = gerarSobre(prod);
+  qs('desc-como-usar').innerHTML = gerarComoUsar(prod);
+}
+
+// Oculta secao de kits inline da copy, redireciona CTAs e adiciona botao CTA ao final
+(function() {
+  var sobreEl = qs('desc-sobre');
+  if (!sobreEl) return;
+  sobreEl.querySelectorAll('[class*="-kits"]').forEach(function(el) { el.style.display = 'none'; });
+  sobreEl.querySelectorAll('a[class*="-btn"]').forEach(function(el) {
+    el.href = '#';
+    el.onclick = function(e) {
+      e.preventDefault();
+      var vg = document.getElementById('variants-grid');
+      if (vg) vg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    };
+  });
+  // Esconde tabelas de kit de preco (Yampi) — colunas "Kit / Preco / De"
+  sobreEl.querySelectorAll('table').forEach(function(t) {
+    var txt = t.textContent || '';
+    if (/COMPRE|LEVE|R\$\s*\d/.test(txt)) t.style.display = 'none';
+  });
+  // Botao CTA ao final da descricao
+  var btn = document.createElement('button');
+  btn.className = 'desc-pane-cta';
+  btn.textContent = 'ESCOLHER MEU KIT';
+  btn.onclick = function() {
+    var vg = document.getElementById('variants-grid');
+    if (vg) vg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+  sobreEl.appendChild(btn);
+})();
+
+// ─── Gallery ──────────────────────────────────────────────────────────────────
+var mainPhoto = qs('main-photo');
+mainPhoto.src = prod.imagens[0];
+mainPhoto.alt = prod.nome;
+
+var thumbsEl = qs('thumbs');
+prod.imagens.forEach(function(url, i) {
+  var t = document.createElement('div');
+  t.className = 'thumb' + (i === 0 ? ' on' : '');
+  t.innerHTML = '<img src="' + url + '" alt="' + prod.nome + ' ' + (i + 1) + '" loading="lazy">';
+  t.onclick = function() {
+    mainPhoto.src = url;
+    document.querySelectorAll('.thumb').forEach(function(el) { el.classList.remove('on'); });
+    t.classList.add('on');
+  };
+  thumbsEl.appendChild(t);
+});
+
+// ─── Variants ─────────────────────────────────────────────────────────────────
+var selectedIdx = prod.variantes.findIndex(function(v) { return v.popular; });
+if (selectedIdx < 0) selectedIdx = 0;
+
+var vgrid = qs('variants-grid');
+prod.variantes.forEach(function(v, i) {
+  var el = document.createElement('div');
+  el.className = 'vcard' + (i === selectedIdx ? ' on' : '');
+  var imgSrc = prod.imagens[Math.min(i, prod.imagens.length - 1)] || prod.imagens[0];
+  el.innerHTML =
+    (v.popular ? '<div class="vcard-pop">MAIS POPULAR</div>' : '') +
+    '<img src="' + imgSrc + '" alt="' + v.titulo + '" style="width:100%;height:90px;object-fit:contain;border-radius:8px;margin-bottom:6px;background:#f8fbfa">' +
+    '<div class="vcard-title">' + v.titulo + '</div>' +
+    '<div class="vcard-price">' + $$(v.preco) + '</div>' +
+    (v.comparar ? '<div class="vcard-compare">' + $$(v.comparar) + '</div>' : '') +
+    (v.desconto ? '<div class="vcard-disc">' + v.desconto + '% OFF</div>' : '') +
+    '<button class="vcard-btn" data-idx="' + i + '">COMPRAR AGORA</button>';
+  el.onclick = function(e) {
+    if (e.target.classList.contains('vcard-btn')) return;
+    selecionarVariante(i);
+  };
+  el.querySelector('.vcard-btn').onclick = function(e) {
+    e.stopPropagation();
+    comprarAgora(i);
+  };
+  vgrid.appendChild(el);
+});
+
+// ─── Checkout URL ─────────────────────────────────────────────────────────────
+function checkoutUrl(idx) {
+  var v   = prod.variantes[idx];
+  var img = prod.imagens[Math.min(idx, prod.imagens.length - 1)];
+  var params = new URLSearchParams({ nome: prod.titulo, variante: v.titulo, preco: v.preco, qty: 1, img: img });
+  return '/checkout.html?' + params.toString();
+}
+
+function selecionarVariante(i) {
+  document.querySelectorAll('.vcard').forEach(function(c) { c.classList.remove('on'); });
+  document.querySelectorAll('.vcard')[i].classList.add('on');
+  selectedIdx = i;
+  if (prod.imagens[i]) {
+    mainPhoto.src = prod.imagens[i];
+    document.querySelectorAll('.thumb').forEach(function(t, ti) {
+      t.classList.toggle('on', ti === i);
+    });
+  }
+  updatePrice();
+  updateBtn();
+}
+
+function comprarAgora(i) {
+  selecionarVariante(i);
+  window.location.href = checkoutUrl(i);
+}
+
+function updatePrice() {}
+
+function updateBtn() {
+  var v   = prod.variantes[selectedIdx];
+  var url = checkoutUrl(selectedIdx);
+  var stickyBtn = document.getElementById('sticky-buy-btn');
+  if (stickyBtn) stickyBtn.href = url;
+  var stickyName  = document.getElementById('sticky-kit-name');
+  var stickyPrice = document.getElementById('sticky-kit-price');
+  if (stickyName)  stickyName.textContent  = v.titulo;
+  if (stickyPrice) stickyPrice.textContent = $$(v.preco);
+}
+
+updatePrice();
+updateBtn();
+
+// ─── Sticky bar ───────────────────────────────────────────────────────────────
+(function() {
+  var bar    = document.getElementById('sticky-kit');
+  var anchor = document.getElementById('variants-grid');
+  if (!bar || !anchor) return;
+  var obs = new IntersectionObserver(function(entries) {
+    bar.classList.toggle('show', !entries[0].isIntersecting);
+  }, { rootMargin: '0px 0px -40px 0px' });
+  obs.observe(anchor);
+  document.getElementById('sticky-back-btn').onclick = function() {
+    anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+})();
+
+// ─── Avaliacoes ───────────────────────────────────────────────────────────────
+gerarAvaliacoes(prod);
+
+// ─── WhatsApp flutuante (mensagem com origem + produto) ───────────────────────
+(function() {
+  var msg = 'Ola! Vim pelo site da Vida Natural e tenho uma duvida sobre o produto ' + prod.titulo + '.';
+  var url = 'https://wa.me/5511970111782?text=' + encodeURIComponent(msg);
+  function setWa() {
+    var wa = document.getElementById('wa-float');
+    if (wa) wa.href = url;
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setWa);
+  } else {
+    setWa();
+  }
+})();
+
+
+// ─── Zoom ─────────────────────────────────────────────────────────────────────
+function openZoom(src) {
+  qs('zoom-img').src = src;
+  qs('zoom').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeZoom() {
+  qs('zoom').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') { closeZoom(); closeModal(); }
+});
+
+// ─── Modais de politicas ──────────────────────────────────────────────────────
+var POLITICAS = {
+  privacidade: {
+    titulo: 'Politica de Privacidade',
+    corpo:
+      '<p><strong>Vida Natural</strong> respeita sua privacidade e protege seus dados pessoais conforme a LGPD (Lei 13.709/2018).</p>' +
+      '<p><strong>Dados coletados:</strong> Nome, e-mail, CPF, endereco e telefone, utilizados exclusivamente para processar pedidos e enviar comunicacoes relacionadas a compra.</p>' +
+      '<p><strong>Compartilhamento:</strong> Seus dados nao sao vendidos. Compartilhamos apenas com transportadoras e processadores de pagamento, estritamente para a finalidade do pedido.</p>' +
+      '<p><strong>Seguranca:</strong> Utilizamos criptografia SSL e sistemas seguros para proteger suas informacoes.</p>' +
+      '<p><strong>Seus direitos:</strong> Voce pode solicitar acesso, correcao ou exclusao dos seus dados a qualquer momento pelo nosso canal de atendimento.</p>' +
+      '<p><strong>Contato:</strong> atendimento@lojavidanatural.com</p>'
+  },
+  termos: {
+    titulo: 'Termos de Uso',
+    corpo:
+      '<p>Ao realizar uma compra na Vida Natural, voce concorda com os seguintes termos:</p>' +
+      '<p><strong>Produtos:</strong> Todos os suplementos sao produtos alimentares. Nao substituem medicamentos nem tratamento medico. Resultados podem variar.</p>' +
+      '<p><strong>Pedidos:</strong> Apos a confirmacao do pagamento, o pedido e processado em ate 24h uteis e despachado com codigo de rastreio.</p>' +
+      '<p><strong>Precos:</strong> Os precos podem ser alterados sem aviso previo. O valor valido e o do momento da compra.</p>' +
+      '<p><strong>Proibicoes:</strong> E proibida a revenda dos produtos sem autorizacao previa por escrito.</p>' +
+      '<p><strong>Foro:</strong> Fica eleito o foro da comarca de domicilio do consumidor para resolucao de conflitos.</p>'
+  },
+  devolucao: {
+    titulo: 'Reembolso e Devolucao',
+    corpo:
+      '<p><strong>Garantia de 30 dias:</strong> Voce tem 30 dias a partir do recebimento para solicitar a devolucao, sem precisar justificar o motivo.</p>' +
+      '<p><strong>Como solicitar:</strong> Entre em contato pelo WhatsApp (11) 97011-1782 ou e-mail informando o numero do pedido. Retornaremos em ate 24h com as instrucoes.</p>' +
+      '<p><strong>Reembolso:</strong> Apos recebermos e verificarmos o produto devolvido, o reembolso e processado em ate 5 dias uteis pelo mesmo metodo de pagamento utilizado na compra.</p>' +
+      '<p><strong>Produto com defeito:</strong> Em caso de defeito de fabricacao, arcamos com o frete de devolucao e enviamos um novo produto sem custo adicional.</p>' +
+      '<p><strong>Contato:</strong> atendimento@lojavidanatural.com</p>'
+  },
+  frete: {
+    titulo: 'Politicas de Frete',
+    corpo:
+      '<p><strong>Frete Gratis:</strong> Todas as compras na Vida Natural tem frete gratis para todo o Brasil, sem valor minimo de pedido.</p>' +
+      '<p><strong>Prazo de envio:</strong> O pedido e despachado em ate 1 dia util apos a confirmacao do pagamento.</p>' +
+      '<p><strong>Prazo de entrega:</strong> De 5 a 12 dias uteis apos o envio, dependendo da regiao. Regioes metropolitanas costumam receber em 3 a 7 dias uteis.</p>' +
+      '<p><strong>Rastreamento:</strong> Voce recebera o codigo de rastreio por e-mail assim que o pedido for despachado.</p>' +
+      '<p><strong>Extravio:</strong> Em caso de nao recebimento em ate 20 dias uteis, entre em contato para abrirmos uma investigacao com a transportadora.</p>'
+  },
+  aviso: {
+    titulo: 'Aviso Legal',
+    corpo:
+      '<p>Os produtos comercializados pela Vida Natural sao suplementos alimentares e nao substituem medicamentos, tratamento medico ou dieta prescrita por profissional de saude.</p>' +
+      '<p>Os resultados podem variar de pessoa para pessoa. As descricoes dos produtos sao baseadas nos beneficios dos ingredientes e nao constituem alegacao de cura, prevencao ou tratamento de doencas.</p>' +
+      '<p>Consulte sempre um medico ou nutricionista antes de iniciar o uso de qualquer suplemento, especialmente se voce tiver condicoes de saude preexistentes, estiver gravida, amamentando ou em uso de medicamentos.</p>' +
+      '<p>A Vida Natural cumpre integralmente as normas da ANVISA para comercializacao de suplementos alimentares no Brasil.</p>' +
+      '<p><strong>Contato:</strong> atendimento@lojavidanatural.com</p>'
+  }
+};
+
+function openModal(tipo) {
+  var pol = POLITICAS[tipo];
+  if (!pol) return;
+  document.getElementById('modal-title').textContent = pol.titulo;
+  document.getElementById('modal-body').innerHTML    = pol.corpo;
+  document.getElementById('modal-overlay').classList.add('open');
+  document.getElementById('modal-box').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+  document.getElementById('modal-box').classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+
+<a id="wa-float" href="https://wa.me/5511970111782" target="_blank" rel="noopener" aria-label="WhatsApp" style="position:fixed;bottom:24px;right:24px;z-index:9999;width:56px;height:56px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.5);transition:transform .2s,box-shadow .2s" onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 28px rgba(37,211,102,.65)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 20px rgba(37,211,102,.5)'">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.878-1.42A9.952 9.952 0 0012 22c5.523 0 10-4.477 10-10S17.521 2 12 2z"/></svg>
+</a>
+</body>
+</html>
