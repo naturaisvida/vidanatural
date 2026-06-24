@@ -171,6 +171,12 @@ module.exports = async function handler(req, res) {
       source:       'checkout_html_vidanatural',
       installments:    String(method === 'cartao' ? (parseInt(installments) || 1) : 1),
       amount_charged:  String(parseInt(amount) || 0),
+      // Snapshot imutavel do cliente POR PEDIDO (o customer do Pagar.me e compartilhado
+      // por email/CPF e pode ser sobrescrito; o admin le estes campos primeiro).
+      cust_name:     String(cust.name  || '').slice(0, 100),
+      cust_email:    String(cust.email || '').slice(0, 100),
+      cust_document: String(doc        || '').slice(0, 14),
+      cust_phone:    String((cust.phones.mobile_phone.area_code || '') + (cust.phones.mobile_phone.number || '')).slice(0, 20),
       utm_source:   String(utm.source   || '').slice(0, 100),
       utm_medium:   String(utm.medium   || '').slice(0, 100),
       utm_campaign: String(utm.campaign || '').slice(0, 100),

@@ -112,10 +112,10 @@ function formatOrder(raw) {
     id:         raw.id,
     code:       raw.code || raw.id,
     customer: {
-      name:     meta.edit_customer_name     || cust.name     || '',
-      email:    meta.edit_customer_email    || cust.email    || '',
-      document: meta.edit_customer_document || cust.document || '',
-      phone:    meta.edit_customer_phone    || basePhone,
+      name:     meta.edit_customer_name     || meta.cust_name     || cust.name     || '',
+      email:    meta.edit_customer_email    || meta.cust_email    || cust.email    || '',
+      document: meta.edit_customer_document || meta.cust_document || cust.document || '',
+      phone:    meta.edit_customer_phone    || meta.cust_phone    || basePhone,
     },
     amount:      raw.amount   || 0,
     amountPaid,
@@ -133,7 +133,7 @@ function formatOrder(raw) {
     shipping: {
       carrier:      meta.shipping_carrier || (ship.description || 'Correios'),
       trackingCode: meta.tracking_code    || '',
-      recipientName: meta.edit_shipping_name || cust.name || '',
+      recipientName: meta.edit_shipping_name || meta.cust_name || cust.name || '',
       address: {
         line1:    meta.edit_shipping_line1 || addr.line_1   || '',
         line2:    meta.edit_shipping_line2 || addr.line_2   || '',
