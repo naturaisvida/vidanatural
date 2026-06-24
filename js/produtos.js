@@ -16,11 +16,11 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10", preco:53990, comparar:149990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/amora-miura-vit-oferta-do-dia-7385274.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/amora-miura-vit-oferta-do-dia-4730940.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/amora-miura-vit-oferta-do-dia-4441925.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/amora-miura-vit-oferta-do-dia-1629460.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/amora-miura-vit-oferta-do-dia-7629359.png"
+      "/img/produtos/amora-miura/1.png",
+      "/img/produtos/amora-miura/2.png",
+      "/img/produtos/amora-miura/3.png",
+      "/img/produtos/amora-miura/4.png",
+      "/img/produtos/amora-miura/5.png"
     ],
   },
   {
@@ -36,11 +36,11 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10", preco:53990, comparar:149990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/mounjax-oferta-do-dia-7380565.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/mounjax-oferta-do-dia-3237211.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/mounjax-oferta-do-dia-6666507.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/mounjax-oferta-do-dia-8437648.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/mounjax-oferta-do-dia-4838725.png"
+      "/img/produtos/mounjax/1.png",
+      "/img/produtos/mounjax/2.png",
+      "/img/produtos/mounjax/3.png",
+      "/img/produtos/mounjax/4.png",
+      "/img/produtos/mounjax/5.png"
     ],
   },
   {
@@ -55,10 +55,10 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10 (10 frascos)", preco:50990, comparar:145990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/glicofit-oferta-do-dia-5818647.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/glicofit-oferta-do-dia-4039073.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/glicofit-oferta-do-dia-7104243.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/glicofit-oferta-do-dia-3284557.png"
+      "/img/produtos/glicofit/1.png",
+      "/img/produtos/glicofit/2.png",
+      "/img/produtos/glicofit/3.png",
+      "/img/produtos/glicofit/4.png"
     ],
   },
   {
@@ -88,9 +88,9 @@ const PRODUTOS = [
       { titulo:"COMPRE 3 LEVE 6", preco:35990, comparar:89990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/florabe-oferta-do-dia-2239788.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/florabe-oferta-do-dia-6042238.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/florabe-oferta-do-dia-6278497.png"
+      "/img/produtos/florabe/1.png",
+      "/img/produtos/florabe/2.png",
+      "/img/produtos/florabe/3.png"
     ],
   },
   {
@@ -122,11 +122,11 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10", preco:53990, comparar:149990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/elefantol-oferta-do-dia-7601141.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/elefantol-oferta-do-dia-2661869.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/elefantol-oferta-do-dia-7621518.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/elefantol-oferta-do-dia-2803191.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/elefantol-oferta-do-dia-4235050.png"
+      "/img/produtos/elefantol/1.png",
+      "/img/produtos/elefantol/2.png",
+      "/img/produtos/elefantol/3.png",
+      "/img/produtos/elefantol/4.png",
+      "/img/produtos/elefantol/5.png"
     ],
   },
   {
@@ -165,10 +165,10 @@ const PRODUTOS = [
       { titulo:"COMPRE 4 LEVE 10", preco:53990, comparar:149990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/Pulmoclean_an_-_2026-06-19T133841.710.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/Pulmoclean_an_-_2026-06-19T133811.257.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/Pulmoclean_an_-_2026-06-19T133743.978.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/Pulmoclean_an_-_2026-06-19T133623.761.png"
+      "/img/produtos/diavance/1.png",
+      "/img/produtos/diavance/2.png",
+      "/img/produtos/diavance/3.png",
+      "/img/produtos/diavance/4.png"
     ],
   },
   {
@@ -197,11 +197,11 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10", preco:53990, comparar:149990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/long-beauty-oferta-do-dia-5837445.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/long-beauty-oferta-do-dia-8932141.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/long-beauty-oferta-do-dia-7586338.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/long-beauty-oferta-do-dia-3220286.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/long-beauty-oferta-do-dia-9860687.png"
+      "/img/produtos/long-beauty/1.png",
+      "/img/produtos/long-beauty/2.png",
+      "/img/produtos/long-beauty/3.png",
+      "/img/produtos/long-beauty/4.png",
+      "/img/produtos/long-beauty/5.png"
     ],
   },
   {
@@ -216,10 +216,10 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10", preco:50990, comparar:145990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/memoralis-oferta-do-dia-5308562.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/memoralis-oferta-do-dia-2257178.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/memoralis-oferta-do-dia-5236423.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/memoralis-oferta-do-dia-2745258.png"
+      "/img/produtos/memoralis/1.png",
+      "/img/produtos/memoralis/2.png",
+      "/img/produtos/memoralis/3.png",
+      "/img/produtos/memoralis/4.png"
     ],
   },
   {
@@ -246,10 +246,10 @@ const PRODUTOS = [
       { titulo:"COMPRE 4 LEVE 9", preco:57990, comparar:134990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/artivita-oferta-do-dia-1695179.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/artivita-oferta-do-dia-8444096.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/artivita-oferta-do-dia-2032751.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/artivita-oferta-do-dia-9234820.png"
+      "/img/produtos/artivita/1.png",
+      "/img/produtos/artivita/2.png",
+      "/img/produtos/artivita/3.png",
+      "/img/produtos/artivita/4.png"
     ],
   },
   {
@@ -261,7 +261,7 @@ const PRODUTOS = [
       { titulo:"Default Title", preco:9990, comparar:9990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/multivitaminico-de-a-z-2-unidades-3526148.webp"
+      "/img/produtos/multivitaminico-de-a-z-2-unidades/1.webp"
     ],
   },
   {
@@ -289,15 +289,15 @@ const PRODUTOS = [
       { titulo:"COMPRE 3 LEVE 5", preco:35990, comparar:89990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/Pulmocleanan-2026-06-19T140058.649.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/Pulmocleanan-2026-06-19T135842.341.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/Pulmocleanan-2026-06-19T140035.690.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/8b4596e4560edbdb395af290a960841b.webp",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/4ce8411148d1a1de099ba70f3d3112b7.webp",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/27a0a3d3d115d42899e6f2eefbb5c938.webp",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/6920d190c65a5.jpg",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/Produto_Znorex_7.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/76d7faecbbc74b50613b26fffe28f33f.webp"
+      "/img/produtos/znorex/1.png",
+      "/img/produtos/znorex/2.png",
+      "/img/produtos/znorex/3.png",
+      "/img/produtos/znorex/4.webp",
+      "/img/produtos/znorex/5.webp",
+      "/img/produtos/znorex/6.webp",
+      "/img/produtos/znorex/7.jpg",
+      "/img/produtos/znorex/8.png",
+      "/img/produtos/znorex/9.webp"
     ],
   },
   {
@@ -417,10 +417,10 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10 (10 frascos)", preco:50990, comparar:145990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/Pulmocleanan_14.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/Pulmocleanan_13.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/Pulmocleanan_15.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/Pulmocleanan_16.png"
+      "/img/produtos/tirze-gotas/1.png",
+      "/img/produtos/tirze-gotas/2.png",
+      "/img/produtos/tirze-gotas/3.png",
+      "/img/produtos/tirze-gotas/4.png"
     ],
   },
   {
@@ -493,11 +493,11 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10", preco:53990, comparar:149990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/viriforte-oferta-do-dia-1369270.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/viriforte-oferta-do-dia-2516175.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/viriforte-oferta-do-dia-5809149.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/viriforte-oferta-do-dia-2296234.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/viriforte-oferta-do-dia-5825847.png"
+      "/img/produtos/viriforte/1.png",
+      "/img/produtos/viriforte/2.png",
+      "/img/produtos/viriforte/3.png",
+      "/img/produtos/viriforte/4.png",
+      "/img/produtos/viriforte/5.png"
     ],
   },
   {
@@ -511,9 +511,9 @@ const PRODUTOS = [
       { titulo:"COMPRE 3 LEVE 6 - 6 frascos", preco:41990, comparar:113990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/rosa-oriental-oferta-do-dia-3647959.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/rosa-oriental-oferta-do-dia-9975599.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/rosa-oriental-oferta-do-dia-3991109.png"
+      "/img/produtos/rosa-oriental/1.png",
+      "/img/produtos/rosa-oriental/2.png",
+      "/img/produtos/rosa-oriental/3.png"
     ],
   },
   {
@@ -528,10 +528,10 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10", preco:55990, comparar:149990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/dura-max-unidade-promocional-2632641.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/dura-max-oferta-do-dia-8615903.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/dura-max-oferta-do-dia-3188070.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/dura-max-oferta-do-dia-9002006.png"
+      "/img/produtos/dura-max/1.png",
+      "/img/produtos/dura-max/2.png",
+      "/img/produtos/dura-max/3.png",
+      "/img/produtos/dura-max/4.png"
     ],
   },
   {
@@ -547,11 +547,11 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10", preco:53990, comparar:149990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/libidrol-oferta-do-dia-9186998.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/libidrol-oferta-do-dia-1338763.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/libidrol-oferta-do-dia-3975362.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/libidrol-oferta-do-dia-8075020.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/libidrol-oferta-do-dia-7165124.png"
+      "/img/produtos/libidrol/1.png",
+      "/img/produtos/libidrol/2.png",
+      "/img/produtos/libidrol/3.png",
+      "/img/produtos/libidrol/4.png",
+      "/img/produtos/libidrol/5.png"
     ],
   },
   {
@@ -566,10 +566,10 @@ const PRODUTOS = [
       { titulo:"COMPRE 4 LEVE 10 - 10 frascos", preco:53990, comparar:149990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/Pulmocleanan-2026-06-19T134801.695.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/Pulmocleanan-2026-06-19T134757.787.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/Pulmocleanan-2026-06-19T134735.946.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/Pulmocleanan-2026-06-19T134653.632.png"
+      "/img/produtos/envy-skin/1.png",
+      "/img/produtos/envy-skin/2.png",
+      "/img/produtos/envy-skin/3.png",
+      "/img/produtos/envy-skin/4.png"
     ],
   },
   {
@@ -603,11 +603,11 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10 (10 frascos)", preco:58990, comparar:189990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/urocianina-oferta-do-dia-5686313.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/urocianina-oferta-do-dia-9725155.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/urocianina-oferta-do-dia-7024475.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/urocianina-oferta-do-dia-1484111.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/urocianina-oferta-do-dia-7318123.png"
+      "/img/produtos/urocianina/1.png",
+      "/img/produtos/urocianina/2.png",
+      "/img/produtos/urocianina/3.png",
+      "/img/produtos/urocianina/4.png",
+      "/img/produtos/urocianina/5.png"
     ],
   },
   {
@@ -637,11 +637,11 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10 (10 frascos)", preco:53990, comparar:149990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/memo-defender-oferta-do-dia-9047891.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/memo-defender-oferta-do-dia-6030265.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/memo-defender-oferta-do-dia-1774616.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/memo-defender-oferta-do-dia-7858076.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/memo-defender-oferta-do-dia-6109922.png"
+      "/img/produtos/memo-defender/1.png",
+      "/img/produtos/memo-defender/2.png",
+      "/img/produtos/memo-defender/3.png",
+      "/img/produtos/memo-defender/4.png",
+      "/img/produtos/memo-defender/5.png"
     ],
   },
   {
@@ -657,11 +657,11 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10", preco:53990, comparar:149990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/creactin-oferta-do-dia-6200989.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/creactin-oferta-do-dia-6999398.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/creactin-oferta-do-dia-9027340.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/creactin-oferta-do-dia-3556909.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/creactin-oferta-do-dia-5685103.png"
+      "/img/produtos/creactin/1.png",
+      "/img/produtos/creactin/2.png",
+      "/img/produtos/creactin/3.png",
+      "/img/produtos/creactin/4.png",
+      "/img/produtos/creactin/5.png"
     ],
   },
   {
@@ -690,11 +690,11 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10 - 10 frascos", preco:53990, comparar:149990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/rejuvita-oferta-do-dia-7488493.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/rejuvita-oferta-do-dia-7301406.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/rejuvita-oferta-do-dia-4718216.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/rejuvita-oferta-do-dia-9981139.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/rejuvita-oferta-do-dia-1709584.png"
+      "/img/produtos/rejuvita/1.png",
+      "/img/produtos/rejuvita/2.png",
+      "/img/produtos/rejuvita/3.png",
+      "/img/produtos/rejuvita/4.png",
+      "/img/produtos/rejuvita/5.png"
     ],
   },
   {
@@ -710,11 +710,11 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10 - 10 frascos", preco:53990, comparar:149990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/viril-fortex-oferta-do-dia-5294513.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/viril-fortex-oferta-do-dia-8680112.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/viril-fortex-oferta-do-dia-4702067.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/viril-fortex-oferta-do-dia-9047172.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/viril-fortex-oferta-do-dia-5954543.png"
+      "/img/produtos/viril-fortex/1.png",
+      "/img/produtos/viril-fortex/2.png",
+      "/img/produtos/viril-fortex/3.png",
+      "/img/produtos/viril-fortex/4.png",
+      "/img/produtos/viril-fortex/5.png"
     ],
   },
   {
@@ -750,11 +750,11 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10 - 10 frascos", preco:53990, comparar:149990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/prostavex-oferta-do-dia-5771287.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/prostavex-oferta-do-dia-2543289.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/prostavex-oferta-do-dia-4010029.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/prostavex-oferta-do-dia-2814872.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/prostavex-oferta-do-dia-8892953.png"
+      "/img/produtos/prostavex/1.png",
+      "/img/produtos/prostavex/2.png",
+      "/img/produtos/prostavex/3.png",
+      "/img/produtos/prostavex/4.png",
+      "/img/produtos/prostavex/5.png"
     ],
   },
   {
@@ -769,10 +769,10 @@ const PRODUTOS = [
       { titulo:"COMPRE 4 LEVE 10 - 10 frascos", preco:53990, comparar:149990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/Pulmoclean_an_-_2026-06-19T135549.749.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/Pulmoclean_an_-_2026-06-19T135540.286.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/Pulmoclean_an_-_2026-06-19T135531.261.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/Pulmoclean_an_-_2026-06-19T135500.322.png"
+      "/img/produtos/acufeno/1.png",
+      "/img/produtos/acufeno/2.png",
+      "/img/produtos/acufeno/3.png",
+      "/img/produtos/acufeno/4.png"
     ],
   },
   {
@@ -788,11 +788,11 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10 — 10 frascos", preco:53990, comparar:149990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/articuly-oferta-do-dia-4108648.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/articuly-oferta-do-dia-1749973.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/articuly-oferta-do-dia-8971928.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/articuly-oferta-do-dia-6943118.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/articuly-oferta-do-dia-6621767.png"
+      "/img/produtos/articuly/1.png",
+      "/img/produtos/articuly/2.png",
+      "/img/produtos/articuly/3.png",
+      "/img/produtos/articuly/4.png",
+      "/img/produtos/articuly/5.png"
     ],
   },
   {
@@ -821,11 +821,11 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10 (10 frascos)", preco:53990, comparar:149990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/burnzine-oferta-do-dia-4249963.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/burnzine-oferta-do-dia-2149315.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/burnzine-oferta-do-dia-9821673.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/burnzine-oferta-do-dia-6298642.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/burnzine-oferta-do-dia-5590287.png"
+      "/img/produtos/burnzine/1.png",
+      "/img/produtos/burnzine/2.png",
+      "/img/produtos/burnzine/3.png",
+      "/img/produtos/burnzine/4.png",
+      "/img/produtos/burnzine/5.png"
     ],
   },
   {
@@ -840,10 +840,10 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10", preco:58990, comparar:189990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/vision-x-oferta-do-dia-4298662.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/vision-x-oferta-do-dia-8048546.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/vision-x-oferta-do-dia-5295392.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/vision-x-oferta-do-dia-9436097.png"
+      "/img/produtos/vision-x/1.png",
+      "/img/produtos/vision-x/2.png",
+      "/img/produtos/vision-x/3.png",
+      "/img/produtos/vision-x/4.png"
     ],
   },
   {
@@ -858,11 +858,11 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10 - 10 frascos", preco:57990, comparar:149990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/akkermat-oferta-do-dia-1819648.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/akkermat-oferta-do-dia-7594025.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/akkermat-oferta-do-dia-8161976.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/akkermat-oferta-do-dia-7772622.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/akkermat-unidade-promocional-9905090.png"
+      "/img/produtos/akkermat/1.png",
+      "/img/produtos/akkermat/2.png",
+      "/img/produtos/akkermat/3.png",
+      "/img/produtos/akkermat/4.png",
+      "/img/produtos/akkermat/5.png"
     ],
   },
   {
@@ -874,7 +874,7 @@ const PRODUTOS = [
       { titulo:"Default Title", preco:14990, comparar:29990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/oferta-do-dia-cinta-modeladora-premium-frete-gratis-2816629.png"
+      "/img/produtos/cinta-modeladora/1.png"
     ],
   },
   {
@@ -890,11 +890,11 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10 — 10 frascos", preco:53990, comparar:149990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/hair-fortin-oferta-do-dia-8463680.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/hair-fortin-oferta-do-dia-7553076.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/hair-fortin-oferta-do-dia-8020701.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/hair-fortin-oferta-do-dia-1302772.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/hair-fortin-oferta-do-dia-9007296.png"
+      "/img/produtos/hair-fortin/1.png",
+      "/img/produtos/hair-fortin/2.png",
+      "/img/produtos/hair-fortin/3.png",
+      "/img/produtos/hair-fortin/4.png",
+      "/img/produtos/hair-fortin/5.png"
     ],
   },
   {
@@ -908,9 +908,9 @@ const PRODUTOS = [
       { titulo:"COMPRE 3 LEVE 6 — 6 frascos (MAIS VENDIDO)", preco:35990, comparar:89990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/meno-care-oferta-do-dia-7730246.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/meno-care-oferta-do-dia-2552269.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/meno-care-oferta-do-dia-3207783.png"
+      "/img/produtos/meno-care/1.png",
+      "/img/produtos/meno-care/2.png",
+      "/img/produtos/meno-care/3.png"
     ],
   },
   {
@@ -925,10 +925,10 @@ const PRODUTOS = [
       { titulo:"COMPRE 5 LEVE 10 - 10 frascos", preco:50990, comparar:145990 }
     ],
     imagens:[
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/neurovex-oferta-do-dia-3363954.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/neurovex-oferta-do-dia-6704965.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/neurovex-oferta-do-dia-8617771.png",
-      "https://cdn.shopify.com/s/files/1/0767/8659/8046/files/neurovex-oferta-do-dia-7212034.png"
+      "/img/produtos/neurovex/1.png",
+      "/img/produtos/neurovex/2.png",
+      "/img/produtos/neurovex/3.png",
+      "/img/produtos/neurovex/4.png"
     ],
   },
   {
