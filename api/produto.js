@@ -50,8 +50,13 @@ module.exports = (req, res) => {
   const slug = String(req.query.slug || '').replace(/[^a-z0-9-]/gi, '').toLowerCase();
   const prod = META.find(p => p.slug === slug);
 
+  // Slug sem SEO pre-cadastrado na META: serve a pagina mesmo assim.
+  // O client renderiza pelo PRODUTOS (que tem todos os produtos); se nao existir
+  // la, o proprio client mostra "produto nao encontrado".
   if (!prod) {
-    res.redirect(302, '/');
+    res.setHeader('Content-Type', 'text/html; charset=utf-8');
+    res.setHeader('Cache-Control', 's-maxage=3600, stale-while-revalidate=86400');
+    res.send(base());
     return;
   }
 
