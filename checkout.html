@@ -578,7 +578,7 @@ function toStep2() {
   if (!v1()) return;
   lock(1);
   document.getElementById('s1-txt').textContent =
-    g('nome').split(' ')[0] + ' . ' + g('email');
+    g('nome').trim() + ' • ' + g('email');
   unlock(2);
   scrollTo('s2');
   _saveCart('entrega');
