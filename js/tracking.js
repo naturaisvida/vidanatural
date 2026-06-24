@@ -3,10 +3,10 @@
 //  >>> PREENCHA OS 3 IDS ABAIXO COM OS SEUS REAIS <<<
 //  Enquanto estiverem com "XXXX", o rastreamento fica desligado (nao quebra nada).
 // ============================================================================
-window.GA4_ID  = 'G-XXXXXXXXXX';   // GA4: Measurement ID (Admin > Fluxos de dados)
-window.GADS_ID = 'AW-XXXXXXXXXX';  // Google Ads: ID de conversao (Ferramentas > Conversoes)
-// Rotulo da conversao de COMPRA (formato AW-XXXXXXXXXX/abcdEFGhIJ...):
-window.GADS_PURCHASE_LABEL = 'AW-XXXXXXXXXX/XXXXXXXXXXXXXXXXXX';
+window.GA4_ID  = 'G-XXXXXXXXXX';   // GA4: Measurement ID (opcional — preencher se quiser GA4)
+window.GADS_ID = 'AW-18090936054';  // Google Ads: ID de conversao
+// Rotulo da conversao de COMPRA (ID + rotulo):
+window.GADS_PURCHASE_LABEL = 'AW-18090936054/r6YjCLiL8LMcEPaNt7JD';
 
 (function () {
   function ok(v) { return v && v.indexOf('XXXX') < 0; }
