@@ -19,7 +19,7 @@ const META = [
   { slug:'long-beauty',       titulo:'Long Beauty',                      desc:'Beleza e vitalidade capilar com a forca da natureza',                  img:'/img/produtos/long-beauty/1.png',        preco:'189.90' },
   { slug:'rosa-oriental',     titulo:'Rosa Oriental',                    desc:'Beleza e bem-estar feminino com ervas do Oriente',                     img:'/img/produtos/rosa-oriental/1.png',      preco:'189.90' },
   { slug:'rejuvita',          titulo:'Rejuvita',                         desc:'Antienvelhecimento e rejuvenescimento com ativos naturais',             img:'/img/produtos/rejuvita/1.png',           preco:'189.90' },
-  { slug:'meno-care',         titulo:'Meno Care',                        desc:'Suporte natural para os sintomas da menopausa',                        img:'/img/produtos/meno-care/1.png',          preco:'189.90' },
+  { slug:'meno-care-oferta-especial',         titulo:'Meno Care',                        desc:'Suporte natural para os sintomas da menopausa',                        img:'/img/produtos/meno-care/1.png',          preco:'189.90' },
   { slug:'dura-max',          titulo:'DuraMax',                          desc:'Formula masculina para disposicao e vitalidade',                       img:'/img/produtos/dura-max/1.png',           preco:'109.90' },
   { slug:'viriforte',         titulo:'Viriforte',                        desc:'Forca e vitalidade masculina com a natureza',                          img:'/img/produtos/viriforte/1.png',          preco:'189.90' },
   { slug:'elefantol',         titulo:'Elefantol',                        desc:'Potencia e resistencia com ativos naturais',                           img:'/img/produtos/elefantol/1.png',          preco:'189.90' },

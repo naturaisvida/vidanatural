@@ -935,7 +935,7 @@ const PRODUTOS = [
     ],
   },
   {
-    slug:"meno-care", nome:"Meno Care", tipo:"fem",
+    slug:"meno-care-oferta-especial", nome:"Meno Care", tipo:"fem",
     titulo:"Meno Care",
     subtitulo:"Equilíbrio e bem-estar para a sua nova fase",
     badge:"MAIS VENDIDO", badgeColor:"#2E8B6F",
