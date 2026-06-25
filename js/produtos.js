@@ -610,7 +610,7 @@ const PRODUTOS = [
     ],
   },
   {
-    slug:"nervomax", nome:"Nervomax", tipo:"geral",
+    slug:"nervomax-oferta", nome:"Nervomax", tipo:"geral",
     titulo:"Nervomax",
     subtitulo:"Suplemento em capsulas — Mais leveza e conforto pras pernas, pes e maos",
     badge:"MAIS VENDIDO", badgeColor:"#2E8B6F",
@@ -951,7 +951,7 @@ const PRODUTOS = [
     ],
   },
   {
-    slug:"neurovex", nome:"Neurovex", tipo:"geral",
+    slug:"neurovex-oferta-do-dia", nome:"Neurovex", tipo:"geral",
     titulo:"Neurovex",
     subtitulo:"Foco e clareza pra render o dia todo",
     badge:"MAIS VENDIDO", badgeColor:"#2E8B6F",
