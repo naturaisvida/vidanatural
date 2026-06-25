@@ -1238,9 +1238,9 @@ function qs(id) { return document.getElementById(id); }
 })();
 
 // ─── Ler slug da URL ──────────────────────────────────────────────────────────
-var slug = new URLSearchParams(location.search).get('slug')
+var slug = (new URLSearchParams(location.search).get('slug')
   || (location.pathname.match(/\/products\/([^/?#]+)/) || [])[1]
-  || '';
+  || '').toLowerCase();
 
 var prod = (typeof PRODUTOS !== 'undefined') ? PRODUTOS.find(function(p) { return p.slug === slug; }) : null;
 
