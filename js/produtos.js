@@ -4,6 +4,18 @@
 
 const PRODUTOS = [
   {
+    slug:"teste", nome:"Produto Teste", tipo:"geral",
+    titulo:"Produto Teste",
+    subtitulo:"Produto interno para testar o fluxo de pagamento (R$ 10).",
+    badge:"TESTE", badgeColor:"#2E8B6F",
+    variantes:[
+      { titulo:"1 Unidade - Teste", preco:1000 }
+    ],
+    imagens:[
+      "/img/produtos/glicofit/1.png"
+    ],
+  },
+  {
     slug:"amora-miura", nome:"Amora Miura + VIT", tipo:"fem",
     titulo:"Amora Miura + VIT",
     subtitulo:"Suplemento em capsulas - Mais equilibrio e bem-estar pra essa fase da sua vida",
