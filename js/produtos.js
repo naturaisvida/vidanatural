@@ -258,16 +258,16 @@ const PRODUTOS = [
     subtitulo:"Suplemento em capsulas - Colageno Tipo 2",
     badge:"MAIS VENDIDO", badgeColor:"#2E8B6F",
     variantes:[
-      { titulo:"1 UNIDADE", preco:11990, comparar:14990 },
       { titulo:"COMPRE 2 LEVE 3", preco:20990, comparar:44990 },
       { titulo:"COMPRE 3 LEVE 6", preco:42990, comparar:89990 },
-      { titulo:"COMPRE 4 LEVE 9", preco:57990, comparar:134990 }
+      { titulo:"COMPRE 4 LEVE 9", preco:57990, comparar:134990 },
+      { titulo:"1 UNIDADE", preco:11990, comparar:14990 }
     ],
     imagens:[
-      "/img/produtos/artivita/1.png",
       "/img/produtos/artivita/2.png",
       "/img/produtos/artivita/3.png",
-      "/img/produtos/artivita/4.png"
+      "/img/produtos/artivita/4.png",
+      "/img/produtos/artivita/1.png"
     ],
   },
   {
@@ -559,16 +559,16 @@ const PRODUTOS = [
     subtitulo:"Mais energia e disposicao pra ser voce de novo",
     badge:"MAIS VENDIDO", badgeColor:"#2E8B6F",
     variantes:[
-      { titulo:"1 UNIDADE", preco:14990, comparar:29990 },
       { titulo:"COMPRE 2 LEVE 3", preco:24990, comparar:59990 },
       { titulo:"COMPRE 3 LEVE 5", preco:35990, comparar:89990 },
-      { titulo:"COMPRE 5 LEVE 10", preco:55990, comparar:149990 }
+      { titulo:"COMPRE 5 LEVE 10", preco:55990, comparar:149990 },
+      { titulo:"1 UNIDADE", preco:14990, comparar:29990 }
     ],
     imagens:[
-      "/img/produtos/dura-max/1.png",
       "/img/produtos/dura-max/2.png",
       "/img/produtos/dura-max/3.png",
-      "/img/produtos/dura-max/4.png"
+      "/img/produtos/dura-max/4.png",
+      "/img/produtos/dura-max/1.png"
     ],
   },
   {
@@ -615,16 +615,16 @@ const PRODUTOS = [
     subtitulo:"Suplemento em capsulas — Mais leveza e conforto pras pernas, pes e maos",
     badge:"MAIS VENDIDO", badgeColor:"#2E8B6F",
     variantes:[
-      { titulo:"1 UNIDADE", preco:14990 },
       { titulo:"COMPRE 2 LEVE 3", preco:20990, comparar:41990 },
       { titulo:"COMPRE 3 LEVE 5", preco:31990, comparar:74990 },
-      { titulo:"COMPRE 4 LEVE 10", preco:53990, comparar:154990 }
+      { titulo:"COMPRE 4 LEVE 10", preco:53990, comparar:154990 },
+      { titulo:"1 UNIDADE", preco:14990 }
     ],
     imagens:[
-      "/img/produtos/nervomax/4.png",
       "/img/produtos/nervomax/1.png",
       "/img/produtos/nervomax/2.png",
-      "/img/produtos/nervomax/3.png"
+      "/img/produtos/nervomax/3.png",
+      "/img/produtos/nervomax/4.png"
     ],
   },
   {
@@ -940,14 +940,16 @@ const PRODUTOS = [
     subtitulo:"Equilíbrio e bem-estar para a sua nova fase",
     badge:"MAIS VENDIDO", badgeColor:"#2E8B6F",
     variantes:[
-      { titulo:"COMPRE 1 LEVE 2 — 2 frascos", preco:16990, comparar:33990 },
-      { titulo:"COMPRE 2 LEVE 4 — 4 frascos", preco:26990, comparar:59990 },
-      { titulo:"COMPRE 3 LEVE 6 — 6 frascos (MAIS VENDIDO)", preco:35990, comparar:89990 }
+      { titulo:"COMPRE 2 LEVE 3", preco:20990, comparar:41990 },
+      { titulo:"COMPRE 3 LEVE 5", preco:31990, comparar:74990 },
+      { titulo:"COMPRE 4 LEVE 10", preco:53990, comparar:154990 },
+      { titulo:"1 UNIDADE", preco:14990 }
     ],
     imagens:[
       "/img/produtos/meno-care/1.png",
       "/img/produtos/meno-care/2.png",
-      "/img/produtos/meno-care/3.png"
+      "/img/produtos/meno-care/3.png",
+      "/img/produtos/meno-care/4.png"
     ],
   },
   {
@@ -956,10 +958,10 @@ const PRODUTOS = [
     subtitulo:"Foco e clareza pra render o dia todo",
     badge:"MAIS VENDIDO", badgeColor:"#2E8B6F",
     variantes:[
-      { titulo:"COMPRE 1 LEVE 2 - 2 frascos", preco:16990, comparar:33990 },
-      { titulo:"COMPRE 2 LEVE 4 - 4 frascos", preco:28990, comparar:64990 },
-      { titulo:"COMPRE 3 LEVE 6 - 6 frascos", preco:37990, comparar:94990 },
-      { titulo:"COMPRE 5 LEVE 10 - 10 frascos", preco:50990, comparar:145990 }
+      { titulo:"COMPRE 2 LEVE 3", preco:20990, comparar:41990 },
+      { titulo:"COMPRE 3 LEVE 5", preco:31990, comparar:74990 },
+      { titulo:"COMPRE 4 LEVE 10", preco:53990, comparar:154990 },
+      { titulo:"1 UNIDADE", preco:14990 }
     ],
     imagens:[
       "/img/produtos/neurovex/1.png",

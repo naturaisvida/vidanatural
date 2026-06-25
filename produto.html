@@ -243,6 +243,8 @@ body { font-family: var(--font); background: var(--bg); color: var(--vn-text); f
   display: flex;
   flex-direction: column;
 }
+/* 4 kits: 2x2 (2 por linha). Impar (3,5) mantem o wrap natural (impar em cima, par embaixo). */
+.variants-grid.vcount-4 .vcard { flex: 1 1 calc(50% - 6px); max-width: calc(50% - 6px); }
 .vcard:hover { border-color: var(--vn-mid); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(46,139,111,.15); }
 .vcard.on { border-color: var(--vn-mid); background: #ECF7F3; box-shadow: 0 4px 16px rgba(46,139,111,.18); }
 .vcard-pop {
@@ -1403,6 +1405,8 @@ prod.variantes.forEach(function(v, i) {
   };
   vgrid.appendChild(el);
 });
+// classe com a qtd de kits (CSS usa pra layout 2x2 quando sao 4)
+vgrid.classList.add('vcount-' + prod.variantes.length);
 
 // ─── Checkout URL ─────────────────────────────────────────────────────────────
 function checkoutUrl(idx) {
