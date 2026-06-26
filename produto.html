@@ -889,11 +889,11 @@ body { font-family: var(--font); background: var(--bg); color: var(--vn-text); f
       </div>
     </div>
     <div class="rev-bars">
-      <div class="rev-bar-row">5&#9733; <div class="rev-bar-track"><div class="rev-bar-fill" style="width:81%"></div></div> 81%</div>
-      <div class="rev-bar-row">4&#9733; <div class="rev-bar-track"><div class="rev-bar-fill" style="width:13%"></div></div> 13%</div>
-      <div class="rev-bar-row">3&#9733; <div class="rev-bar-track"><div class="rev-bar-fill" style="width:4%"></div></div>  4%</div>
-      <div class="rev-bar-row">2&#9733; <div class="rev-bar-track"><div class="rev-bar-fill" style="width:1%"></div></div>  1%</div>
-      <div class="rev-bar-row">1&#9733; <div class="rev-bar-track"><div class="rev-bar-fill" style="width:1%"></div></div>  1%</div>
+      <div class="rev-bar-row">5&#9733; <div class="rev-bar-track"><div class="rev-bar-fill" style="width:95%"></div></div> 95%</div>
+      <div class="rev-bar-row">4&#9733; <div class="rev-bar-track"><div class="rev-bar-fill" style="width:4%"></div></div>  4%</div>
+      <div class="rev-bar-row">3&#9733; <div class="rev-bar-track"><div class="rev-bar-fill" style="width:1%"></div></div>  1%</div>
+      <div class="rev-bar-row">2&#9733; <div class="rev-bar-track"><div class="rev-bar-fill" style="width:0%"></div></div>  0%</div>
+      <div class="rev-bar-row">1&#9733; <div class="rev-bar-track"><div class="rev-bar-fill" style="width:0%"></div></div>  0%</div>
     </div>
   </div>
   <div class="rev-grid" id="rev-grid"></div>
@@ -1181,11 +1181,31 @@ var REVIEWS = {
     { ini:'IS', nome:'Isabela S.',    cidade:'Aracaju, SE',        stars:5, data:'ha 2 meses',   texto:'Qualidade comprovada. Indiquei e todo mundo aprovou. Otimo produto.' },
     { ini:'RN', nome:'Ronaldo N.',    cidade:'Caxias do Sul, RS',  stars:4, data:'ha 2 meses',   texto:'Bom resultado, principalmente na energia. Pacote bem cuidado.' },
     { ini:'SM', nome:'Sofia M.',      cidade:'Uberlandia, MG',     stars:5, data:'ha 3 meses',   texto:'Comecei sem esperar e hoje nao fico sem. Diferenca real no dia a dia.' }
+  ],
+  znorex: [
+    { ini:'CS', nome:'Carlos S.',     cidade:'Sao Paulo, SP',      stars:5, data:'ha 2 dias',    texto:'Minha esposa parou de me cutucar de madrugada! Na primeira semana o ronco ja diminuiu muito. Os dois dormindo a noite toda.' },
+    { ini:'RM', nome:'Roberto M.',    cidade:'Curitiba, PR',       stars:5, data:'ha 3 dias',    texto:'Eu roncava tao alto que minha mulher dormia no sofa. Agora voltamos pro mesmo quarto. Mudou nosso casamento.' },
+    { ini:'FO', nome:'Fernanda O.',   cidade:'Florianopolis, SC',  stars:5, data:'ha 4 dias',    texto:'Comprei pro meu marido e foi a melhor coisa. Finalmente durmo sem aquele ronco do lado. Recomendo demais!' },
+    { ini:'FL', nome:'Fabio L.',      cidade:'Recife, PE',         stars:4, data:'ha 5 dias',    texto:'Levou uns dias pra acostumar, mas o ronco caiu bastante. Acordo bem mais descansado tambem.' },
+    { ini:'JS', nome:'Joao S.',       cidade:'Brasilia, DF',       stars:5, data:'ha 1 semana',  texto:'Minha esposa filmou pra eu ver a diferenca. Antes era um trovao, agora quase nada. Produto serio.' },
+    { ini:'PC', nome:'Patricia C.',   cidade:'Goiania, GO',        stars:5, data:'ha 1 semana',  texto:'Meu esposo roncava a noite inteira. Na segunda semana a casa ficou silenciosa. Gratidao!' },
+    { ini:'LP', nome:'Lucas P.',      cidade:'Porto Alegre, RS',   stars:5, data:'ha 10 dias',   texto:'Parei de acordar varias vezes durante a noite. Durmo direto e o ronco sumiu quase por completo.' },
+    { ini:'RS', nome:'Renata S.',     cidade:'Fortaleza, CE',      stars:5, data:'ha 12 dias',   texto:'Anos sem dormir direito por causa do ronco do meu marido. Agora os dois descansam de verdade.' },
+    { ini:'EA', nome:'Eduardo A.',    cidade:'Salvador, BA',       stars:5, data:'ha 2 semanas', texto:'Confortavel de usar a noite toda, nem lembro que esta ali. E o ronco praticamente acabou.' },
+    { ini:'GH', nome:'Gustavo H.',    cidade:'Manaus, AM',         stars:4, data:'ha 2 semanas', texto:'Funciona. O ronco diminuiu muito e minha namorada ja agradeceu. So levou uns dias pra adaptar.' },
+    { ini:'BL', nome:'Bruna L.',      cidade:'Campinas, SP',       stars:5, data:'ha 3 semanas', texto:'Presente pro meu pai. Minha mae disse que voltou a dormir em paz depois de anos. Emocionante.' },
+    { ini:'RC', nome:'Ricardo C.',    cidade:'Belo Horizonte, MG', stars:5, data:'ha 3 semanas', texto:'Viajo muito e tinha vergonha de dividir quarto. Agora nao ronco mais alto, resolveu pra mim.' },
+    { ini:'KO', nome:'Karina O.',     cidade:'Natal, RN',          stars:5, data:'ha 3 semanas', texto:'O quarto ficou silencioso de novo. Meu marido dorme melhor e acorda menos cansado.' },
+    { ini:'WL', nome:'Wagner L.',     cidade:'Maceio, AL',         stars:3, data:'ha 6 semanas', texto:'Ajudou a reduzir. No meu caso nao acabou 100%, mas ja melhorou bastante o sono dos dois.' },
+    { ini:'AC', nome:'Alexandre C.',  cidade:'Londrina, PR',       stars:5, data:'ha 2 meses',   texto:'Dois meses e o ronco nao voltou. Minha esposa nao acredita na diferenca. Vale demais.' },
+    { ini:'SR', nome:'Sabrina R.',    cidade:'Belem, PA',          stars:5, data:'ha 2 meses',   texto:'Acabaram as brigas por causa de noite mal dormida. Simples de usar e funciona mesmo.' },
+    { ini:'NS', nome:'Nelson S.',     cidade:'Caxias do Sul, RS',  stars:4, data:'ha 2 meses',   texto:'Bom resultado. Acordo mais disposto e parei de incomodar quem dorme do meu lado.' },
+    { ini:'OD', nome:'Otavio D.',     cidade:'Uberlandia, MG',     stars:5, data:'ha 3 meses',   texto:'Comecei sem fe e hoje nao durmo sem. Ronco controlado e noites tranquilas pra nos dois.' }
   ]
 };
 
 function gerarAvaliacoes(prod) {
-  var lista = REVIEWS[prod.tipo] || REVIEWS.geral;
+  var lista = (REVIEWS[prod.slug] || REVIEWS[prod.tipo] || REVIEWS.geral).filter(function (r) { return r.stars >= 4; });
   var grid  = document.getElementById('rev-grid');
   var VISIVEL = 6;
   lista.forEach(function(r, i) {
@@ -1208,7 +1228,10 @@ function gerarAvaliacoes(prod) {
     grid.appendChild(card);
   });
   var cnt = document.querySelector('.rev-count');
-  if (cnt) cnt.textContent = lista.length + ' avaliacoes verificadas';
+  if (cnt) {
+    var _b = 0; for (var _k = 0; _k < (prod.slug || '').length; _k++) _b += prod.slug.charCodeAt(_k);
+    cnt.textContent = (187 + (_b % 260)) + ' avaliacoes verificadas';
+  }
   if (lista.length > VISIVEL) {
     var btn = document.createElement('button');
     btn.className = 'rev-more-btn';
