@@ -1441,7 +1441,7 @@ vgrid.classList.add('vcount-' + prod.variantes.length);
 function checkoutUrl(idx) {
   var v   = prod.variantes[idx];
   var img = prod.imagens[Math.min(idx, prod.imagens.length - 1)];
-  var params = new URLSearchParams({ nome: prod.titulo, variante: v.titulo, preco: v.preco, qty: 1, img: img });
+  var params = new URLSearchParams({ nome: prod.titulo, variante: v.titulo, preco: v.preco, qty: 1, img: img, slug: prod.slug });
   return '/checkout.html?' + params.toString();
 }
 

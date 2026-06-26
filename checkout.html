@@ -169,6 +169,21 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:15
 .badges{display:flex;justify-content:center;align-items:center;gap:7px;flex-wrap:wrap;max-width:380px;margin:0 auto}
 .badges img{height:19px;object-fit:contain}
 
+/* ORDER BUMP */
+.obump{border:2px dashed var(--green);border-radius:11px;overflow:hidden;margin-bottom:18px;background:#fbfffe;animation:bumpIn .3s ease}
+@keyframes bumpIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.obump-flag{background:var(--green);color:#fff;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:7px 14px;display:flex;align-items:center;gap:6px}
+.obump-flag svg{width:15px;height:15px;flex-shrink:0}
+.obump-body{display:flex;align-items:center;gap:12px;padding:13px 14px;cursor:pointer;user-select:none}
+.obump-chk{width:22px;height:22px;flex-shrink:0;accent-color:var(--green);cursor:pointer}
+.obump-img{width:62px;height:62px;object-fit:contain;border-radius:8px;background:#f4faf9;border:1px solid var(--border-light);flex-shrink:0}
+.obump-info{flex:1;min-width:0}
+.obump-name{font-size:13px;font-weight:700;color:var(--vn-dark);line-height:1.3;margin-bottom:2px}
+.obump-desc{font-size:11.5px;color:var(--vn-muted);line-height:1.35;margin-bottom:4px}
+.obump-price{font-size:13px;font-weight:700;color:var(--green)}
+.obump-de{color:var(--vn-muted);font-weight:500;text-decoration:line-through;margin-right:5px;font-size:12px}
+.obump.on{background:var(--vn-sage);border-style:solid}
+
 /* SUCCESS */
 .success-screen{text-align:center;padding:44px 22px}
 .success-icon{width:66px;height:66px;background:var(--success);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
@@ -222,6 +237,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:15
     <p class="obs-c" id="obs-c">0/300 caracteres</p>
     <div class="sline"><span id="sb-lbl">Produto (1)</span><span id="sb-price"></span></div>
     <div class="sline"><span>Frete</span><span id="sb-frete" style="color:var(--green)">Gratis</span></div>
+    <div class="sline" id="sb-bump-line" style="display:none"><span id="sb-bump-lbl">+1 Unidade Promocional</span><span id="sb-bump-price" style="color:var(--green)"></span></div>
     <div class="sline stotal"><span>Total</span><span id="sb-total"></span></div>
     <div class="sprod">
       <img id="sb-img" src="" alt="">
@@ -355,6 +371,23 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:15
     <div class="card locked" id="s3">
       <div class="card-hdr"><h2>Pagamento</h2><span class="num">3 de 3</span></div>
       <div class="card-body" id="s3-body">
+
+        <!-- ORDER BUMP -->
+        <div class="obump" id="orderbump" style="display:none">
+          <div class="obump-flag">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9.05 2.93c.3-.92 1.6-.92 1.9 0l1.5 4.62h4.86c.97 0 1.37 1.24.59 1.81l-3.93 2.86 1.5 4.62c.3.92-.75 1.68-1.54 1.11L10 15.1l-3.93 2.85c-.79.57-1.84-.19-1.54-1.11l1.5-4.62L2.1 9.36c-.78-.57-.38-1.81.59-1.81h4.86l1.5-4.62Z"/></svg>
+            Oferta exclusiva — só nesta página
+          </div>
+          <label class="obump-body" for="obump-chk">
+            <input type="checkbox" class="obump-chk" id="obump-chk" onchange="toggleBump()">
+            <img class="obump-img" id="obump-img" src="" alt="">
+            <div class="obump-info">
+              <div class="obump-name" id="obump-name"></div>
+              <div class="obump-desc">Sim! Quero adicionar <strong>+1 unidade</strong> ao meu pedido com desconto.</div>
+              <div class="obump-price"><span class="obump-de" id="obump-de"></span><span id="obump-por"></span></div>
+            </div>
+          </label>
+        </div>
 
         <div class="ptabs">
           <button class="ptab" id="tab-pix" onclick="selPay('pix')">
@@ -521,7 +554,47 @@ const P = (q => ({
   preco:    parseInt(q.get('preco'))  || 0,
   qty:      parseInt(q.get('qty'))    || 1,
   img:      q.get('img')              || '',
+  slug:     q.get('slug')             || '',
 }))(new URLSearchParams(location.search));
+
+// ══════════════════════════════════════════
+// ORDER BUMP — +1 unidade promocional do produto
+// ══════════════════════════════════════════
+let BUMP   = null;   // dados do order bump do produto atual (ou null)
+let bumpOn = false;  // marcado ou nao
+
+function bumpTotal() { return (BUMP && bumpOn) ? BUMP.preco : 0; }
+
+async function loadBump() {
+  if (!P.slug) return;
+  try {
+    const r = await fetch('/js/orderbumps.json');
+    if (!r.ok) return;
+    const map = await r.json();
+    const b = map[P.slug];
+    if (!b) return;            // produto sem order bump cadastrado
+    BUMP = b;
+    document.getElementById('obump-img').src         = b.img;
+    document.getElementById('obump-img').alt         = b.nome;
+    document.getElementById('obump-name').textContent = b.nome;
+    document.getElementById('obump-de').textContent   = b.de ? $$(b.de) : '';
+    document.getElementById('obump-por').textContent  = $$(b.preco);
+    document.getElementById('orderbump').style.display = '';
+  } catch (e) {}
+}
+
+function toggleBump() {
+  bumpOn = document.getElementById('obump-chk').checked;
+  document.getElementById('orderbump').classList.toggle('on', bumpOn);
+  const line = document.getElementById('sb-bump-line');
+  if (BUMP && bumpOn) {
+    document.getElementById('sb-bump-price').textContent = '+ ' + $$(BUMP.preco);
+    line.style.display = '';
+  } else {
+    line.style.display = 'none';
+  }
+  updateSidebarTotal();
+}
 
 // ══════════════════════════════════════════
 // HELPERS
@@ -560,6 +633,7 @@ function getInstallment(n) {
 
   buildParcelas(total);
   updatePixDiscount(total);
+  loadBump();
 })();
 
 function buildParcelas(total) {
@@ -741,7 +815,7 @@ function selFrete(cost) {
 
 function updateSidebarTotal() {
   const productTotal = P.preco * P.qty;
-  const grandTotal   = productTotal + shippingCost;
+  const grandTotal   = productTotal + shippingCost + bumpTotal();
   document.getElementById('sb-frete').textContent = shippingCost === 0 ? 'Gratis' : $$(shippingCost);
   document.getElementById('sb-total').textContent = $$(grandTotal);
   const mobPrice = document.getElementById('mob-sum-price');
@@ -806,7 +880,7 @@ async function pay(method) {
     if (method === 'cartao') cardToken = await tokenize();
 
     const productTotal = P.preco * P.qty;
-    const grandTotal   = productTotal + shippingCost;
+    const grandTotal   = productTotal + shippingCost + bumpTotal();
     const parcN        = parseInt(g('parc') || '1');
     const inst         = getInstallment(parcN);
 
@@ -850,6 +924,14 @@ async function pay(method) {
         quantity:    P.qty,
       }],
     };
+
+    if (BUMP && bumpOn) {
+      payload.items.push({
+        amount:      BUMP.preco,
+        description: BUMP.nome,
+        quantity:    1,
+      });
+    }
 
     const res  = await fetch(CFG.apiEndpoint, {
       method:  'POST',
