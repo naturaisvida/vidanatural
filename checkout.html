@@ -184,6 +184,13 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:15
 .obump-de{color:var(--vn-muted);font-weight:500;text-decoration:line-through;margin-right:5px;font-size:12px}
 .obump.on{background:var(--vn-sage);border-style:solid}
 
+/* RESUMO DE VALOR no passo pagamento */
+.paytotal{background:var(--vn-sage);border:1px solid var(--vn-pale);border-radius:10px;padding:13px 15px;margin-bottom:18px}
+.paytotal-row{display:flex;justify-content:space-between;font-size:13.5px;color:var(--vn-dark2);margin-bottom:6px}
+.paytotal-row:last-child{margin-bottom:0}
+.paytotal-total{border-top:1px solid var(--vn-pale);margin-top:9px;padding-top:9px;font-size:17px;font-weight:700;color:var(--vn-dark)}
+.paytotal-total span:last-child{color:var(--green)}
+
 /* SUCCESS */
 .success-screen{text-align:center;padding:44px 22px}
 .success-icon{width:66px;height:66px;background:var(--success);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
@@ -404,6 +411,14 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:15
             </svg>
             <span>Cartao</span>
           </button>
+        </div>
+
+        <!-- RESUMO DE VALOR (abaixo do metodo de pagamento) -->
+        <div class="paytotal" id="paytotal">
+          <div class="paytotal-row"><span id="pt-prod-lbl">Produto</span><span id="pt-prod"></span></div>
+          <div class="paytotal-row" id="pt-bump-row" style="display:none"><span>+1 Unidade Promocional</span><span id="pt-bump" style="color:var(--green)"></span></div>
+          <div class="paytotal-row"><span>Frete</span><span id="pt-frete" style="color:var(--green)">Gratis</span></div>
+          <div class="paytotal-row paytotal-total"><span>Total</span><span id="pt-total"></span></div>
         </div>
 
         <!-- PIX -->
@@ -633,6 +648,14 @@ function getInstallment(n) {
 
   buildParcelas(total);
   updatePixDiscount(total);
+
+  // resumo de valor inicial abaixo do metodo de pagamento (frete gratis, sem bump)
+  const ptProd = document.getElementById('pt-prod');
+  if (ptProd) {
+    ptProd.textContent  = $$(total);
+    document.getElementById('pt-total').textContent = $$(total);
+  }
+
   loadBump();
 })();
 
@@ -820,6 +843,22 @@ function updateSidebarTotal() {
   document.getElementById('sb-total').textContent = $$(grandTotal);
   const mobPrice = document.getElementById('mob-sum-price');
   if (mobPrice) mobPrice.textContent = $$(grandTotal);
+
+  // Resumo de valor abaixo do metodo de pagamento
+  const ptProd = document.getElementById('pt-prod');
+  if (ptProd) {
+    ptProd.textContent = $$(productTotal);
+    document.getElementById('pt-frete').textContent = shippingCost === 0 ? 'Gratis' : $$(shippingCost);
+    document.getElementById('pt-total').textContent = $$(grandTotal);
+    const bumpRow = document.getElementById('pt-bump-row');
+    if (BUMP && bumpOn) {
+      document.getElementById('pt-bump').textContent = '+ ' + $$(BUMP.preco);
+      bumpRow.style.display = '';
+    } else {
+      bumpRow.style.display = 'none';
+    }
+  }
+
   buildParcelas(grandTotal);
 }
 
