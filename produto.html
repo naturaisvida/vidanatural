@@ -1495,7 +1495,18 @@ updateBtn();
 })();
 
 // ─── Avaliacoes ───────────────────────────────────────────────────────────────
-gerarAvaliacoes(prod);
+if (prod.semAvaliacao) {
+  var _rs = document.querySelector('.rev-section');
+  if (_rs) {
+    if (_rs.previousElementSibling && _rs.previousElementSibling.classList.contains('sec-divider'))
+      _rs.previousElementSibling.style.display = 'none';
+    _rs.style.display = 'none';
+  }
+  var _st = document.querySelector('.stars');
+  if (_st) _st.style.display = 'none';
+} else {
+  gerarAvaliacoes(prod);
+}
 
 // ─── WhatsApp flutuante (mensagem com origem + produto) ───────────────────────
 (function() {

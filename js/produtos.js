@@ -984,7 +984,7 @@ const PRODUTOS = [
     ],
   },
   {
-    slug:"alphasin", nome:"Alphasin", tipo:"geral",
+    slug:"alphasin", semCopy:true, semAvaliacao:true, nome:"Alphasin", tipo:"geral",
     titulo:"Alphasin: Oferta Do Dia",
     subtitulo:"Vida Natural",
     badge:"OFERTA DO DIA", badgeColor:"#e67e22",
@@ -1002,7 +1002,7 @@ const PRODUTOS = [
     ],
   },
   {
-    slug:"rejuvex-ultra", nome:"Rejuvex Ultra", tipo:"geral",
+    slug:"rejuvex-ultra", semCopy:true, semAvaliacao:true, nome:"Rejuvex Ultra", tipo:"geral",
     titulo:"Rejuvex Ultra",
     subtitulo:"Vida Natural",
     badge:"OFERTA DO DIA", badgeColor:"#e67e22",
