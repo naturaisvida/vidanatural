@@ -543,14 +543,14 @@ const PRODUTOS = [
     subtitulo:"Suplemento em capsulas - Pele bonita comeca de dentro",
     badge:"OFERTA DO DIA", badgeColor:"#e67e22",
     variantes:[
-      { titulo:"COMPRE 1 LEVE 2 - 2 frascos", preco:17990, comparar:37990 },
-      { titulo:"COMPRE 2 LEVE 4 - 4 frascos", preco:31990, comparar:75990 },
-      { titulo:"COMPRE 3 LEVE 6 - 6 frascos", preco:41990, comparar:113990 }
+      { titulo:"1 UNIDADE", preco:14990 },
+      { titulo:"COMPRE 2 LEVE 3", preco:20990, comparar:41990 },
+      { titulo:"COMPRE 3 LEVE 5", preco:31990, comparar:74990, popular:true }
     ],
     imagens:[
-      "/img/produtos/rosa-oriental/1.png",
-      "/img/produtos/rosa-oriental/2.png",
-      "/img/produtos/rosa-oriental/3.png"
+      "/img/produtos/rosa-oriental/rosaoriental1unid.png",
+      "/img/produtos/rosa-oriental/rosaoriental2leve3.png",
+      "/img/produtos/rosa-oriental/rosaoriental3leve5.png"
     ],
   },
   {
@@ -981,6 +981,40 @@ const PRODUTOS = [
     imagens:[
       "/img/produtos/pente-de-madeira-antifrizz/1.webp",
       "/img/produtos/pente-de-madeira-antifrizz/2.webp"
+    ],
+  },
+  {
+    slug:"alphasin", nome:"Alphasin", tipo:"geral",
+    titulo:"Alphasin: Oferta Do Dia",
+    subtitulo:"Vida Natural",
+    badge:"OFERTA DO DIA", badgeColor:"#e67e22",
+    variantes:[
+      { titulo:"COMPRE 1 LEVE 2", preco:16990, comparar:33990 },
+      { titulo:"COMPRE 2 LEVE 4", preco:28990, comparar:64990 },
+      { titulo:"COMPRE 3 LEVE 6", preco:37990, comparar:94990 },
+      { titulo:"COMPRE 4 LEVE 10", preco:50990, comparar:145990 }
+    ],
+    imagens:[
+      "/img/produtos/alphasin/1.png",
+      "/img/produtos/alphasin/2.png",
+      "/img/produtos/alphasin/3.png",
+      "/img/produtos/alphasin/4.png"
+    ],
+  },
+  {
+    slug:"rejuvex-ultra", nome:"Rejuvex Ultra", tipo:"geral",
+    titulo:"Rejuvex Ultra",
+    subtitulo:"Vida Natural",
+    badge:"OFERTA DO DIA", badgeColor:"#e67e22",
+    variantes:[
+      { titulo:"COMPRE 1 LEVE 2", preco:17990, comparar:37990 },
+      { titulo:"COMPRE 2 LEVE 4", preco:31990, comparar:75990 },
+      { titulo:"COMPRE 3 LEVE 6", preco:41990, comparar:113990, popular:true }
+    ],
+    imagens:[
+      "/img/produtos/rejuvex-ultra/rejuvex1leve2.png",
+      "/img/produtos/rejuvex-ultra/rejuvex2leve4.png",
+      "/img/produtos/rejuvex-ultra/rejuvex3leve6.png"
     ],
   },
 ];
