@@ -610,21 +610,21 @@ const PRODUTOS = [
     ],
   },
   {
-    slug:"nervomax-oferta", nome:"Nervomax", tipo:"geral",
+    slug:"nervomax-oferta", semCopy:true, semAvaliacao:true, nome:"Nervomax", tipo:"geral",
     titulo:"Nervomax",
-    subtitulo:"Suplemento em capsulas — Mais leveza e conforto pras pernas, pes e maos",
+    subtitulo:"Suplemento em capsulas - Mais leveza e conforto pras pernas, pes e maos",
     badge:"MAIS VENDIDO", badgeColor:"#2E8B6F",
     variantes:[
-      { titulo:"COMPRE 2 LEVE 3", preco:20990, comparar:41990 },
-      { titulo:"COMPRE 3 LEVE 5", preco:31990, comparar:74990 },
-      { titulo:"COMPRE 4 LEVE 10", preco:53990, comparar:154990 },
-      { titulo:"1 UNIDADE", preco:14990 }
+      { titulo:"COMPRE 1 LEVE 2", preco:18990, comparar:37990 },
+      { titulo:"COMPRE 2 LEVE 4", preco:31990, comparar:75990 },
+      { titulo:"COMPRE 3 LEVE 6", preco:41990, comparar:113990 },
+      { titulo:"COMPRE 4 LEVE 10", preco:53990, comparar:154990, popular:true }
     ],
     imagens:[
-      "/img/produtos/nervomax/1.png",
-      "/img/produtos/nervomax/2.png",
-      "/img/produtos/nervomax/3.png",
-      "/img/produtos/nervomax/4.png"
+      "/img/produtos/nervomax/nervomax1leve2.png",
+      "/img/produtos/nervomax/nervomax2leve4.png",
+      "/img/produtos/nervomax/nervomax3leve6.png",
+      "/img/produtos/nervomax/nervomax4leve10.png"
     ],
   },
   {
